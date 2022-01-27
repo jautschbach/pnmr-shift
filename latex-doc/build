@@ -1,0 +1,37 @@
+#!/bin/bash
+
+rm -f *.aux *.bbl *.blg *.loe *.lof *.log *.los *.lot *.out *.toc *.tdo
+rm -f *pdf
+
+for TEX in manual-pnmrshift.tex; do
+
+  BASE=`basename $TEX .tex`
+  echo "Compiling $BASE"
+  
+  pdflatex -halt-on-error -draftmode $BASE
+  if [ $? != 0 ]; then
+  echo "Error. Exiting..."
+  exit 1
+  fi
+  
+##  bibtex $BASE
+  
+  pdflatex -halt-on-error -draftmode $BASE
+  if [ $? != 0 ]; then
+  echo "Error. Exiting..."
+  exit 1
+  fi
+  
+  pdflatex -halt-on-error -draftmode $BASE
+  if [ $? != 0 ]; then
+  echo "Error. Exiting..."
+  exit 1
+  fi
+
+  pdflatex -halt-on-error $BASE
+  if [ $? != 0 ]; then
+  echo "Error. Exiting..."
+  exit 1
+  fi
+  
+done

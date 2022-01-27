@@ -1,0 +1,40 @@
+"$ADFBIN/adf" <<eor
+
+Atoms
+O      10.1533918749    1.5037987354    5.5459454395
+O       9.1660940552    1.3639542790    6.2269320718
+END
+
+UNRESTRICTED
+SYMMETRY NoSym
+CHARGE 0 2
+
+BASIS
+ O $ADFRESOURCES/ZORA/jcpl/O
+END
+
+XC
+gga pbe
+END
+
+integration
+ accint 7
+ accsph 7
+end
+
+RELATIVISTIC scalar ZORA
+
+SCF
+ ITERATIONS 200
+ CONVERGE 1e-7 1e-7
+END
+
+ZFS
+
+SAVE TAPE21 TAPE10
+
+eor
+
+mv TAPE21 TAPE21.bak
+mv TAPE10 TAPE10.bak
+rm t21.O logfile

@@ -1,0 +1,8 @@
+#!/bin/bash
+
+if [ ! -x "$1" ]; then
+  echo "Error - $1 doesn't exist or isn't executable"
+  exit 1
+fi
+
+./$1 | tee $(basename $1 .sh).out

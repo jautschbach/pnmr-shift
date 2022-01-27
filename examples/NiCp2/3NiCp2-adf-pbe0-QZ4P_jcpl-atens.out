@@ -1,0 +1,2645 @@
+Job 978352.d12n16.ccr.buffalo.edu has requested 8 cores/processors per node.
+ADFHOME is /ifs/projects/jochena/software/adf/adffix2012
+running in directory /scratch/978352.d12n16.ccr.buffalo.edu
+Platform-MPI licensed for SCM.
+
+
+ Parallel Execution: Process Information
+ ==============================================================================
+ Rank   Node Name                              NodeID   MyNodeRank  NodeMaster
+    0   d11n03                                    0          0          0
+    1   d11n03                                    0          1         -1
+    2   d11n03                                    0          2         -1
+    3   d11n03                                    0          3         -1
+    4   d11n03                                    0          4         -1
+    5   d11n03                                    0          5         -1
+    6   d11n03                                    0          6         -1
+    7   d11n03                                    0          7         -1
+ ==============================================================================
+
+
+1(INPUT FILE)
+ gga
+ hybrid
+ hyperfine-scalar
+   scf converge 1e-8 iterations 25
+   atoms 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+ end
+ end input
+
+ *******************************************************************************
+ *                                                                             *
+ *  -------------------------------------                                      *
+ *   Amsterdam Density Functional  (ADF)         2012.01   January 26, 2012    *
+ *  -------------------------------------                                      *
+ *                                               Build 201205311514            *
+ *                                                                             *
+ *                                                                             *
+ *                              =================                              *
+ *                              |               |                              *
+ *                              |     C P L     |                              *
+ *                              |               |                              *
+ *                              =================                              *
+ *                                                                             *
+ *                                                                             *
+ *   Online information and documentation:  http://www.scm.com                 *
+ *   E-mail:  support@scm.com   info@scm.com                                   *
+ *                                                                             *
+ *   Scientific publications using ADF results must be properly referenced     *
+ *   See the User Manuals (or the web site) for recommended citations          *
+ *   The terms and conditions of the End User License Agreement apply to       *
+ *   the use of ADF, http://www.scm.com/Sales/LicAgreement.html                *
+ *                                                                             *
+ **********************  pentium64_linux / platform_mpi  ***********************
+ 
+ CPL 2012.01  RunTime: Dec21-2012 10:01:37  Nodes: 1  Procs: 8
+
+ Temporary files are created in /scratch/kid_0.F15V8R
+
+ hello from rdinp, dbg=            0
+   
+   
+  ****************************************  
+     *************************************  
+     **                                 **  
+     **     ######  ######   ##         **  
+     **    #######  ##   ##  ##         **  
+     **   ##        ######   ##         **  
+     **   ##        ##       ##         **  
+     **    #######  ##       #######    **  
+     **     ######  ##       #######    **  
+     **                                 **  
+     *************************************  
+  ****************************************  
+   
+  CPL was written by                  
+   
+  Jochen Autschbach               
+  SUNY Buffalo                  
+   
+  Original development of CPL took     
+  place in the research group of       
+  Tom Ziegler                 
+  University of Calgary          
+  Alberta, Canada              
+   
+  Further developments done by 
+  JA's research group at SUNY Buffalo 
+   
+  Please cite this work using       
+  some or all of Refs. [1-4]        
+   
+  Refs. [1,2]: original implementation    
+  Ref. [3]: NBO analysis, 
+  Ref. [4]: hybrid functionals and rewrite
+  Recommended references: [2,4]       
+   
+  Nonrelativistic code for the       
+  DSO term and a few other things     
+  based on the Dickson & Ziegler      
+  program, Refs. [5,6]            
+   
+  References: 
+  =========== 
+   
+  [1] J. Autschbach and T. Ziegler,      
+      J. Chem. Phys. 113 (2000), 936     
+   
+  [2] J. Autschbach and T. Ziegler,      
+      J. Chem. Phys. 113 (2000), 9410    
+   
+  [3] J. Autschbach,                     
+      J. Chem. Phys. 128 (2008), 164112  
+   
+  [4] J. Autschbach,                     
+      J. Chem. Phys. 129 (2008), 094105  
+   
+  [5] R. M. Dickson and T. Ziegler,      
+      J. Phys. Chem. 100 (1996), 5286    
+   
+  [6] J. Khandogin and T. Ziegler,       
+      Spectrochim. Acta A55 (1999), 607  
+   
+  ****************************************  
+   
+
+
+
+                 ***********************************
+                 *   J O B  I N F O R M A T I O N  *
+                 ***********************************
+  
+
+
+
+ ===============================
+ General information from TAPE21
+ ===============================
+  
+  TITLE:      *** (NO TITLE) ***                                
+  JOB ID:     ADF 2012.01  RunTime: Dec21-2012 09:35:25  Nodes: 
+  NONLXC:                                                       
+  SYMMETRY:   NOSYM                                             
+   
+  IOPREL:       3
+  ------>     Scalar ZORA + frozen core pot. (Re MOs)
+
+
+
+ ==========================================
+ Nuclear Coordinates and internal numbering
+ ==========================================
+  
+  Ni (  1):       0.0000     -0.0001      0.0000
+  H  (  2):      -0.7705      2.1667      1.8276
+  H  (  3):      -2.2989     -0.0632      1.8275
+  H  (  4):      -0.6505     -2.2059      1.8274
+  H  (  5):       1.8968     -1.3003      1.8274
+  H  (  6):       1.8226      1.4022      1.8275
+  H  (  7):      -0.6503     -2.2057     -1.8275
+  H  (  8):       1.8970     -1.3001     -1.8278
+  H  (  9):       1.8228      1.4024     -1.8277
+  H  ( 10):      -0.7703      2.1670     -1.8273
+  H  ( 11):      -2.2988     -0.0629     -1.8272
+  C  ( 12):      -0.4070      1.1445      1.8308
+  C  ( 13):      -1.2144     -0.0334      1.8308
+  C  ( 14):      -0.3436     -1.1653      1.8307
+  C  ( 15):       1.0019     -0.6869      1.8307
+  C  ( 16):       0.9627      0.7406      1.8307
+  C  ( 17):      -0.3435     -1.1651     -1.8307
+  C  ( 18):       1.0021     -0.6867     -1.8309
+  C  ( 19):       0.9629      0.7408     -1.8308
+  C  ( 20):      -0.4068      1.1447     -1.8306
+  C  ( 21):      -1.2142     -0.0332     -1.8305
+
+
+
+ =======
+ Numbers
+ =======
+  
+  number of valence electrons:     98.00
+ 
+  ---   AOs   ---           ---  MOs alfa / beta ---
+  ncor =      0            nocc =     50     48
+  nval =    598            nvir =    484    486
+  nbas =    598            nmo  =    534    534
+  naos =    598            nsot =    534
+
+
+
+ ===================
+ Fragments and Basis
+ ===================
+  
+   
+  --------------------------
+  ATOM TYPE:  Ni                                                
+  --------------------------
+  === BASIS
+    1S  380.00     VALENCE
+    1S   99.00     VALENCE
+    1S   35.55     VALENCE
+    1S   26.40     VALENCE
+    2S   23.65     VALENCE
+    2S   12.20     VALENCE
+    2S    9.60     VALENCE
+    3S    7.65     VALENCE
+    3S    5.10     VALENCE
+    3S    3.65     VALENCE
+    4S    2.70     VALENCE
+    4S    1.80     VALENCE
+    4S    1.20     VALENCE
+    4S    0.85     VALENCE
+    2P   24.60     VALENCE
+    2P   13.60     VALENCE
+    2P    9.60     VALENCE
+    3P    6.80     VALENCE
+    3P    4.50     VALENCE
+    3P    3.05     VALENCE
+    4P    2.00     VALENCE
+    4P    1.00     VALENCE
+    3D   10.80     VALENCE
+    3D    6.00     VALENCE
+    3D    3.25     VALENCE
+    3D    1.70     VALENCE
+    3D    0.93     VALENCE
+    4F    4.00     VALENCE
+    4F    2.00     VALENCE
+    4F    1.00     VALENCE
+   
+  --------------------------
+  ATOM TYPE:  H                                                 
+  --------------------------
+  === BASIS
+    1S  100.00     VALENCE
+    1S    4.00     VALENCE
+    1S    3.00     VALENCE
+    1S    2.00     VALENCE
+    1S    0.69     VALENCE
+    1S    0.92     VALENCE
+    1S    1.58     VALENCE
+    2P    1.25     VALENCE
+    3D    2.50     VALENCE
+   
+  --------------------------
+  ATOM TYPE:  C                                                 
+  --------------------------
+  === BASIS
+    1S  600.00     VALENCE
+    1S   24.00     VALENCE
+    1S   18.00     VALENCE
+    1S   12.00     VALENCE
+    1S    7.68     VALENCE
+    1S    5.00     VALENCE
+    2S    1.28     VALENCE
+    2S    2.10     VALENCE
+    2S    4.60     VALENCE
+    2P    0.82     VALENCE
+    2P    1.48     VALENCE
+    2P    2.94     VALENCE
+    3D    2.20     VALENCE
+    4F    3.30     VALENCE
+
+
+
+ =================================
+ TAPE10 info, TAPE21 compatibility
+ =================================
+  
+  ---> TAPE10 will be created by CPL
+ 
+  ---> ADF 2000 TAPE21 detected. 
+ 
+  ---> Potential is already on TAPE10.
+       It will not be re-calculated.
+
+
+
+ ================================================
+ Settings for the Hyperfine couplings computation
+ ================================================
+  
+  Compute...
+  FC  Term    YES             (*     default *)
+  SD  Term    YES             (*     default *)
+  PSO Term    YES             (*     default *)
+ 
+  Max. no. of SCF iterations:                25
+  Convergence criterion for SCF cycle:       0.000000010
+
+  Nuclei numbering in the output refers to the
+  INTERNAL atom ordering of ADF.
+  This ordering is usually different from the order
+  that has been specified in the ADF input that pro-
+  duced the TAPE21 being used here.
+
+
+
+ ===========================
+ L I N E A R   S C A L I N G
+ ===========================
+  
+
+ Overlap cut-off criterion AO matrix elements:     0.1000000000E-08
+
+
+
+
+ Test of Precision of the Numerical Integration Grid
+ ===================================================
+
+ Integral of the Total Core Density:                   0.00000000000000
+
+
+
+                 **********************************
+                 *  Hyperfine tensor calculation  *
+                 **********************************
+  
+ Nucelar Data for requested nuclei
+
+ Nucleus  Element   g-value   Spin   Isotope       X/A        Y/A        Z/A
+ ---------------------------------------------------------------------------
+      1     Ni      -0.5000    1.5    61.00      0.000      0.000      0.000
+      2     H        5.5857    0.5     1.00     -0.770      2.167      1.828
+     12     C        1.4048    0.5    13.00     -0.407      1.144      1.831
+      3     H        5.5857    0.5     1.00     -2.299     -0.063      1.827
+     13     C        1.4048    0.5    13.00     -1.214     -0.033      1.831
+      4     H        5.5857    0.5     1.00     -0.650     -2.206      1.827
+     14     C        1.4048    0.5    13.00     -0.344     -1.165      1.831
+      5     H        5.5857    0.5     1.00      1.897     -1.300      1.827
+     15     C        1.4048    0.5    13.00      1.002     -0.687      1.831
+      6     H        5.5857    0.5     1.00      1.823      1.402      1.827
+     16     C        1.4048    0.5    13.00      0.963      0.741      1.831
+      7     H        5.5857    0.5     1.00     -0.650     -2.206     -1.828
+     17     C        1.4048    0.5    13.00     -0.343     -1.165     -1.831
+      8     H        5.5857    0.5     1.00      1.897     -1.300     -1.828
+     18     C        1.4048    0.5    13.00      1.002     -0.687     -1.831
+      9     H        5.5857    0.5     1.00      1.823      1.402     -1.828
+     19     C        1.4048    0.5    13.00      0.963      0.741     -1.831
+     10     H        5.5857    0.5     1.00     -0.770      2.167     -1.827
+     20     C        1.4048    0.5    13.00     -0.407      1.145     -1.831
+     21     C        1.4048    0.5    13.00     -1.214     -0.033     -1.830
+     11     H        5.5857    0.5     1.00     -2.299     -0.063     -1.827
+ 
+ ****************************************
+ *  WARNING: DEPENDENCY is turned on... *
+ ****************************************
+ *********************************************************
+ *  ..And orbitals have been removed... Before removal:  *
+ *********************************************************
+ * nbasdpt =           20          20
+ * nmot =          534         534   gCpl%nmot =          534         534
+ * gCpl%nvirt =          484         486  gCpl%nmo =          534
+ * gCpl%nocc =           50  gCpl%nocct =           50          48
+ *********************************************************
+ Neglecting orbital/spin          515 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          516 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          517 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          518 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          519 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          520 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          521 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          522 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          523 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          524 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          525 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          526 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          527 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          528 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          529 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          530 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          531 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          532 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          533 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          534 /           1  with energy 
+   100000000.000000     
+ Highest non-neglected orbital/spin:          514 /           1  energy = 
+   164584.563504262     
+ Neglecting orbital/spin          515 /           2  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          516 /           2  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          517 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          518 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          519 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          520 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          521 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          522 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          523 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          524 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          525 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          526 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          527 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          528 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          529 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          530 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          531 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          532 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          533 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          534 /           2  with energy 
+   100000000.000000     
+ Highest non-neglected orbital/spin:          514 /           2  energy = 
+   164584.709868434     
+ *********************************************************
+ *  After removal of dependency orbitals: *
+ *********************************************************
+ * nbasdpt =           20          20
+ * nmot =          514         514   gCpl%nmot =          514         514
+ * gCpl%nvirt =          464         466  gCpl%nmo =          514
+ * gCpl%nocc =           50  gCpl%nocct =           50          48
+ *********************************************************
+ *** calculating FC / SD contributions
+ *** running PSOSO linear response calculation
+
+ *** entering CPKS routine for hyperfine coupling *** Version 09/10 (scalar) ***
+
+     computing
+     ... pso matrix elements for nucleus   1
+     ... pso matrix elements for nucleus   2
+     ... pso matrix elements for nucleus  12
+     ... pso matrix elements for nucleus   3
+     ... pso matrix elements for nucleus  13
+     ... pso matrix elements for nucleus   4
+     ... pso matrix elements for nucleus  14
+     ... pso matrix elements for nucleus   5
+     ... pso matrix elements for nucleus  15
+     ... pso matrix elements for nucleus   6
+     ... pso matrix elements for nucleus  16
+     ... pso matrix elements for nucleus   7
+     ... pso matrix elements for nucleus  17
+     ... pso matrix elements for nucleus   8
+     ... pso matrix elements for nucleus  18
+     ... pso matrix elements for nucleus   9
+     ... pso matrix elements for nucleus  19
+     ... pso matrix elements for nucleus  10
+     ... pso matrix elements for nucleus  20
+     ... pso matrix elements for nucleus  21
+     ... pso matrix elements for nucleus  11
+     ... matrix elements for spin-orbit operator 
+     ... PSOSO terms of coupling constant(s) 
+ 
+ *** using new CPKS routine ***
+ *** NOTE: running UNrestricted calculation ***
+    running CPKS for SINGLET Operator
+ Hybrid DFT parameters: PBE0
+     hf X-lda X-gga C-lda C-gga
+   0.25  0.75  0.75  1.00  1.00
+ we will use a HYBRID response kernel
+    response potential will skip pure DFT part due to antisymmetric operator
+ 
+ Convergence criteria set to   1.000000000000000E-005  1.000000000000000E-005
+ iter.  1 V(1) max  0.9745532552570E+01 0.9746128288380E+01
+ iter.  2 V(1) max  0.2892553224028E+00 0.8154751581569E+00
+        2        delta  0.2892553224028E+00 0.8154751581569E+00
+ iter.  3 V(1) max  0.5110318585377E-01 0.8003889552608E+00
+        3        delta  0.5110318585377E-01 0.8003889552608E+00
+ iter.  4 V(1) max  0.5710799547994E-02 0.9506327508320E-01
+        4        delta  0.5710799547994E-02 0.9506327508320E-01
+ iter.  5 V(1) max  0.2157187852239E-02 0.4075981804736E-01
+        5        delta  0.2157187852239E-02 0.4075981804736E-01
+ iter.  6 V(1) max  0.4255912922344E-03 0.7731456333050E-02
+        6        delta  0.4255912922344E-03 0.7731456333050E-02
+ iter.  7 V(1) max  0.7106357736944E-04 0.2578818277978E-02
+        7        delta  0.7106357736944E-04 0.2578818277978E-02
+ iter.  8 V(1) max  0.1190235324837E-04 0.2748626164841E-03
+        8        delta  0.1190235324837E-04 0.2748626164841E-03
+ iter.  9 V(1) max  0.2003578632821E-05 0.6199244709077E-04
+        9        delta  0.2003578632821E-05 0.6199244709077E-04
+ iter. 10 V(1) max  0.2490521012356E-06 0.1421414366676E-04
+       10        delta  0.2490521012356E-06 0.1421414366676E-04
+ iter. 11 V(1) max  0.3692089660997E-07 0.3892572216803E-05
+       11        delta  0.3692089660997E-07 0.3892572216803E-05
+ iter. 12 V(1) max  0.6383625591351E-08 0.1488485740955E-05
+       12        delta  0.6383625591351E-08 0.1488485740955E-05
+     coupled SCF converged
+ DEBUG: this tensor element from pmat1:  0.958275389251791     
+ DEBUG: this tensor element from pmat1: -1.512343112389455E-005
+ DEBUG: this tensor element from pmat1:  8.232611727257346E-005
+ DEBUG: this tensor element from pmat1: -2.701337831708426E-004
+ DEBUG: this tensor element from pmat1: -1.300449175831299E-004
+ DEBUG: this tensor element from pmat1: -1.542043459874776E-004
+ DEBUG: this tensor element from pmat1: -2.253274400048636E-003
+ DEBUG: this tensor element from pmat1: -2.686015983435205E-004
+ DEBUG: this tensor element from pmat1: -5.093396971407144E-004
+ DEBUG: this tensor element from pmat1:  9.528988721193046E-005
+ DEBUG: this tensor element from pmat1:  1.129923069212612E-005
+ DEBUG: this tensor element from pmat1: -4.601050053324896E-004
+ DEBUG: this tensor element from pmat1: -1.499324408035725E-003
+ DEBUG: this tensor element from pmat1:  2.333113407426087E-005
+ DEBUG: this tensor element from pmat1: -1.519907086322848E-003
+ DEBUG: this tensor element from pmat1: -2.834889220221767E-004
+ DEBUG: this tensor element from pmat1:  1.118079832236761E-004
+ DEBUG: this tensor element from pmat1: -1.301967585257810E-004
+ DEBUG: this tensor element from pmat1: -2.281364686345694E-003
+ DEBUG: this tensor element from pmat1:  2.311730406602611E-004
+ DEBUG: this tensor element from pmat1: -4.300593216863811E-004
+ DEBUG: this tensor element from pmat1: -3.600035607512028E-005
+ DEBUG: this tensor element from pmat1: -1.922731433387150E-004
+ DEBUG: this tensor element from pmat1:  3.797735905199216E-004
+ DEBUG: this tensor element from pmat1: -1.770174352302563E-003
+ DEBUG: this tensor element from pmat1: -3.973778966051692E-004
+ DEBUG: this tensor element from pmat1:  1.254614103365292E-003
+ DEBUG: this tensor element from pmat1: -5.753211663851297E-005
+ DEBUG: this tensor element from pmat1:  1.992173037072933E-004
+ DEBUG: this tensor element from pmat1:  3.648711850119936E-004
+ DEBUG: this tensor element from pmat1: -1.814604440839800E-003
+ DEBUG: this tensor element from pmat1:  4.116481515663950E-004
+ DEBUG: this tensor element from pmat1:  1.205340124422048E-003
+ DEBUG: this tensor element from pmat1: -2.835372438847117E-004
+ DEBUG: this tensor element from pmat1:  1.118247772146822E-004
+ DEBUG: this tensor element from pmat1:  1.302029766051034E-004
+ DEBUG: this tensor element from pmat1: -2.281789601909070E-003
+ DEBUG: this tensor element from pmat1:  2.311504370049406E-004
+ DEBUG: this tensor element from pmat1:  4.302705388860772E-004
+ DEBUG: this tensor element from pmat1: -3.612327871064006E-005
+ DEBUG: this tensor element from pmat1: -1.920194282605801E-004
+ DEBUG: this tensor element from pmat1: -3.796127374710703E-004
+ DEBUG: this tensor element from pmat1: -1.770159191772305E-003
+ DEBUG: this tensor element from pmat1: -3.962523274692949E-004
+ DEBUG: this tensor element from pmat1: -1.253862688683086E-003
+ DEBUG: this tensor element from pmat1: -5.762754106695472E-005
+ DEBUG: this tensor element from pmat1:  1.990300402248173E-004
+ DEBUG: this tensor element from pmat1: -3.646729014635061E-004
+ DEBUG: this tensor element from pmat1: -1.814355976061735E-003
+ DEBUG: this tensor element from pmat1:  4.107227280425504E-004
+ DEBUG: this tensor element from pmat1: -1.204529440247478E-003
+ DEBUG: this tensor element from pmat1: -2.701774039723496E-004
+ DEBUG: this tensor element from pmat1: -1.300750069656787E-004
+ DEBUG: this tensor element from pmat1:  1.541652907551155E-004
+ DEBUG: this tensor element from pmat1: -2.253676846069141E-003
+ DEBUG: this tensor element from pmat1: -2.686460767858686E-004
+ DEBUG: this tensor element from pmat1:  5.093950456486271E-004
+ DEBUG: this tensor element from pmat1: -1.498627962610050E-003
+ DEBUG: this tensor element from pmat1:  2.315944576093833E-005
+ DEBUG: this tensor element from pmat1:  1.520687880794816E-003
+ DEBUG: this tensor element from pmat1:  9.548219653468851E-005
+ DEBUG: this tensor element from pmat1:  1.124944217059046E-005
+ DEBUG: this tensor element from pmat1:  4.602609171959454E-004
+ *** using new CPKS routine ***
+ *** NOTE: running UNrestricted calculation ***
+    running CPKS for SINGLET Operator
+ Hybrid DFT parameters: PBE0
+     hf X-lda X-gga C-lda C-gga
+   0.25  0.75  0.75  1.00  1.00
+ we will use a HYBRID response kernel
+    response potential will skip pure DFT part due to antisymmetric operator
+ 
+ Convergence criteria set to   1.000000000000000E-005  1.000000000000000E-005
+ iter.  1 V(1) max  0.9746417729717E+01 0.9747013517289E+01
+ iter.  2 V(1) max  0.2901081903147E+00 0.8182775942038E+00
+        2        delta  0.2901081903147E+00 0.8182775942038E+00
+ iter.  3 V(1) max  0.5136457881756E-01 0.8045375913118E+00
+        3        delta  0.5136457881756E-01 0.8045375913118E+00
+ iter.  4 V(1) max  0.5716023218840E-02 0.9559301794604E-01
+        4        delta  0.5716023218840E-02 0.9559301794604E-01
+ iter.  5 V(1) max  0.2163605344045E-02 0.4082593567970E-01
+        5        delta  0.2163605344045E-02 0.4082593567970E-01
+ iter.  6 V(1) max  0.4273413143760E-03 0.7809924018628E-02
+        6        delta  0.4273413143760E-03 0.7809924018628E-02
+ iter.  7 V(1) max  0.7155161306430E-04 0.2593359460720E-02
+        7        delta  0.7155161306430E-04 0.2593359460720E-02
+ iter.  8 V(1) max  0.1194788441229E-04 0.2764633712302E-03
+        8        delta  0.1194788441229E-04 0.2764633712302E-03
+ iter.  9 V(1) max  0.2014901948108E-05 0.6288210171552E-04
+        9        delta  0.2014901948108E-05 0.6288210171552E-04
+ iter. 10 V(1) max  0.2502312358431E-06 0.1560440870270E-04
+       10        delta  0.2502312358431E-06 0.1560440870270E-04
+ iter. 11 V(1) max  0.3741070474432E-07 0.3809672894919E-05
+       11        delta  0.3741070474432E-07 0.3809672894919E-05
+ iter. 12 V(1) max  0.8105094971116E-08 0.1142917401712E-05
+       12        delta  0.8105094971116E-08 0.1142917401712E-05
+     coupled SCF converged
+ DEBUG: this tensor element from pmat1: -1.511324507098481E-005
+ DEBUG: this tensor element from pmat1:  0.958268948533939     
+ DEBUG: this tensor element from pmat1:  5.579193426405413E-005
+ DEBUG: this tensor element from pmat1: -1.300676179874697E-004
+ DEBUG: this tensor element from pmat1:  4.940220013063822E-005
+ DEBUG: this tensor element from pmat1:  4.336641177413593E-004
+ DEBUG: this tensor element from pmat1: -2.686162180771567E-004
+ DEBUG: this tensor element from pmat1: -1.593778971317547E-003
+ DEBUG: this tensor element from pmat1:  1.432623793291809E-003
+ DEBUG: this tensor element from pmat1:  1.126185336723498E-005
+ DEBUG: this tensor element from pmat1: -3.160851698084795E-004
+ DEBUG: this tensor element from pmat1: -1.261491133601197E-005
+ DEBUG: this tensor element from pmat1:  2.327301400224282E-005
+ DEBUG: this tensor element from pmat1: -2.348354770221698E-003
+ DEBUG: this tensor element from pmat1: -4.165342954881102E-005
+ DEBUG: this tensor element from pmat1:  1.118173508087976E-004
+ DEBUG: this tensor element from pmat1:  6.268521356361483E-005
+ DEBUG: this tensor element from pmat1: -4.415538124182470E-004
+ DEBUG: this tensor element from pmat1:  2.311219965889576E-004
+ DEBUG: this tensor element from pmat1: -1.566614882099209E-003
+ DEBUG: this tensor element from pmat1: -1.458701166516808E-003
+ DEBUG: this tensor element from pmat1: -1.922383122585346E-004
+ DEBUG: this tensor element from pmat1: -1.847201523456322E-004
+ DEBUG: this tensor element from pmat1: -2.603204503648468E-004
+ DEBUG: this tensor element from pmat1: -3.973692582570874E-004
+ DEBUG: this tensor element from pmat1: -2.077422801428212E-003
+ DEBUG: this tensor element from pmat1: -8.598947664394163E-004
+ DEBUG: this tensor element from pmat1:  1.992354986146853E-004
+ DEBUG: this tensor element from pmat1: -1.631615989108910E-004
+ DEBUG: this tensor element from pmat1:  2.807161931231291E-004
+ DEBUG: this tensor element from pmat1:  4.117402624017803E-004
+ DEBUG: this tensor element from pmat1: -2.032523449168445E-003
+ DEBUG: this tensor element from pmat1:  9.273159550329943E-004
+ DEBUG: this tensor element from pmat1:  1.118013568271707E-004
+ DEBUG: this tensor element from pmat1:  6.267631895374016E-005
+ DEBUG: this tensor element from pmat1:  4.416046952967373E-004
+ DEBUG: this tensor element from pmat1:  2.308757944920830E-004
+ DEBUG: this tensor element from pmat1: -1.566494902792394E-003
+ DEBUG: this tensor element from pmat1:  1.458678707512329E-003
+ DEBUG: this tensor element from pmat1: -1.920497942864640E-004
+ DEBUG: this tensor element from pmat1: -1.847431511565813E-004
+ DEBUG: this tensor element from pmat1:  2.601618075967076E-004
+ DEBUG: this tensor element from pmat1: -3.965063755806086E-004
+ DEBUG: this tensor element from pmat1: -2.077177645489331E-003
+ DEBUG: this tensor element from pmat1:  8.592438430503638E-004
+ DEBUG: this tensor element from pmat1:  1.990327856950980E-004
+ DEBUG: this tensor element from pmat1: -1.631548236629763E-004
+ DEBUG: this tensor element from pmat1: -2.805771256230007E-004
+ DEBUG: this tensor element from pmat1:  4.108315527109669E-004
+ DEBUG: this tensor element from pmat1: -2.032153242947324E-003
+ DEBUG: this tensor element from pmat1: -9.269854801096201E-004
+ DEBUG: this tensor element from pmat1: -1.300328838040469E-004
+ DEBUG: this tensor element from pmat1:  4.948335252656844E-005
+ DEBUG: this tensor element from pmat1: -4.336876170187084E-004
+ DEBUG: this tensor element from pmat1: -2.682942762511933E-004
+ DEBUG: this tensor element from pmat1: -1.593358456584725E-003
+ DEBUG: this tensor element from pmat1: -1.432865313765822E-003
+ DEBUG: this tensor element from pmat1:  2.325998048241238E-005
+ DEBUG: this tensor element from pmat1: -2.349391531176151E-003
+ DEBUG: this tensor element from pmat1:  4.141168462372199E-005
+ DEBUG: this tensor element from pmat1:  1.125731374574738E-005
+ DEBUG: this tensor element from pmat1: -3.162242565159411E-004
+ DEBUG: this tensor element from pmat1:  1.257634790377513E-005
+ *** using new CPKS routine ***
+ *** NOTE: running UNrestricted calculation ***
+    running CPKS for SINGLET Operator
+ Hybrid DFT parameters: PBE0
+     hf X-lda X-gga C-lda C-gga
+   0.25  0.75  0.75  1.00  1.00
+ we will use a HYBRID response kernel
+    response potential will skip pure DFT part due to antisymmetric operator
+ 
+ Convergence criteria set to   1.000000000000000E-005  1.000000000000000E-005
+ iter.  1 V(1) max  0.9730436176543E+01 0.9730462454074E+01
+ iter.  2 V(1) max  0.2767773430445E+00 0.4128410616492E+00
+        2        delta  0.2767773430445E+00 0.4128410616492E+00
+ iter.  3 V(1) max  0.4570727721094E-01 0.1814601536191E+00
+        3        delta  0.4570727721094E-01 0.1814601536191E+00
+ iter.  4 V(1) max  0.4818565806568E-02 0.2853310624191E-01
+        4        delta  0.4818565806568E-02 0.2853310624191E-01
+ iter.  5 V(1) max  0.3822806865494E-03 0.4308997053093E-02
+        5        delta  0.3822806865494E-03 0.4308997053093E-02
+ iter.  6 V(1) max  0.3379100743252E-04 0.3398311926405E-03
+        6        delta  0.3379100743252E-04 0.3398311926405E-03
+ iter.  7 V(1) max  0.1427554143781E-05 0.3392172530320E-04
+        7        delta  0.1427554143781E-05 0.3392172530320E-04
+ iter.  8 V(1) max  0.8033447692022E-06 0.1231339477601E-04
+        8        delta  0.8033447692022E-06 0.1231339477601E-04
+ iter.  9 V(1) max  0.5932766405093E-07 0.5525137891756E-05
+        9        delta  0.5932766405093E-07 0.5525137891756E-05
+     coupled SCF converged
+ DEBUG: this tensor element from pmat1:  8.312430474157357E-005
+ DEBUG: this tensor element from pmat1:  5.583207868641587E-005
+ DEBUG: this tensor element from pmat1:  5.325380821119451E-002
+ DEBUG: this tensor element from pmat1: -1.653951006657557E-005
+ DEBUG: this tensor element from pmat1:  4.643605066641710E-005
+ DEBUG: this tensor element from pmat1:  1.859318995701298E-005
+ DEBUG: this tensor element from pmat1: -4.603144771485139E-005
+ DEBUG: this tensor element from pmat1:  1.289018379293828E-004
+ DEBUG: this tensor element from pmat1: -7.797855090003825E-005
+ DEBUG: this tensor element from pmat1: -4.927584347661020E-005
+ DEBUG: this tensor element from pmat1: -1.367512884558794E-006
+ DEBUG: this tensor element from pmat1:  1.854324377843306E-005
+ DEBUG: this tensor element from pmat1: -1.370962702155385E-004
+ DEBUG: this tensor element from pmat1: -3.880836759661661E-006
+ DEBUG: this tensor element from pmat1: -7.815048931510371E-005
+ DEBUG: this tensor element from pmat1: -1.395746472485068E-005
+ DEBUG: this tensor element from pmat1: -4.727470594793066E-005
+ DEBUG: this tensor element from pmat1:  1.854389030172619E-005
+ DEBUG: this tensor element from pmat1: -3.881831734022213E-005
+ DEBUG: this tensor element from pmat1: -1.312985574114025E-004
+ DEBUG: this tensor element from pmat1: -7.811721256684000E-005
+ DEBUG: this tensor element from pmat1:  4.065101802902748E-005
+ DEBUG: this tensor element from pmat1: -2.789624616761114E-005
+ DEBUG: this tensor element from pmat1:  1.859276973725244E-005
+ DEBUG: this tensor element from pmat1:  1.126134432309599E-004
+ DEBUG: this tensor element from pmat1: -7.744678876565464E-005
+ DEBUG: this tensor element from pmat1: -7.794143616371356E-005
+ DEBUG: this tensor element from pmat1:  3.907661674474449E-005
+ DEBUG: this tensor element from pmat1:  3.006426227227863E-005
+ DEBUG: this tensor element from pmat1:  1.862308226116489E-005
+ DEBUG: this tensor element from pmat1:  1.083214415565404E-004
+ DEBUG: this tensor element from pmat1:  8.332574773769792E-005
+ DEBUG: this tensor element from pmat1: -7.785248844866011E-005
+ DEBUG: this tensor element from pmat1:  1.392902627983923E-005
+ DEBUG: this tensor element from pmat1:  4.729998881766891E-005
+ DEBUG: this tensor element from pmat1:  1.862318464394798E-005
+ DEBUG: this tensor element from pmat1:  3.854387390616288E-005
+ DEBUG: this tensor element from pmat1:  1.311304522822596E-004
+ DEBUG: this tensor element from pmat1: -7.785346793712477E-005
+ DEBUG: this tensor element from pmat1: -4.067092084509149E-005
+ DEBUG: this tensor element from pmat1:  2.783847611191064E-005
+ DEBUG: this tensor element from pmat1:  1.857666492674657E-005
+ DEBUG: this tensor element from pmat1: -1.131577721777375E-004
+ DEBUG: this tensor element from pmat1:  7.730864417249265E-005
+ DEBUG: this tensor element from pmat1: -7.805055533885761E-005
+ DEBUG: this tensor element from pmat1: -3.905599638322338E-005
+ DEBUG: this tensor element from pmat1: -3.005238392504757E-005
+ DEBUG: this tensor element from pmat1:  1.853851518659891E-005
+ DEBUG: this tensor element from pmat1: -1.088028703619633E-004
+ DEBUG: this tensor element from pmat1: -8.371878416143246E-005
+ DEBUG: this tensor element from pmat1: -7.818997024126102E-005
+ DEBUG: this tensor element from pmat1:  1.648260735999667E-005
+ DEBUG: this tensor element from pmat1: -4.645185261974801E-005
+ DEBUG: this tensor element from pmat1:  1.856034297986165E-005
+ DEBUG: this tensor element from pmat1:  4.570047593930594E-005
+ DEBUG: this tensor element from pmat1: -1.291067116947649E-004
+ DEBUG: this tensor element from pmat1: -7.808417360814280E-005
+ DEBUG: this tensor element from pmat1:  1.364986420159449E-004
+ DEBUG: this tensor element from pmat1:  3.599773028592631E-006
+ DEBUG: this tensor element from pmat1: -7.786895506094748E-005
+ DEBUG: this tensor element from pmat1:  4.928611540115231E-005
+ DEBUG: this tensor element from pmat1:  1.328352435851867E-006
+ DEBUG: this tensor element from pmat1:  1.861284622652356E-005
+
+ <Sz> value used in the calculation:   1.0000
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 1(Ni)  XYZ=       0.000      0.000      0.000
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  61Ni 
+  nuclear spin I      =  1.5
+  magnetic moment mu  = -0.7500200
+          g_n = mu/I  = -0.5000133
+  quadrupole moment Q =  0.16200 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -1.827                           A(MHz)      87.274
+      -2.560       0.000       0.000            122.260       0.000       0.005
+       0.000      -2.560       0.000              0.000     122.260       0.006
+       0.000       0.000      -0.362              0.005       0.006      17.302
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.657                           A(MHz)     -31.360
+       0.958       0.000       0.000            -45.769       0.001      -0.004
+       0.000       0.958       0.000              0.001     -45.769      -0.003
+       0.000       0.000       0.053             -0.004      -0.003      -2.544
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -1.171                           A(MHz)      55.914
+      -1.602       0.000       0.000             76.491       0.001       0.001
+       0.000      -1.602       0.000              0.001      76.492       0.004
+       0.000       0.000      -0.309              0.001       0.004      14.758
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -1.827                           A(MHz)      87.274
+      -2.560       0.000       0.000            122.261       0.000      -0.002
+       0.000      -2.560       0.000              0.000     122.260       0.002
+       0.000       0.000      -0.362             -0.002       0.002      17.302
+
+        span        skew       asymm               span        skew       asymm
+       2.198       1.000       0.000           -104.959     -47.761      -0.001
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.657                           A(MHz)     -31.360
+       0.958       0.000       0.000            -45.768       0.000       0.002
+       0.000       0.958       0.000              0.000     -45.770      -0.002
+       0.000       0.000       0.053              0.002      -0.002      -2.544
+
+        span        skew       asymm               span        skew       asymm
+      -0.905       1.000       0.000             43.225     -47.765       0.002
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -1.171                           A(MHz)      55.914
+      -1.602       0.000       0.000             76.492       0.000       0.000
+       0.000      -1.601       0.000              0.000      76.490       0.000
+       0.000       0.000      -0.309              0.000       0.000      14.758
+
+        span        skew       asymm               span        skew       asymm
+       1.293       1.000       0.000            -61.734     -47.758      -0.003
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+       -0.610     0.792     0.000
+       -0.792    -0.610     0.000
+        0.000     0.000     1.000
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 2(H)  XYZ=      -0.770      2.167      1.828
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.573
+      -0.013      -0.005      -0.002             -6.721      -2.464      -1.066
+      -0.005      -0.001       0.006             -2.464      -0.665       2.999
+      -0.002       0.006      -0.006             -1.067       2.999      -3.334
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.144      -0.069      -0.082
+       0.000       0.000       0.000             -0.069       0.026       0.231
+       0.000       0.000       0.000             -0.009       0.025       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.609
+      -0.013      -0.005      -0.002             -6.865      -2.534      -1.149
+      -0.005      -0.001       0.006             -2.534      -0.639       3.231
+      -0.002       0.006      -0.006             -1.075       3.024      -3.324
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.573
+      -0.014       0.000       0.000             -7.597       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.205       0.046
+       0.000       0.000       0.004              0.000       0.047       2.082
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.678     269.834     225.676
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099       0.063
+       0.000       0.000       0.000              0.000      -0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.575       0.357              0.329     306.565     190.502
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.609
+      -0.015       0.000       0.000             -7.765       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.304       0.109
+       0.000       0.000       0.004              0.000      -0.109       2.242
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.421             10.007     271.040     224.499
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.942     0.171     0.288
+        0.335    -0.483    -0.809
+        0.000     0.859    -0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 12(C)  XYZ=      -0.407      1.144      1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.028
+       0.007      -0.002      -0.007              0.959      -0.328      -0.995
+      -0.002       0.013       0.021             -0.328       1.765       2.798
+      -0.007       0.021       0.092             -0.995       2.798      12.359
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000      -0.001             -0.302      -0.036      -0.068
+       0.000      -0.002       0.001             -0.036      -0.214       0.192
+       0.000       0.000       0.000             -0.006       0.017      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.005      -0.003      -0.008              0.657      -0.364      -1.063
+      -0.003       0.012       0.022             -0.364       1.551       2.990
+      -0.007       0.021       0.092             -1.001       2.816      12.349
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.028
+       0.006       0.000       0.000              0.843       0.000       0.000
+       0.000       0.008       0.000              0.000       1.098       0.049
+       0.000       0.000       0.098              0.000       0.049      13.142
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.031             12.300     128.613       4.227
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002      -0.001              0.000      -0.244      -0.141
+       0.000       0.000       0.000              0.000       0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.590       0.343              0.348      79.134      46.012
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.004       0.000       0.000              0.527       0.000       0.000
+       0.000       0.006      -0.001              0.000       0.854      -0.093
+       0.000       0.001       0.098              0.000       0.093      13.175
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.647     127.254       5.271
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.942     0.323    -0.087
+        0.335    -0.910     0.244
+        0.000     0.259     0.966
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 3(H)  XYZ=      -2.299     -0.063      1.827
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.574
+       0.000       0.000      -0.006              0.205       0.214      -3.182
+       0.000      -0.014       0.000              0.214      -7.591      -0.087
+      -0.006       0.000      -0.006             -3.182      -0.087      -3.335
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000              0.051       0.006      -0.245
+       0.000       0.000       0.000              0.006      -0.169      -0.007
+       0.000       0.000       0.000             -0.026      -0.001       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.610
+       0.000       0.000      -0.006              0.256       0.220      -3.427
+       0.000      -0.015       0.000              0.220      -7.760      -0.094
+      -0.006       0.000      -0.006             -3.209      -0.088      -3.325
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.574
+      -0.014       0.000       0.000             -7.597       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.205      -0.046
+       0.000       0.000       0.004              0.000      -0.047       2.082
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.679     269.850     225.660
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099      -0.063
+       0.000       0.000       0.000              0.000       0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.575       0.357              0.329     306.603     190.467
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.610
+      -0.015       0.000       0.000             -7.766       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.304      -0.110
+       0.000       0.000       0.004              0.000       0.110       2.241
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.421             10.007     271.057     224.483
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.027     0.512    -0.859
+       -1.000     0.014    -0.024
+        0.000     0.859     0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 13(C)  XYZ=      -1.214     -0.033      1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.027
+       0.014       0.000      -0.022              1.880       0.029      -2.969
+       0.000       0.006      -0.001              0.029       0.843      -0.081
+      -0.022      -0.001       0.092             -2.969      -0.081      12.359
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.001       0.000      -0.002             -0.201       0.003      -0.204
+       0.000      -0.002       0.000              0.003      -0.315      -0.006
+       0.000       0.000       0.000             -0.018      -0.001      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.013       0.000      -0.024              1.679       0.032      -3.173
+       0.000       0.004      -0.001              0.032       0.528      -0.087
+      -0.022      -0.001       0.092             -2.988      -0.082      12.349
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.027
+       0.006       0.000       0.000              0.842       0.000       0.000
+       0.000       0.008       0.000              0.000       1.098      -0.049
+       0.000       0.000       0.098              0.000      -0.049      13.143
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.031             12.301     128.614       4.227
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002       0.001              0.000      -0.244       0.141
+       0.000       0.000       0.000              0.000      -0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.590       0.343              0.348      79.174      45.975
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.004       0.000       0.000              0.527       0.000       0.000
+       0.000       0.006       0.001              0.000       0.854       0.093
+       0.000      -0.001       0.098              0.000      -0.093      13.175
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.648     127.255       5.270
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.028    -0.966    -0.259
+       -1.000    -0.027    -0.007
+        0.000    -0.259     0.966
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 4(H)  XYZ=      -0.650     -2.206      1.827
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.572
+      -0.013       0.004      -0.002             -6.971       2.118      -0.900
+       0.004      -0.001      -0.006              2.118      -0.412      -3.054
+      -0.002      -0.006      -0.006             -0.901      -3.054      -3.334
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.151       0.060      -0.069
+       0.000       0.000       0.000              0.060       0.033      -0.236
+       0.000       0.000       0.000             -0.007      -0.025       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.608
+      -0.013       0.004      -0.002             -7.122       2.177      -0.970
+       0.004      -0.001      -0.006              2.177      -0.379      -3.289
+      -0.002      -0.006      -0.006             -0.908      -3.079      -3.324
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.572
+      -0.014       0.000       0.000             -7.595       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.205      -0.046
+       0.000       0.000       0.004              0.000      -0.047       2.083
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.678     269.959     225.554
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099      -0.063
+       0.000       0.000       0.000              0.000       0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.575       0.357              0.329     306.578     190.490
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.608
+      -0.015       0.000       0.000             -7.764       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.303      -0.110
+       0.000       0.000       0.004              0.000       0.110       2.243
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.421             10.007     271.161     224.380
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.959     0.145    -0.243
+       -0.283     0.491    -0.824
+        0.000     0.859     0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 14(C)  XYZ=      -0.344     -1.165      1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.027
+       0.007       0.002      -0.006              0.927       0.282      -0.840
+       0.002       0.013      -0.021              0.282       1.800      -2.849
+      -0.006      -0.021       0.092             -0.840      -2.849      12.356
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.306       0.031      -0.058
+       0.000      -0.002      -0.001              0.031      -0.210      -0.196
+       0.000       0.000       0.000             -0.005      -0.018      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.005       0.002      -0.007              0.621       0.313      -0.898
+       0.002       0.012      -0.023              0.313       1.589      -3.045
+      -0.006      -0.021       0.092             -0.845      -2.867      12.345
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.027
+       0.006       0.000       0.000              0.844       0.000       0.000
+       0.000       0.008       0.000              0.000       1.099      -0.049
+       0.000       0.000       0.098              0.000      -0.049      13.139
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.031             12.295     128.616       4.225
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002       0.001              0.000      -0.244       0.141
+       0.000       0.000       0.000              0.000      -0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.590       0.343              0.348      79.106      46.038
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.004       0.000       0.000              0.528       0.000       0.000
+       0.000       0.006       0.001              0.000       0.855       0.093
+       0.000      -0.001       0.098              0.000      -0.093      13.172
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.643     127.255       5.270
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.959    -0.273    -0.073
+       -0.283    -0.927    -0.248
+        0.000    -0.259     0.966
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 5(H)  XYZ=       1.897     -1.300      1.827
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.571
+      -0.004      -0.007       0.005             -2.283      -3.640       2.626
+      -0.007      -0.010      -0.003             -3.640      -5.098      -1.800
+       0.005      -0.003      -0.006              2.626      -1.800      -3.332
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.019      -0.103       0.203
+       0.000       0.000       0.000             -0.103      -0.099      -0.139
+       0.000       0.000       0.000              0.022      -0.015       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.607
+      -0.004      -0.007       0.005             -2.302      -3.743       2.829
+      -0.007      -0.010      -0.004             -3.743      -5.197      -1.939
+       0.005      -0.003      -0.006              2.648      -1.815      -3.322
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.571
+      -0.014       0.000       0.000             -7.593       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.203      -0.046
+       0.000       0.000       0.004              0.000      -0.047       2.084
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.677     270.031     225.483
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099      -0.063
+       0.000       0.000       0.000              0.000       0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.575       0.357              0.329     306.567     190.501
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.607
+      -0.015       0.000       0.000             -7.762       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.302      -0.110
+       0.000       0.000       0.004              0.000       0.110       2.244
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.420             10.006     271.232     224.312
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.565    -0.423     0.708
+        0.825     0.290    -0.486
+        0.000     0.859     0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 15(C)  XYZ=       1.002     -0.687      1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.025
+       0.012      -0.004       0.018              1.550      -0.485       2.450
+      -0.004       0.009      -0.013             -0.485       1.175      -1.679
+       0.018      -0.013       0.092              2.450      -1.679      12.350
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.001             -0.238      -0.053       0.168
+       0.000      -0.002      -0.001             -0.053      -0.279      -0.115
+       0.000       0.000       0.000              0.015      -0.010      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.850
+       0.010      -0.004       0.020              1.312      -0.538       2.618
+      -0.004       0.007      -0.013             -0.538       0.897      -1.795
+       0.018      -0.013       0.092              2.465      -1.690      12.340
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.025
+       0.006       0.000       0.000              0.843       0.000       0.000
+       0.000       0.008       0.000              0.000       1.098      -0.049
+       0.000       0.000       0.098              0.000      -0.049      13.134
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.031             12.291     128.618       4.223
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002       0.001              0.000      -0.244       0.141
+       0.000       0.000       0.000              0.000      -0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.589       0.344              0.348      79.038      46.102
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.850
+       0.004       0.000       0.000              0.528       0.000       0.000
+       0.000       0.006       0.001              0.000       0.855       0.093
+       0.000      -0.001       0.098              0.000      -0.093      13.167
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.639     127.254       5.270
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.565     0.797     0.214
+        0.825    -0.546    -0.147
+        0.000    -0.259     0.966
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 6(H)  XYZ=       1.823      1.402      1.827
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.572
+      -0.005       0.007       0.005             -2.690       3.773       2.523
+       0.007      -0.009       0.004              3.773      -4.692       1.941
+       0.005       0.004      -0.006              2.523       1.941      -3.332
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.031       0.106       0.195
+       0.000       0.000       0.000              0.106      -0.087       0.150
+       0.000       0.000       0.000              0.021       0.016       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.607
+      -0.005       0.007       0.005             -2.721       3.879       2.718
+       0.007      -0.009       0.004              3.879      -4.779       2.091
+       0.005       0.004      -0.006              2.544       1.957      -3.322
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.572
+      -0.014       0.000       0.000             -7.594       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.204       0.046
+       0.000       0.000       0.004              0.000       0.047       2.083
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.678     269.945     225.567
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099       0.063
+       0.000       0.000       0.000              0.000      -0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.574       0.357              0.329     306.525     190.540
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.607
+      -0.015       0.000       0.000             -7.763       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.303       0.110
+       0.000       0.000       0.004              0.000      -0.110       2.243
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.421             10.006     271.147     224.394
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.610    -0.406    -0.681
+       -0.793    -0.312    -0.524
+        0.000     0.859    -0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 16(C)  XYZ=       0.963      0.741      1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.025
+       0.011       0.004       0.018              1.495       0.502       2.354
+       0.004       0.009       0.013              0.502       1.228       1.811
+       0.018       0.013       0.092              2.354       1.811      12.353
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.001             -0.244       0.055       0.162
+       0.000      -0.002       0.001              0.055      -0.273       0.124
+       0.000       0.000       0.000              0.015       0.011      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.850
+       0.009       0.004       0.019              1.251       0.557       2.516
+       0.004       0.007       0.014              0.557       0.955       1.935
+       0.018       0.014       0.092              2.369       1.822      12.342
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.025
+       0.006       0.000       0.000              0.842       0.000       0.000
+       0.000       0.008       0.000              0.000       1.097       0.049
+       0.000       0.000       0.098              0.000       0.049      13.136
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.031             12.294     128.615       4.226
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002      -0.001              0.000      -0.244      -0.141
+       0.000       0.000       0.000              0.000       0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.589       0.343              0.348      79.050      46.090
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.850
+       0.004       0.000       0.000              0.527       0.000       0.000
+       0.000       0.006      -0.001              0.000       0.854      -0.093
+       0.000       0.001       0.098              0.000       0.093      13.169
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.642     127.252       5.272
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.610    -0.766     0.205
+       -0.793    -0.589     0.158
+        0.000     0.259     0.966
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 7(H)  XYZ=      -0.650     -2.206     -1.828
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.571
+      -0.013       0.004       0.002             -6.968       2.117       0.901
+       0.004      -0.001       0.006              2.117      -0.412       3.054
+       0.002       0.006      -0.006              0.901       3.054      -3.331
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.151       0.060       0.069
+       0.000       0.000       0.000              0.060       0.033       0.236
+       0.000       0.000       0.000              0.007       0.025       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.607
+      -0.013       0.004       0.002             -7.120       2.177       0.970
+       0.004      -0.001       0.006              2.177      -0.379       3.290
+       0.002       0.006      -0.006              0.908       3.080      -3.321
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.571
+      -0.014       0.000       0.000             -7.593       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.203       0.046
+       0.000       0.000       0.004              0.000       0.047       2.084
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.677     270.053     225.462
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099       0.063
+       0.000       0.000       0.000              0.000      -0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.575       0.357              0.329     306.556     190.511
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.607
+      -0.015       0.000       0.000             -7.762       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.302       0.110
+       0.000       0.000       0.004              0.000      -0.110       2.244
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.420             10.006     271.252     224.292
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.959    -0.145    -0.243
+       -0.283    -0.491    -0.824
+        0.000     0.859    -0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 17(C)  XYZ=      -0.343     -1.165     -1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.026
+       0.007       0.002       0.006              0.927       0.282       0.840
+       0.002       0.013       0.021              0.282       1.799       2.847
+       0.006       0.021       0.092              0.840       2.847      12.351
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.306       0.031       0.058
+       0.000      -0.002       0.001              0.031      -0.210       0.196
+       0.000       0.000       0.000              0.005       0.018      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.850
+       0.005       0.002       0.007              0.621       0.313       0.898
+       0.002       0.012       0.023              0.313       1.589       3.043
+       0.006       0.021       0.092              0.845       2.865      12.341
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.026
+       0.006       0.000       0.000              0.844       0.000       0.000
+       0.000       0.008       0.000              0.000       1.099       0.049
+       0.000       0.000       0.098              0.000       0.049      13.134
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.032             12.290     128.612       4.228
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002      -0.001              0.000      -0.244      -0.141
+       0.000       0.000       0.000              0.000       0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.589       0.343              0.348      79.074      46.068
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.850
+       0.004       0.000       0.000              0.529       0.000       0.000
+       0.000       0.006      -0.001              0.000       0.856      -0.093
+       0.000       0.001       0.098              0.000       0.093      13.166
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.638     127.249       5.275
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.959    -0.274     0.073
+       -0.283    -0.926     0.248
+        0.000     0.259     0.966
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 8(H)  XYZ=       1.897     -1.300     -1.828
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.573
+      -0.004      -0.007      -0.005             -2.285      -3.641      -2.626
+      -0.007      -0.010       0.003             -3.641      -5.101       1.799
+      -0.005       0.003      -0.006             -2.626       1.800      -3.334
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.019      -0.102      -0.203
+       0.000       0.000       0.000             -0.102      -0.099       0.139
+       0.000       0.000       0.000             -0.022       0.015       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.609
+      -0.004      -0.007      -0.005             -2.305      -3.743      -2.828
+      -0.007      -0.010       0.004             -3.743      -5.200       1.938
+      -0.005       0.003      -0.006             -2.648       1.814      -3.324
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.573
+      -0.014       0.000       0.000             -7.597       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.205       0.046
+       0.000       0.000       0.004              0.000       0.047       2.081
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.678     269.820     225.689
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099       0.063
+       0.000       0.000       0.000              0.000      -0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.575       0.357              0.329     306.632     190.440
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.609
+      -0.015       0.000       0.000             -7.765       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.304       0.109
+       0.000       0.000       0.004              0.000      -0.109       2.241
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.421             10.006     271.029     224.510
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.565     0.422     0.708
+        0.825    -0.290    -0.486
+        0.000     0.859    -0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 18(C)  XYZ=       1.002     -0.687     -1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.028
+       0.012      -0.004      -0.018              1.549      -0.484      -2.449
+      -0.004       0.009       0.012             -0.484       1.174       1.677
+      -0.018       0.013       0.092             -2.449       1.677      12.361
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000      -0.001             -0.238      -0.053      -0.168
+       0.000      -0.002       0.001             -0.053      -0.279       0.115
+       0.000       0.000       0.000             -0.015       0.010      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.010      -0.004      -0.020              1.311      -0.537      -2.617
+      -0.004       0.007       0.013             -0.537       0.896       1.793
+      -0.018       0.013       0.092             -2.464       1.688      12.350
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.028
+       0.006       0.000       0.000              0.842       0.000       0.000
+       0.000       0.008       0.000              0.000       1.098       0.049
+       0.000       0.000       0.098              0.000       0.049      13.143
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.032             12.300     128.605       4.233
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002      -0.001              0.000      -0.244      -0.141
+       0.000       0.000       0.000              0.000       0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.590       0.343              0.348      79.153      45.994
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.004       0.000       0.000              0.527       0.000       0.000
+       0.000       0.006      -0.001              0.000       0.855      -0.093
+       0.000       0.001       0.098              0.000       0.093      13.175
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.648     127.246       5.277
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.566     0.796    -0.213
+        0.825    -0.547     0.146
+        0.000     0.259     0.966
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 9(H)  XYZ=       1.823      1.402     -1.828
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.574
+      -0.005       0.007      -0.005             -2.693       3.774      -2.522
+       0.007      -0.009      -0.004              3.774      -4.694      -1.941
+      -0.005      -0.004      -0.006             -2.522      -1.941      -3.335
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.031       0.106      -0.195
+       0.000       0.000       0.000              0.106      -0.087      -0.150
+       0.000       0.000       0.000             -0.021      -0.016       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.610
+      -0.005       0.007      -0.005             -2.723       3.880      -2.717
+       0.007      -0.009      -0.004              3.880      -4.781      -2.091
+      -0.005      -0.004      -0.006             -2.543      -1.957      -3.325
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.574
+      -0.014       0.000       0.000             -7.597       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.205      -0.046
+       0.000       0.000       0.004              0.000      -0.047       2.081
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.678     269.750     225.758
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099      -0.063
+       0.000       0.000       0.000              0.000       0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.575       0.357              0.329     306.600     190.470
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.610
+      -0.015       0.000       0.000             -7.766       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.304      -0.109
+       0.000       0.000       0.004              0.000       0.109       2.240
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.421             10.006     270.960     224.577
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.610     0.406    -0.681
+       -0.793     0.312    -0.524
+        0.000     0.859     0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 19(C)  XYZ=       0.963      0.741     -1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.028
+       0.011       0.004      -0.018              1.494       0.502      -2.353
+       0.004       0.009      -0.013              0.502       1.228      -1.811
+      -0.018      -0.013       0.092             -2.353      -1.811      12.362
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000      -0.001             -0.243       0.055      -0.162
+       0.000      -0.002      -0.001              0.055      -0.273      -0.124
+       0.000       0.000       0.000             -0.015      -0.011      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.853
+       0.009       0.004      -0.019              1.251       0.557      -2.514
+       0.004       0.007      -0.014              0.557       0.956      -1.936
+      -0.018      -0.014       0.092             -2.367      -1.823      12.352
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.028
+       0.006       0.000       0.000              0.842       0.000       0.000
+       0.000       0.008       0.000              0.000       1.098      -0.049
+       0.000       0.000       0.098              0.000      -0.049      13.145
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.032             12.303     128.605       4.233
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002       0.001              0.000      -0.244       0.141
+       0.000       0.000       0.000              0.000      -0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.590       0.343              0.347      79.173      45.976
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.853
+       0.004       0.000       0.000              0.527       0.000       0.000
+       0.000       0.006       0.001              0.000       0.854       0.093
+       0.000      -0.001       0.098              0.000      -0.093      13.177
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.650     127.247       5.276
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.610    -0.766    -0.205
+       -0.793    -0.589    -0.158
+        0.000    -0.259     0.966
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 10(H)  XYZ=      -0.770      2.167     -1.827
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.572
+      -0.013      -0.005       0.002             -6.719      -2.464       1.066
+      -0.005      -0.001      -0.006             -2.464      -0.664      -2.999
+       0.002      -0.006      -0.006              1.066      -2.999      -3.334
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.144      -0.069       0.082
+       0.000       0.000       0.000             -0.069       0.026      -0.231
+       0.000       0.000       0.000              0.009      -0.025       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.608
+      -0.013      -0.005       0.002             -6.863      -2.534       1.148
+      -0.005      -0.001      -0.006             -2.534      -0.638      -3.231
+       0.002      -0.006      -0.006              1.075      -3.024      -3.324
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.572
+      -0.014       0.000       0.000             -7.595       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.204      -0.046
+       0.000       0.000       0.004              0.000      -0.047       2.082
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.678     269.889     225.622
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099      -0.063
+       0.000       0.000       0.000              0.000       0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.575       0.357              0.329     306.546     190.520
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.608
+      -0.015       0.000       0.000             -7.764       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.303      -0.110
+       0.000       0.000       0.004              0.000       0.110       2.242
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.421             10.006     271.093     224.447
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.942    -0.172     0.288
+        0.335     0.483    -0.809
+        0.000     0.859     0.512
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 20(C)  XYZ=      -0.407      1.145     -1.831
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.027
+       0.007      -0.002       0.007              0.960      -0.328       0.995
+      -0.002       0.013      -0.021             -0.328       1.766      -2.798
+       0.007      -0.021       0.092              0.995      -2.799      12.356
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.001             -0.302      -0.036       0.068
+       0.000      -0.002      -0.001             -0.036      -0.214      -0.192
+       0.000       0.000       0.000              0.006      -0.017      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.005      -0.003       0.008              0.658      -0.364       1.063
+      -0.003       0.012      -0.022             -0.364       1.552      -2.991
+       0.007      -0.021       0.092              1.001      -2.816      12.346
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.027
+       0.006       0.000       0.000              0.843       0.000       0.000
+       0.000       0.008       0.000              0.000       1.099      -0.049
+       0.000       0.000       0.098              0.000      -0.049      13.140
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.032             12.296     128.609       4.230
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002       0.001              0.000      -0.244       0.141
+       0.000       0.000       0.000              0.000      -0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.590       0.343              0.348      79.112      46.033
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.852
+       0.004       0.000       0.000              0.528       0.000       0.000
+       0.000       0.006       0.001              0.000       0.855       0.093
+       0.000      -0.001       0.098              0.000      -0.093      13.172
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.644     127.249       5.275
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.942     0.324     0.087
+        0.335    -0.910    -0.244
+        0.000    -0.259     0.966
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 21(C)  XYZ=      -1.214     -0.033     -1.830
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  13C  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  0.7024118
+          g_n = mu/I  =  1.4048236
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.026
+       0.014       0.000       0.022              1.883       0.028       2.969
+       0.000       0.006       0.001              0.028       0.846       0.080
+       0.022       0.001       0.092              2.969       0.080      12.349
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.001       0.000       0.002             -0.201       0.003       0.204
+       0.000      -0.002       0.000              0.003      -0.315       0.006
+       0.000       0.000       0.000              0.018       0.000      -0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.851
+       0.013       0.000       0.024              1.682       0.031       3.173
+       0.000       0.004       0.001              0.031       0.530       0.086
+       0.022       0.001       0.092              2.987       0.081      12.339
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.037                           A(MHz)       5.026
+       0.006       0.000       0.000              0.845       0.000       0.000
+       0.000       0.008       0.000              0.000       1.100       0.049
+       0.000       0.000       0.098              0.000       0.049      13.133
+
+        span        skew       asymm               span        skew       asymm
+       0.092       0.958       0.032             12.288     128.613       4.227
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)      -0.176
+      -0.002       0.000       0.000             -0.315       0.000       0.000
+       0.000      -0.002      -0.001              0.000      -0.244      -0.142
+       0.000       0.000       0.000              0.000       0.044       0.032
+
+        span        skew       asymm               span        skew       asymm
+       0.003       0.589       0.343              0.348      79.052      46.088
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.036                           A(MHz)       4.851
+       0.004       0.000       0.000              0.530       0.000       0.000
+       0.000       0.006      -0.001              0.000       0.856      -0.093
+       0.000       0.001       0.098              0.000       0.093      13.166
+
+        span        skew       asymm               span        skew       asymm
+       0.094       0.948       0.039             12.636     127.249       5.274
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.028    -0.965     0.259
+       -1.000    -0.027     0.007
+        0.000     0.259     0.966
+
+
+
+ ==========================================================================
+ Hyperfine tensor for nucleus 11(H)  XYZ=      -2.299     -0.063     -1.827
+ ==========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =   1H  
+  nuclear spin I      =  0.5
+  magnetic moment mu  =  2.7928473
+          g_n = mu/I  =  5.5856947
+  quadrupole moment Q =  0.00000 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.570
+       0.000       0.000       0.006              0.207       0.214       3.183
+       0.000      -0.014       0.000              0.214      -7.586       0.087
+       0.006       0.000      -0.006              3.183       0.087      -3.331
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000              0.051       0.006       0.246
+       0.000       0.000       0.000              0.006      -0.169       0.007
+       0.000       0.000       0.000              0.026       0.001       0.010
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.606
+       0.000       0.000       0.006              0.258       0.220       3.428
+       0.000      -0.015       0.000              0.220      -7.755       0.094
+       0.006       0.000      -0.006              3.209       0.088      -3.321
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)      -0.007                           A(MHz)      -3.570
+      -0.014       0.000       0.000             -7.592       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.203       0.046
+       0.000       0.000       0.004              0.000       0.047       2.085
+
+        span        skew       asymm               span        skew       asymm
+       0.018       0.506       0.423              9.677     270.079     225.436
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)       0.000                           A(MHz)      -0.036
+       0.000       0.000       0.000             -0.169       0.000       0.000
+       0.000       0.000       0.000              0.000      -0.099       0.063
+       0.000       0.000       0.000              0.000      -0.156       0.160
+
+        span        skew       asymm               span        skew       asymm
+       0.001       0.574       0.357              0.329     306.508     190.556
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)      -0.007                           A(MHz)      -3.606
+      -0.015       0.000       0.000             -7.761       0.000       0.000
+       0.000      -0.010       0.000              0.000      -5.302       0.110
+       0.000       0.000       0.004              0.000      -0.110       2.245
+
+        span        skew       asymm               span        skew       asymm
+       0.019       0.508       0.420             10.005     271.277     224.268
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+        0.027    -0.512    -0.858
+       -1.000    -0.014    -0.024
+        0.000     0.859    -0.512
+ *******************************************************************************
+
+                             N M R   E X I T
+ NORMAL TERMINATION
+
+
+
+ =================
+ Timing Statistics
+ =================
+  
+ Total Used :                     CPU=     4633.95      System=       35.98     Elapsed=     4675.57
+
+ Calls  Section                     ( Mean, Percentage )
+ ---------------------------------------------------------------------------------------------------
+     3  ><      ................      0.00    0.00             0.00    0.01             0.00    0.00
+    21  FCSD    ................     72.68   32.94             0.18   10.57            73.00   32.79
+    21  CALPSO  ................     40.15   18.19             0.02    1.02            40.21   18.06
+     1  PSOSO   ................   2264.50   48.87            31.65   87.95          2297.95   49.15
+     1  ATENS   ................      0.01    0.00             0.00    0.01             0.01    0.00
+     1  EXIT PROCEDURE .........      0.00    0.00             0.16    0.45             0.16    0.00
+
+
+ Currently Open Files (EXIT00)
+ ====================
+
+ Unit    Access Format  Status   Type       Ident (file)
+ -------------------------------------------------------
+   3      SEQ    FORM   TRANSP  NORMAL      LOGFILE
+                                          ( logfile )
+
+
+ Buffered I/O statistics
+ =======================
+ Memory available:                     67108864
+ Number of records fitting in memory:     16131
+ Input :  21.3% of                      3170295  *4k bytes
+ Output:  37.8% of                       285681  *4k bytes
+ Records from serial files evicted:           0
+                    others evicted:      102080
+ Hash table lookups:   10263822 with    4288356 conflicts ( 41.78%)
+
+ ***************************************************************************************************
+ (LOGFILE)
+ <Dec21-2012> <10:01:37>  CPL 2012.01  RunTime: Dec21-2012 10:01:37  Nodes: 1  Procs: 8
+ <Dec21-2012> <10:01:39>  FITFIT
+ <Dec21-2012> <10:01:39>  AOAOFIT
+ <Dec21-2012> <10:01:39>         atom:     1
+ <Dec21-2012> <10:03:35>         atom:     2
+ <Dec21-2012> <10:03:39>         atom:     3
+ <Dec21-2012> <10:03:44>         atom:     4
+ <Dec21-2012> <10:03:49>         atom:     5
+ <Dec21-2012> <10:03:54>         atom:     6
+ <Dec21-2012> <10:03:59>         atom:     7
+ <Dec21-2012> <10:04:04>         atom:     8
+ <Dec21-2012> <10:04:09>         atom:     9
+ <Dec21-2012> <10:04:14>         atom:    10
+ <Dec21-2012> <10:04:19>         atom:    11
+ <Dec21-2012> <10:04:24>         atom:    12
+ <Dec21-2012> <10:04:38>         atom:    13
+ <Dec21-2012> <10:04:53>         atom:    14
+ <Dec21-2012> <10:05:08>         atom:    15
+ <Dec21-2012> <10:05:23>         atom:    16
+ <Dec21-2012> <10:05:37>         atom:    17
+ <Dec21-2012> <10:05:53>         atom:    18
+ <Dec21-2012> <10:06:08>         atom:    19
+ <Dec21-2012> <10:06:24>         atom:    20
+ <Dec21-2012> <10:06:39>         atom:    21
+ <Dec21-2012> <10:06:55>  >>>> ATENS
+ <Dec21-2012> <10:06:55>  >>>> FCSD
+ <Dec21-2012> <10:07:54>  >>>> FCSD
+ <Dec21-2012> <10:08:52>  >>>> FCSD
+ <Dec21-2012> <10:09:50>  >>>> FCSD
+ <Dec21-2012> <10:10:48>  >>>> FCSD
+ <Dec21-2012> <10:11:46>  >>>> FCSD
+ <Dec21-2012> <10:12:43>  >>>> FCSD
+ <Dec21-2012> <10:13:42>  >>>> FCSD
+ <Dec21-2012> <10:14:40>  >>>> FCSD
+ <Dec21-2012> <10:15:37>  >>>> FCSD
+ <Dec21-2012> <10:16:35>  >>>> FCSD
+ <Dec21-2012> <10:17:32>  >>>> FCSD
+ <Dec21-2012> <10:18:30>  >>>> FCSD
+ <Dec21-2012> <10:19:28>  >>>> FCSD
+ <Dec21-2012> <10:20:26>  >>>> FCSD
+ <Dec21-2012> <10:21:24>  >>>> FCSD
+ <Dec21-2012> <10:22:21>  >>>> FCSD
+ <Dec21-2012> <10:23:19>  >>>> FCSD
+ <Dec21-2012> <10:24:16>  >>>> FCSD
+ <Dec21-2012> <10:25:14>  >>>> FCSD
+ <Dec21-2012> <10:26:12>  >>>> FCSD
+ <Dec21-2012> <10:27:10>  >>>> PSOSO
+ <Dec21-2012> <10:42:52>     1 V(1)  0.9745533E+01  0.9746128E+01
+ <Dec21-2012> <10:44:00>     2 V(1)  0.2892553E+00  0.8154752E+00
+ <Dec21-2012> <10:45:08>     3 V(1)  0.5110319E-01  0.8003890E+00
+ <Dec21-2012> <10:46:16>     4 V(1)  0.5710800E-02  0.9506328E-01
+ <Dec21-2012> <10:47:24>     5 V(1)  0.2157188E-02  0.4075982E-01
+ <Dec21-2012> <10:48:33>     6 V(1)  0.4255913E-03  0.7731456E-02
+ <Dec21-2012> <10:49:42>     7 V(1)  0.7106358E-04  0.2578818E-02
+ <Dec21-2012> <10:50:51>     8 V(1)  0.1190235E-04  0.2748626E-03
+ <Dec21-2012> <10:51:59>     9 V(1)  0.2003579E-05  0.6199245E-04
+ <Dec21-2012> <10:53:09>    10 V(1)  0.2490521E-06  0.1421414E-04
+ <Dec21-2012> <10:54:19>    11 V(1)  0.3692090E-07  0.3892572E-05
+ <Dec21-2012> <10:55:28>    12 V(1)  0.6383626E-08  0.1488486E-05
+ <Dec21-2012> <10:55:28>  coupled perturbed SCF converged
+ <Dec21-2012> <10:56:37>     1 V(1)  0.9746418E+01  0.9747014E+01
+ <Dec21-2012> <10:57:45>     2 V(1)  0.2901082E+00  0.8182776E+00
+ <Dec21-2012> <10:58:53>     3 V(1)  0.5136458E-01  0.8045376E+00
+ <Dec21-2012> <11:00:02>     4 V(1)  0.5716023E-02  0.9559302E-01
+ <Dec21-2012> <11:01:11>     5 V(1)  0.2163605E-02  0.4082594E-01
+ <Dec21-2012> <11:02:19>     6 V(1)  0.4273413E-03  0.7809924E-02
+ <Dec21-2012> <11:03:28>     7 V(1)  0.7155161E-04  0.2593359E-02
+ <Dec21-2012> <11:04:38>     8 V(1)  0.1194788E-04  0.2764634E-03
+ <Dec21-2012> <11:05:48>     9 V(1)  0.2014902E-05  0.6288210E-04
+ <Dec21-2012> <11:06:58>    10 V(1)  0.2502312E-06  0.1560441E-04
+ <Dec21-2012> <11:08:07>    11 V(1)  0.3741070E-07  0.3809673E-05
+ <Dec21-2012> <11:09:16>    12 V(1)  0.8105095E-08  0.1142917E-05
+ <Dec21-2012> <11:09:16>  coupled perturbed SCF converged
+ <Dec21-2012> <11:10:26>     1 V(1)  0.9730436E+01  0.9730462E+01
+ <Dec21-2012> <11:11:33>     2 V(1)  0.2767773E+00  0.4128411E+00
+ <Dec21-2012> <11:12:41>     3 V(1)  0.4570728E-01  0.1814602E+00
+ <Dec21-2012> <11:13:49>     4 V(1)  0.4818566E-02  0.2853311E-01
+ <Dec21-2012> <11:14:57>     5 V(1)  0.3822807E-03  0.4308997E-02
+ <Dec21-2012> <11:16:05>     6 V(1)  0.3379101E-04  0.3398312E-03
+ <Dec21-2012> <11:17:14>     7 V(1)  0.1427554E-05  0.3392173E-04
+ <Dec21-2012> <11:18:23>     8 V(1)  0.8033448E-06  0.1231339E-04
+ <Dec21-2012> <11:19:31>     9 V(1)  0.5932766E-07  0.5525138E-05
+ <Dec21-2012> <11:19:31>  coupled perturbed SCF converged
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 1(Ni)  XYZ=       0.000      0.000      0.000
+ <Dec21-2012> <11:19:32>   Ni(1):                A(au)=      -1.171 , A(MHz)      55.914
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 2(H)  XYZ=      -0.770      2.167      1.828
+ <Dec21-2012> <11:19:32>    H(2):                A(au)=      -0.007 , A(MHz)      -3.609
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 12(C)  XYZ=      -0.407      1.144      1.831
+ <Dec21-2012> <11:19:32>    C(12):               A(au)=       0.036 , A(MHz)       4.852
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 3(H)  XYZ=      -2.299     -0.063      1.827
+ <Dec21-2012> <11:19:32>    H(3):                A(au)=      -0.007 , A(MHz)      -3.610
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 13(C)  XYZ=      -1.214     -0.033      1.831
+ <Dec21-2012> <11:19:32>    C(13):               A(au)=       0.036 , A(MHz)       4.852
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 4(H)  XYZ=      -0.650     -2.206      1.827
+ <Dec21-2012> <11:19:32>    H(4):                A(au)=      -0.007 , A(MHz)      -3.608
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 14(C)  XYZ=      -0.344     -1.165      1.831
+ <Dec21-2012> <11:19:32>    C(14):               A(au)=       0.036 , A(MHz)       4.852
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 5(H)  XYZ=       1.897     -1.300      1.827
+ <Dec21-2012> <11:19:32>    H(5):                A(au)=      -0.007 , A(MHz)      -3.607
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 15(C)  XYZ=       1.002     -0.687      1.831
+ <Dec21-2012> <11:19:32>    C(15):               A(au)=       0.036 , A(MHz)       4.850
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 6(H)  XYZ=       1.823      1.402      1.827
+ <Dec21-2012> <11:19:32>    H(6):                A(au)=      -0.007 , A(MHz)      -3.607
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 16(C)  XYZ=       0.963      0.741      1.831
+ <Dec21-2012> <11:19:32>    C(16):               A(au)=       0.036 , A(MHz)       4.850
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 7(H)  XYZ=      -0.650     -2.206     -1.828
+ <Dec21-2012> <11:19:32>    H(7):                A(au)=      -0.007 , A(MHz)      -3.607
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 17(C)  XYZ=      -0.343     -1.165     -1.831
+ <Dec21-2012> <11:19:32>    C(17):               A(au)=       0.036 , A(MHz)       4.850
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 8(H)  XYZ=       1.897     -1.300     -1.828
+ <Dec21-2012> <11:19:32>    H(8):                A(au)=      -0.007 , A(MHz)      -3.609
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 18(C)  XYZ=       1.002     -0.687     -1.831
+ <Dec21-2012> <11:19:32>    C(18):               A(au)=       0.036 , A(MHz)       4.852
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 9(H)  XYZ=       1.823      1.402     -1.828
+ <Dec21-2012> <11:19:32>    H(9):                A(au)=      -0.007 , A(MHz)      -3.610
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 19(C)  XYZ=       0.963      0.741     -1.831
+ <Dec21-2012> <11:19:32>    C(19):               A(au)=       0.036 , A(MHz)       4.853
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 10(H)  XYZ=      -0.770      2.167     -1.827
+ <Dec21-2012> <11:19:32>    H(10):               A(au)=      -0.007 , A(MHz)      -3.608
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 20(C)  XYZ=      -0.407      1.145     -1.831
+ <Dec21-2012> <11:19:32>    C(20):               A(au)=       0.036 , A(MHz)       4.852
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 21(C)  XYZ=      -1.214     -0.033     -1.830
+ <Dec21-2012> <11:19:32>    C(21):               A(au)=       0.036 , A(MHz)       4.851
+ <Dec21-2012> <11:19:32>  Hyperfine tensor for nucleus 11(H)  XYZ=      -2.299     -0.063     -1.827
+ <Dec21-2012> <11:19:32>    H(11):               A(au)=      -0.007 , A(MHz)      -3.606
+ <Dec21-2012> <11:19:32>  NORMAL TERMINATION
+ <Dec21-2012> <11:19:33>  END
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION

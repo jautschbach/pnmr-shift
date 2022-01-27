@@ -1,0 +1,40 @@
+#!/bin/bash
+
+#PNMRSHIFT=../../build/release/PNMRShift
+PNMRSHIFT=../../build/PNMRShift
+
+if [[ ! -x $PNMRSHIFT ]]; then
+  echo "======================================="
+  echo "PNMRShift not found or not executable."
+  echo "Fix the PNMRSHIFT variable in this script"
+  echo "======================================="
+  exit 1
+fi
+
+$PNMRSHIFT \
+-f pnmrshift.nod.inp \
+--splitinp --detail \
+-c geo.xyz \
+-t 298 \
+-s 1.0 | tee pnmr.nod.out
+
+$PNMRSHIFT \
+-f pnmrshift.inp \
+--splitinp --detail \
+-c geo.xyz \
+-t 298 \
+-s 1.0 | tee pnmr.out
+
+$PNMRSHIFT \
+-f pnmrshift.inp \
+--splitinp --detail \
+-c geo.xyz \
+-t 25 \
+-s 1.0 | tee pnmr_25K.out
+
+#$PNMRSHIFT \
+#-f pnmrshift.inp \
+#--splitinp --detail \
+#-c geo.xyz \
+#-t 298 \
+#-s 1.0 | tee pnmr.out

@@ -1,0 +1,37 @@
+#!/bin/sh
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=72:00:00
+#PBS -q nehalem
+#PBS -o $PBS_JOBNAME.out
+#PBS -N 3NiCp2-adf-pbe0-QZ4P_jcpl-orb 
+#PBS -j oe
+#PBS -M rmartin9@buffalo.edu
+#PBS -m e
+#
+export LC_COLLATE=C
+
+. /projects/jochena/software/adf/adf2012.01/tag.sh
+
+cd $PBSTMPDIR
+
+NN=`cat $PBS_NODEFILE | wc -l`
+#
+
+export SCM_TMPDIR SCM_USETMPDIR MPIDIR PATH NN NSCM
+echo "running in directory $PWD"
+
+SCFFILE=$(echo $PBS_JOBNAME | sed 's/orb/scf/g')
+cp $PBS_O_WORKDIR/$SCFFILE.t21 TAPE21
+cp $PBS_O_WORKDIR/$SCFFILE.t10 TAPE10
+
+$ADFBIN/nmr << eor
+allinone
+nmr
+ u1k best
+ calc all
+ out iso tens
+ atoms 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+end
+end input
+eor
+

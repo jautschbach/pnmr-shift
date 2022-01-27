@@ -1,0 +1,3268 @@
+Job 978353.d12n16.ccr.buffalo.edu has requested 8 cores/processors per node.
+ADFHOME is /ifs/projects/jochena/software/adf/adffix2012
+running in directory /scratch/978353.d12n16.ccr.buffalo.edu
+Platform-MPI licensed for SCM.
+
+
+ Parallel Execution: Process Information
+ ==============================================================================
+ Rank   Node Name                              NodeID   MyNodeRank  NodeMaster
+    0   d11n08                                    0          0          0
+    1   d11n08                                    0          1         -1
+    2   d11n08                                    0          2         -1
+    3   d11n08                                    0          3         -1
+    4   d11n08                                    0          4         -1
+    5   d11n08                                    0          5         -1
+    6   d11n08                                    0          6         -1
+    7   d11n08                                    0          7         -1
+ ==============================================================================
+
+
+(INPUT FILE)
+allinone
+nmr
+ u1k best
+ calc all
+ out iso tens
+ atoms 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+end
+end input
+
+ *******************************************************************************
+ *                                                                             *
+ *  -------------------------------------                                      *
+ *   Amsterdam Density Functional  (ADF)         2012.01   January 26, 2012    *
+ *  -------------------------------------                                      *
+ *                                               Build 201205311514            *
+ *                                                                             *
+ *                                                                             *
+ *                              =================                              *
+ *                              |               |                              *
+ *                              |     N M R     |                              *
+ *                              |               |                              *
+ *                              =================                              *
+ *                                                                             *
+ *                                                                             *
+ *   Online information and documentation:  http://www.scm.com                 *
+ *   E-mail:  support@scm.com   info@scm.com                                   *
+ *                                                                             *
+ *   Scientific publications using ADF results must be properly referenced     *
+ *   See the User Manuals (or the web site) for recommended citations          *
+ *   The terms and conditions of the End User License Agreement apply to       *
+ *   the use of ADF, http://www.scm.com/Sales/LicAgreement.html                *
+ *                                                                             *
+ **********************  pentium64_linux / platform_mpi  ***********************
+ 
+ NMR 2012.01  RunTime: Dec21-2012 10:03:37  Nodes: 1  Procs: 8
+
+ Temporary files are created in /scratch/kid_0.NJmJ0P
+
+                    
+                      **********************************    
+                      ||******************************||    
+                      ||                              ||    
+                      ||  ##   ##  ###  ###  ######   ||    
+                      ||  ###  ##  ########  ##   ##  ||    
+                      ||  #### ##  ## ## ##  ######   ||    
+                      ||  ## ####  ##    ##  ## ##    ||    
+                      ||  ##  ###  ##    ##  ##  ##   ||    
+                      ||  ##   ##  ##    ##  ##   ##  ||    
+                      ||                              ||    
+                      | ****************************** |    
+                      **********************************    
+                    
+                            Written for ADF by              
+                    
+                    Stephen K. Wolff & Georg Schreckenbach  
+                    
+                      The research group of Tom Ziegler     
+                            University of Calgary           
+                               Alberta, Canada              
+                    
+                      Speedups, NBO analysis, g-tensors, by 
+                         Jochen Autschbach, SUNY Buffalo
+                    
+                    --------------------------------------- 
+                    
+                    
+                                 References:                
+                                 ===========                
+                    
+                    1. G. Schreckenbach and T. Ziegler,     
+                       J. Phys. Chem. 99 (1995) 606         
+                    
+                    2. G. Schreckenbach and T. Ziegler      
+                       Int. J. Quantum CHem. 61 (1997) 899  
+                    
+                    3. S. K. Wolff and T. Ziegler           
+                       J. Chem. Phys. 109 (1998) 895        
+                    
+                    --------------------------------------- 
+                    
+ 
+################################################################################
+ 
+ 
+################################################################################
+ 
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 GENERAL ADF INFORMATION:
+                 ------------------------
+ 
+                 TITLE:    *** (NO TITLE) ***                           
+                 JOB ID:   ADF 2012.01  RunTime: Dec21-2012 09:35:25  No
+                 NONLXC:                                                
+                 SYMMETRY: NOSYM                                        
+                  
+                 IOPREL:   3
+                 ------>  Scalar ZORA + core pot. (Re MOs)
+                 ------>  Core pot used in K, Full pot used in V
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              ==================================================
+ 
+                 NUCLEAR COORDINATES (ANGSTROMS):
+                 --------------------------------
+ 
+                 Ni (  1):       0.0000     -0.0001      0.0000
+                 H  (  2):      -0.7705      2.1667      1.8276
+                 H  (  3):      -2.2989     -0.0632      1.8275
+                 H  (  4):      -0.6505     -2.2059      1.8274
+                 H  (  5):       1.8968     -1.3003      1.8274
+                 H  (  6):       1.8226      1.4022      1.8275
+                 H  (  7):      -0.6503     -2.2057     -1.8275
+                 H  (  8):       1.8970     -1.3001     -1.8278
+                 H  (  9):       1.8228      1.4024     -1.8277
+                 H  ( 10):      -0.7703      2.1670     -1.8273
+                 H  ( 11):      -2.2988     -0.0629     -1.8272
+                 C  ( 12):      -0.4070      1.1445      1.8308
+                 C  ( 13):      -1.2144     -0.0334      1.8308
+                 C  ( 14):      -0.3436     -1.1653      1.8307
+                 C  ( 15):       1.0019     -0.6869      1.8307
+                 C  ( 16):       0.9627      0.7406      1.8307
+                 C  ( 17):      -0.3435     -1.1651     -1.8307
+                 C  ( 18):       1.0021     -0.6867     -1.8309
+                 C  ( 19):       0.9629      0.7408     -1.8308
+                 C  ( 20):      -0.4068      1.1447     -1.8306
+                 C  ( 21):      -1.2142     -0.0332     -1.8305
+ 
+              ==================================================
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 NUMBERS:
+                 --------
+ 
+                 number of electrons:     98.00
+ 
+                 ---   AOs   ---           ---  MOs alfa / beta ---
+                 ncor =      0            nocc =     50     48
+                 nval =    598            nvir =    484    486
+                 nbas =    598            nmo  =    534    534
+                 naos =   598             nsot =   534
+              ==================================================
+                  
+                 --------------------------
+                     ATOM TYPE: Ni                       
+                 --------------------------
+                 === BASIS
+                   1S  380.00     VALENCE
+                   1S   99.00     VALENCE
+                   1S   35.55     VALENCE
+                   1S   26.40     VALENCE
+                   2S   23.65     VALENCE
+                   2S   12.20     VALENCE
+                   2S    9.60     VALENCE
+                   3S    7.65     VALENCE
+                   3S    5.10     VALENCE
+                   3S    3.65     VALENCE
+                   4S    2.70     VALENCE
+                   4S    1.80     VALENCE
+                   4S    1.20     VALENCE
+                   4S    0.85     VALENCE
+                   2P   24.60     VALENCE
+                   2P   13.60     VALENCE
+                   2P    9.60     VALENCE
+                   3P    6.80     VALENCE
+                   3P    4.50     VALENCE
+                   3P    3.05     VALENCE
+                   4P    2.00     VALENCE
+                   4P    1.00     VALENCE
+                   3D   10.80     VALENCE
+                   3D    6.00     VALENCE
+                   3D    3.25     VALENCE
+                   3D    1.70     VALENCE
+                   3D    0.93     VALENCE
+                   4F    4.00     VALENCE
+                   4F    2.00     VALENCE
+                   4F    1.00     VALENCE
+                  
+                 --------------------------
+                     ATOM TYPE: H                        
+                 --------------------------
+                 === BASIS
+                   1S  100.00     VALENCE
+                   1S    4.00     VALENCE
+                   1S    3.00     VALENCE
+                   1S    2.00     VALENCE
+                   1S    0.69     VALENCE
+                   1S    0.92     VALENCE
+                   1S    1.58     VALENCE
+                   2P    1.25     VALENCE
+                   3D    2.50     VALENCE
+                  
+                 --------------------------
+                     ATOM TYPE: C                        
+                 --------------------------
+                 === BASIS
+                   1S  600.00     VALENCE
+                   1S   24.00     VALENCE
+                   1S   18.00     VALENCE
+                   1S   12.00     VALENCE
+                   1S    7.68     VALENCE
+                   1S    5.00     VALENCE
+                   2S    1.28     VALENCE
+                   2S    2.10     VALENCE
+                   2S    4.60     VALENCE
+                   2P    0.82     VALENCE
+                   2P    1.48     VALENCE
+                   2P    2.94     VALENCE
+                   3D    2.20     VALENCE
+                   4F    3.30     VALENCE
+                  
+              ==================================================
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 TENSOR INFORMATION:
+                 -------------------
+ 
+                              CALC                   U1K
+ 
+                 paramagnetic  = T     mass-velocity = F
+                 diamagnetic   = T     Darwin        = F
+                 Fermi-cont.   = F     Zeeman        = F
+                 ZORA SO       = F     ZORA SO       = F
+                 ZORA SCALE    = T     ZORA SO FULL  = F
+                                       E IN U1 SCL   = F
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 OUTPUT SWITCHES:
+                 ----------------
+ 
+                           ISO = T                F1 = F
+                          TENS = T                S1 = F
+                           EIG = F                U1 = F
+                           AOP = F                B1 = F
+                           AOD = F                F  = F
+                           AOF = F                 S = F
+                          INFO = F              REFS = F
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              --------------------------------------------------
+ 
+                 CALCULATE THE POTENTIAL? F
+                  
+                 ---> Potential is already on TAPE10.
+                      It will not be re-calculated.
+ 
+              --------------------------------------------------
+
+
+
+ ===========================
+ L I N E A R   S C A L I N G
+ ===========================
+  
+
+ Overlap cut-off criterion AO matrix elements:     0.1000000000E-08
+
+
+ Test of Precision of the Numerical Integration Grid
+ ===================================================
+
+ Integral of the Total Core Density:                   0.00000000000000
+ ****************************************
+ *  ...INFO: DEPENDENCY is turned on... *
+ ****************************************
+ *********************************************************
+ *  ..And orbitals have been removed... Before removal:  *
+ *********************************************************
+ * nbasdpt =           20          20 gNmr%nmot =          534         534
+ * gNmr%nvirt =          484         486  gNmr%nmo =          534
+ * gNmr%nocc =           50  gNmr%nocct =           50          48
+ *********************************************************
+ Neglecting orbital/spin          515 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          516 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          517 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          518 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          519 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          520 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          521 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          522 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          523 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          524 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          525 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          526 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          527 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          528 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          529 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          530 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          531 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          532 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          533 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          534 /           1  with energy 
+   100000000.000000     
+ Highest non-neglected orbital/spin:          514 /           1  energy = 
+   164584.563504262     
+ Neglecting orbital/spin          515 /           2  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          516 /           2  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          517 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          518 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          519 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          520 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          521 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          522 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          523 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          524 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          525 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          526 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          527 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          528 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          529 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          530 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          531 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          532 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          533 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          534 /           2  with energy 
+   100000000.000000     
+ Highest non-neglected orbital/spin:          514 /           2  energy = 
+   164584.709868434     
+ *********************************************************
+ *  After removal of dependency orbitals *
+ *********************************************************
+ * nbasdpt =           20          20 gNmr%nmot =          514         514
+ * gNmr%nvirt =          464         466  gNmr%nmo =          534
+ * gNmr%nocc =           50  gNmr%nocct =           50          48
+ *********************************************************
+ ========================
+ STARTING A NEW SCF. Step            1
+ CRIT   1.00000000000000     
+ CRIT   1.00000000000000     
+ CRIT   1.00000000000000     
+ ========================
+ STARTING A NEW SCF. Step            2
+ CRIT  8.415843718647073E-002
+ CRIT  8.416513429169439E-002
+ CRIT  1.583645256870946E-002
+ ========================
+ STARTING A NEW SCF. Step            3
+ CRIT  7.777306873964584E-003
+ CRIT  7.778244195630788E-003
+ CRIT  9.672718367375848E-004
+ ========================
+ STARTING A NEW SCF. Step            4
+ CRIT  2.613853213738772E-003
+ CRIT  2.613979100561937E-003
+ CRIT  9.993817064375767E-005
+ ========================
+ STARTING A NEW SCF. Step            5
+ CRIT  3.157228878713479E-004
+ CRIT  3.160593896389810E-004
+ CRIT  5.837927949242923E-006
+ ========================
+ STARTING A NEW SCF. Step            6
+ CRIT  8.227869596162960E-005
+ CRIT  8.232803833396155E-005
+ CRIT  1.320624683269252E-006
+ ========================
+ STARTING A NEW SCF. Step            7
+ CRIT  3.554776701801010E-005
+ CRIT  3.559810455511852E-005
+ CRIT  2.566465613357735E-007
+ ========================
+ STARTING A NEW SCF. Step            8
+ CRIT  5.168698898335905E-006
+ CRIT  5.170916682057807E-006
+ ========================
+ STARTING A NEW SCF. Step            9
+ CRIT  1.398761217426019E-006
+ CRIT  1.400177254236667E-006
+ ========================
+ STARTING A NEW SCF. Step           10
+ CRIT  1.423517021611198E-007
+ CRIT  1.435668499444052E-007
+ ========================
+ STARTING A NEW SCF. Step            1
+ CRIT   1.00000000000000     
+ CRIT   1.00000000000000     
+ CRIT   1.00000000000000     
+ ========================
+ STARTING A NEW SCF. Step            2
+ CRIT  0.370271731857136     
+ CRIT  0.370350223001759     
+ CRIT  2.292765142744133E-002
+ ========================
+ STARTING A NEW SCF. Step            3
+ CRIT  8.662399043442878E-002
+ CRIT  8.663561530336976E-002
+ CRIT  5.534442753751023E-003
+ ========================
+ STARTING A NEW SCF. Step            4
+ CRIT  5.116588071365834E-002
+ CRIT  5.116843800304409E-002
+ CRIT  7.390875743918705E-004
+ ========================
+ STARTING A NEW SCF. Step            5
+ CRIT  1.691872007800173E-002
+ CRIT  1.692472601877324E-002
+ CRIT  9.496702545924955E-005
+ ========================
+ STARTING A NEW SCF. Step            6
+ CRIT  8.100778821959451E-003
+ CRIT  8.103372527071879E-003
+ CRIT  8.716779501929048E-006
+ ========================
+ STARTING A NEW SCF. Step            7
+ CRIT  2.507280720480479E-003
+ CRIT  2.510174871939963E-003
+ CRIT  3.829797244118421E-006
+ ========================
+ STARTING A NEW SCF. Step            8
+ CRIT  1.907691841715990E-004
+ CRIT  1.924387049621183E-004
+ CRIT  2.443775427745033E-006
+ ========================
+ STARTING A NEW SCF. Step            9
+ CRIT  3.524839168665411E-005
+ CRIT  3.713668721476879E-005
+ CRIT  1.803238121083767E-006
+ ========================
+ STARTING A NEW SCF. Step           10
+ CRIT  2.042752215889187E-005
+ CRIT  2.131514408069438E-005
+ CRIT  4.719391849693200E-007
+ ========================
+ STARTING A NEW SCF. Step           11
+ CRIT  2.171798275807543E-006
+ CRIT  1.946782124469374E-006
+ ========================
+ STARTING A NEW SCF. Step           12
+ CRIT  3.370927826743264E-007
+ CRIT  5.480610087181005E-007
+################################################################################
+********************************************************************************
+****  N U C L E U S : Ni(1)
+ 
+ Atom input number in the ADF calculation: Ni(1)
+ Internal NMR numbering of atoms: Ni(1)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000          -11916.197     0.154    -0.501
+           0.000     0.000     0.000               0.154-11916.145    -0.656
+           0.000     0.000     0.000              -0.501    -0.656  -647.585
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =  -8159.976
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          63.449     0.003     0.052               4.870     0.000     0.000
+           0.003    63.448    -0.006               0.000     4.870     0.000
+           0.052    -0.006   252.325               0.000     0.000    11.639
+    -----------------------------------     -----------------------------------
+              isotropic =    126.407                  isotropic =      7.126
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                          -11847.878     0.157    -0.449
+                               0.157-11847.827    -0.662
+                              -0.449    -0.662  -383.621
+                        -----------------------------------
+                                  isotropic =  -8026.442
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                          -11848.012-11847.694  -383.621
+ 
+                        ==== Principal Axis System:
+
+                               0.762    -0.648     0.000
+                              -0.648    -0.762     0.000
+                               0.000     0.000     1.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            2258.651     0.000     0.002
+           0.000     0.000     0.000               0.000  2258.651    -0.001
+           0.000     0.000     0.000               0.002    -0.001  2270.700
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   2262.667
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                            2258.651     0.000     0.002
+                               0.000  2258.651    -0.001
+                               0.002    -0.001  2270.700
+                        -----------------------------------
+                                  isotropic =   2262.667
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            2258.651  2258.651  2270.700
+ 
+                        ==== Principal Axis System:
+
+                               0.955     0.298     0.000
+                              -0.298     0.955     0.000
+                               0.000     0.000     1.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                           -9589.227     0.157    -0.448
+                               0.157 -9589.176    -0.663
+                              -0.448    -0.663  1887.078
+                        -----------------------------------
+                                  isotropic =  -5763.775
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                           -9589.361 -9589.043  1887.078
+ 
+                        ==== Principal Axis System:
+
+                               0.762    -0.647     0.000
+                              -0.647    -0.762     0.000
+                               0.000     0.000     1.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(2)
+ 
+ Atom input number in the ADF calculation: H(2)
+ Internal NMR numbering of atoms: H(2)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              -7.813     7.988     6.514
+           0.000     0.000     0.000               7.988   -27.439   -18.323
+           0.000     0.000     0.000               6.514   -18.323     6.568
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.561
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           3.577    -3.346    -5.544               3.701     0.459    -0.220
+          -3.346    11.798    15.594               0.459     2.574     0.619
+          -5.544    15.594    -7.956              -0.220     0.619     1.125
+    -----------------------------------     -----------------------------------
+              isotropic =      2.473                  isotropic =      2.467
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              -0.535     5.101     0.750
+                               5.101   -13.067    -2.110
+                               0.750    -2.110    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.621
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.216     0.073     1.279
+ 
+                        ==== Principal Axis System:
+
+                               0.331     0.050     0.942
+                              -0.932    -0.140     0.335
+                              -0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              27.938    -4.921    -0.778
+           0.000     0.000     0.000              -4.921    40.030     2.189
+           0.000     0.000     0.000              -0.778     2.189    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              27.938    -4.921    -0.778
+                              -4.921    40.030     2.189
+                              -0.778     2.189    25.203
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.189    42.099
+ 
+                        ==== Principal Axis System:
+
+                               0.046     0.942     0.332
+                              -0.128     0.335    -0.933
+                               0.991     0.000    -0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              27.403     0.180    -0.028
+                               0.180    26.963     0.079
+                              -0.028     0.079    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.902    27.467
+ 
+                        ==== Principal Axis System:
+
+                               0.014     0.335     0.942
+                              -0.040    -0.941     0.335
+                               0.999    -0.043     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(12)
+ 
+ Atom input number in the ADF calculation: C(3)
+ Internal NMR numbering of atoms: C(12)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -218.966    27.184    11.861
+           0.000     0.000     0.000              27.184  -285.749   -33.359
+           0.000     0.000     0.000              11.861   -33.359  -194.905
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.207
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          32.678   -13.232    -7.778              10.517     1.051     2.904
+         -13.232    65.196    21.875               1.051     7.935    -8.164
+          -7.778    21.875   121.677               2.904    -8.164     7.842
+    -----------------------------------     -----------------------------------
+              isotropic =     73.184                  isotropic =      8.765
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -175.770    15.004     6.987
+                              15.004  -212.618   -19.648
+                               6.987   -19.648   -65.386
+                        -----------------------------------
+                                  isotropic =   -151.258
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.753  -170.434   -62.587
+ 
+                        ==== Principal Axis System:
+
+                               0.332     0.942     0.045
+                              -0.934     0.335    -0.125
+                              -0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             256.329     2.459    -1.435
+           0.000     0.000     0.000               2.459   250.284     4.033
+           0.000     0.000     0.000              -1.435     4.033   232.895
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.503
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             256.329     2.459    -1.435
+                               2.459   250.284     4.033
+                              -1.435     4.033   232.895
+                        -----------------------------------
+                                  isotropic =    246.503
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.851   250.454   257.203
+ 
+                        ==== Principal Axis System:
+
+                               0.079     0.325     0.942
+                              -0.223    -0.915     0.335
+                               0.972    -0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              80.559    17.463     5.552
+                              17.463    37.666   -15.615
+                               5.552   -15.615   167.509
+                        -----------------------------------
+                                  isotropic =     95.245
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.466    86.769   169.498
+ 
+                        ==== Principal Axis System:
+
+                               0.333     0.942     0.040
+                              -0.935     0.335    -0.112
+                              -0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(3)
+ 
+ Atom input number in the ADF calculation: H(4)
+ Internal NMR numbering of atoms: H(3)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             -30.261    -0.695    19.437
+           0.000     0.000     0.000              -0.695    -4.991     0.532
+           0.000     0.000     0.000              19.437     0.532     6.572
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.560
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          12.981     0.292   -16.543               2.411    -0.040    -0.656
+           0.292     2.394    -0.453              -0.040     3.863    -0.018
+         -16.543    -0.453    -7.959              -0.656    -0.018     1.125
+    -----------------------------------     -----------------------------------
+              isotropic =      2.472                  isotropic =      2.467
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                             -14.869    -0.443     2.238
+                              -0.443     1.267     0.062
+                               2.238     0.062    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.621
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.216     0.073     1.279
+ 
+                        ==== Principal Axis System:
+
+                              -0.989     0.148     0.027
+                              -0.027     0.004    -1.000
+                               0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              41.768     0.428    -2.321
+           0.000     0.000     0.000               0.428    26.200    -0.064
+           0.000     0.000     0.000              -2.321    -0.064    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              41.768     0.428    -2.321
+                               0.428    26.200    -0.064
+                              -2.321    -0.064    25.203
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.189    42.099
+ 
+                        ==== Principal Axis System:
+
+                               0.136     0.027    -0.990
+                               0.004    -1.000    -0.027
+                               0.991     0.000     0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              26.899    -0.015    -0.084
+                              -0.015    27.467    -0.002
+                              -0.084    -0.002    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.903    27.467
+ 
+                        ==== Principal Axis System:
+
+                               0.043    -0.999     0.027
+                               0.001    -0.027    -1.000
+                               0.999     0.043     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(13)
+ 
+ Atom input number in the ADF calculation: C(5)
+ Internal NMR numbering of atoms: C(13)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -295.348    -2.362    35.388
+           0.000     0.000     0.000              -2.362  -209.356     0.972
+           0.000     0.000     0.000              35.388     0.972  -194.900
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.201
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          69.868     1.151   -23.208               7.563    -0.091     8.662
+           1.151    28.001    -0.643              -0.091    10.890     0.239
+         -23.208    -0.643   121.675               8.662     0.239     7.843
+    -----------------------------------     -----------------------------------
+              isotropic =     73.181                  isotropic =      8.765
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -217.917    -1.302    20.841
+                              -1.302  -170.464     0.567
+                              20.841     0.567   -65.382
+                        -----------------------------------
+                                  isotropic =   -151.255
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.750  -170.429   -62.584
+ 
+                        ==== Principal Axis System:
+
+                              -0.991     0.027     0.133
+                              -0.027    -1.000     0.004
+                               0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             249.417    -0.214    -4.279
+           0.000     0.000     0.000              -0.214   257.198    -0.116
+           0.000     0.000     0.000              -4.279    -0.116   232.894
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.503
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             249.417    -0.214    -4.279
+                              -0.214   257.198    -0.116
+                              -4.279    -0.116   232.894
+                        -----------------------------------
+                                  isotropic =    246.503
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.851   250.454   257.204
+ 
+                        ==== Principal Axis System:
+
+                               0.237    -0.971     0.027
+                               0.006    -0.027    -1.000
+                               0.972     0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              31.500    -1.516    16.562
+                              -1.516    86.733     0.452
+                              16.562     0.452   167.512
+                        -----------------------------------
+                                  isotropic =     95.248
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.470    86.775   169.501
+ 
+                        ==== Principal Axis System:
+
+                              -0.993     0.027     0.119
+                              -0.027    -1.000     0.003
+                               0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(4)
+ 
+ Atom input number in the ADF calculation: H(6)
+ Internal NMR numbering of atoms: H(4)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              -6.993    -6.866     5.499
+           0.000     0.000     0.000              -6.866   -28.257    18.650
+           0.000     0.000     0.000               5.499    18.650     6.572
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.559
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           3.232     2.876    -4.680               3.748    -0.394    -0.185
+           2.876    12.142   -15.873              -0.394     2.527    -0.629
+          -4.680   -15.873    -7.960              -0.185    -0.629     1.126
+    -----------------------------------     -----------------------------------
+              isotropic =      2.472                  isotropic =      2.467
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              -0.013    -4.384     0.633
+                              -4.384   -13.587     2.147
+                               0.633     2.147    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.621
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.215     0.073     1.280
+ 
+                        ==== Principal Axis System:
+
+                              -0.280     0.042     0.959
+                              -0.949     0.142    -0.283
+                               0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              27.435     4.229    -0.657
+           0.000     0.000     0.000               4.229    40.533    -2.228
+           0.000     0.000     0.000              -0.657    -2.228    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              27.435     4.229    -0.657
+                               4.229    40.533    -2.228
+                              -0.657    -2.228    25.203
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.188    42.099
+ 
+                        ==== Principal Axis System:
+
+                               0.039     0.959    -0.280
+                               0.131    -0.283    -0.950
+                               0.991     0.000     0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              27.422    -0.154    -0.024
+                              -0.154    26.945    -0.080
+                              -0.024    -0.080    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.903    27.468
+ 
+                        ==== Principal Axis System:
+
+                               0.012    -0.283     0.959
+                               0.041    -0.958    -0.283
+                               0.999     0.043     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(14)
+ 
+ Atom input number in the ADF calculation: C(7)
+ Internal NMR numbering of atoms: C(14)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -216.169   -23.369    10.010
+           0.000     0.000     0.000             -23.369  -288.522    33.952
+           0.000     0.000     0.000              10.010    33.952  -194.899
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.197
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          31.332    11.375    -6.564              10.625    -0.904     2.451
+          11.375    66.557   -22.274              -0.904     7.826     8.311
+          -6.564   -22.274   121.672               2.451     8.311     7.844
+    -----------------------------------     -----------------------------------
+              isotropic =     73.187                  isotropic =      8.765
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -174.212   -12.898     5.897
+                             -12.898  -214.139    19.989
+                               5.897    19.989   -65.383
+                        -----------------------------------
+                                  isotropic =   -151.244
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.738  -170.408   -62.587
+ 
+                        ==== Principal Axis System:
+
+                              -0.280     0.959     0.038
+                              -0.951    -0.283     0.128
+                               0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             256.578    -2.114    -1.212
+           0.000     0.000     0.000              -2.114   250.032    -4.105
+           0.000     0.000     0.000              -1.212    -4.105   232.895
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.502
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             256.578    -2.114    -1.212
+                              -2.114   250.032    -4.105
+                              -1.212    -4.105   232.895
+                        -----------------------------------
+                                  isotropic =    246.502
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.851   250.452   257.201
+ 
+                        ==== Principal Axis System:
+
+                               0.067    -0.275     0.959
+                               0.227    -0.932    -0.283
+                               0.972     0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              82.366   -15.012     4.685
+                             -15.012    35.893    15.884
+                               4.685    15.884   167.512
+                        -----------------------------------
+                                  isotropic =     95.257
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.479    86.794   169.499
+ 
+                        ==== Principal Axis System:
+
+                              -0.281     0.959     0.034
+                              -0.952    -0.283     0.114
+                               0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(5)
+ 
+ Atom input number in the ADF calculation: H(8)
+ Internal NMR numbering of atoms: H(5)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             -22.190    11.804   -16.039
+           0.000     0.000     0.000              11.804   -13.062    10.993
+           0.000     0.000     0.000             -16.039    10.993     6.569
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.561
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           9.601    -4.946    13.651               2.875     0.678     0.542
+          -4.946     5.777    -9.356               0.678     3.400    -0.371
+          13.651    -9.356    -7.957               0.542    -0.371     1.126
+    -----------------------------------     -----------------------------------
+              isotropic =      2.473                  isotropic =      2.467
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              -9.714     7.536    -1.847
+                               7.536    -3.886     1.266
+                              -1.847     1.266    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.620
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.215     0.074     1.280
+ 
+                        ==== Principal Axis System:
+
+                               0.816    -0.122     0.565
+                              -0.559     0.084     0.825
+                               0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              36.795    -7.271     1.916
+           0.000     0.000     0.000              -7.271    31.172    -1.313
+           0.000     0.000     0.000               1.916    -1.313    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              36.795    -7.271     1.916
+                              -7.271    31.172    -1.313
+                               1.916    -1.313    25.203
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.188    42.098
+ 
+                        ==== Principal Axis System:
+
+                              -0.112     0.565     0.817
+                               0.077     0.825    -0.560
+                               0.991     0.000     0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              27.081     0.265     0.069
+                               0.265    27.286    -0.047
+                               0.069    -0.047    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.903    27.468
+ 
+                        ==== Principal Axis System:
+
+                              -0.035     0.824     0.566
+                               0.024    -0.565     0.825
+                               0.999     0.042     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(15)
+ 
+ Atom input number in the ADF calculation: C(9)
+ Internal NMR numbering of atoms: C(15)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -267.873    40.171   -29.198
+           0.000     0.000     0.000              40.171  -236.811    20.012
+           0.000     0.000     0.000             -29.198    20.012  -194.904
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.196
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          56.512   -19.557    19.155               8.625     1.555    -7.147
+         -19.557    41.389   -13.129               1.555     9.828     4.899
+          19.155   -13.129   121.676              -7.147     4.899     7.844
+    -----------------------------------     -----------------------------------
+              isotropic =     73.192                  isotropic =      8.766
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -202.736    22.169   -17.191
+                              22.169  -185.594    11.781
+                             -17.191    11.781   -65.384
+                        -----------------------------------
+                                  isotropic =   -151.238
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.729  -170.397   -62.588
+ 
+                        ==== Principal Axis System:
+
+                               0.817     0.565    -0.110
+                              -0.560     0.825     0.075
+                               0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             251.898     3.634     3.531
+           0.000     0.000     0.000               3.634   254.708    -2.420
+           0.000     0.000     0.000               3.531    -2.420   232.895
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.500
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             251.898     3.634     3.531
+                               3.634   254.708    -2.420
+                               3.531    -2.420   232.895
+                        -----------------------------------
+                                  isotropic =    246.500
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.851   250.450   257.199
+ 
+                        ==== Principal Axis System:
+
+                              -0.195     0.801     0.565
+                               0.134    -0.549     0.825
+                               0.972     0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              49.162    25.803   -13.660
+                              25.803    69.114     9.361
+                             -13.660     9.361   167.511
+                        -----------------------------------
+                                  isotropic =     95.262
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.487    86.803   169.498
+ 
+                        ==== Principal Axis System:
+
+                               0.819     0.565    -0.098
+                              -0.561     0.825     0.067
+                               0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(6)
+ 
+ Atom input number in the ADF calculation: H(10)
+ Internal NMR numbering of atoms: H(6)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             -20.872   -12.231   -15.413
+           0.000     0.000     0.000             -12.231   -14.381   -11.858
+           0.000     0.000     0.000             -15.413   -11.858     6.567
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.562
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           9.049     5.124    13.117               2.952    -0.703     0.520
+           5.124     6.329    10.092              -0.703     3.324     0.400
+          13.117    10.092    -7.955               0.520     0.400     1.126
+    -----------------------------------     -----------------------------------
+              isotropic =      2.475                  isotropic =      2.467
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              -8.871    -7.810    -1.775
+                              -7.810    -4.729    -1.365
+                              -1.775    -1.365    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.621
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.215     0.073     1.280
+ 
+                        ==== Principal Axis System:
+
+                              -0.784    -0.117     0.610
+                              -0.603    -0.090    -0.793
+                              -0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              35.982     7.535     1.841
+           0.000     0.000     0.000               7.535    31.985     1.416
+           0.000     0.000     0.000               1.841     1.416    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              35.982     7.535     1.841
+                               7.535    31.985     1.416
+                               1.841     1.416    25.203
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.188    42.098
+ 
+                        ==== Principal Axis System:
+
+                              -0.108     0.610    -0.785
+                              -0.083    -0.793    -0.604
+                               0.991     0.000    -0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              27.111    -0.275     0.066
+                              -0.275    27.256     0.051
+                               0.066     0.051    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.903    27.468
+ 
+                        ==== Principal Axis System:
+
+                              -0.034    -0.792     0.610
+                              -0.026    -0.609    -0.792
+                               0.999    -0.043     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(16)
+ 
+ Atom input number in the ADF calculation: C(11)
+ Internal NMR numbering of atoms: C(16)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -263.388   -41.623   -28.058
+           0.000     0.000     0.000             -41.623  -241.310   -21.587
+           0.000     0.000     0.000             -28.058   -21.587  -194.908
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.202
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          54.325    20.264    18.404               8.800    -1.611    -6.867
+          20.264    43.568    14.156              -1.611     9.654    -5.284
+          18.404    14.156   121.682              -6.867    -5.284     7.842
+    -----------------------------------     -----------------------------------
+              isotropic =     73.192                  isotropic =      8.766
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -200.262   -22.969   -16.521
+                             -22.969  -188.087   -12.715
+                             -16.521   -12.715   -65.384
+                        -----------------------------------
+                                  isotropic =   -151.244
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.734  -170.413   -62.586
+ 
+                        ==== Principal Axis System:
+
+                              -0.785     0.610    -0.105
+                              -0.604    -0.793    -0.081
+                              -0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             252.304    -3.766     3.392
+           0.000     0.000     0.000              -3.766   254.303     2.612
+           0.000     0.000     0.000               3.392     2.612   232.894
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.501
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             252.304    -3.766     3.392
+                              -3.766   254.303     2.612
+                               3.392     2.612   232.894
+                        -----------------------------------
+                                  isotropic =    246.501
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.851   250.451   257.200
+ 
+                        ==== Principal Axis System:
+
+                              -0.188    -0.770     0.610
+                              -0.145    -0.592    -0.793
+                               0.972    -0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              52.042   -26.736   -13.129
+                             -26.736    66.216   -10.103
+                             -13.129   -10.103   167.511
+                        -----------------------------------
+                                  isotropic =     95.256
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.482    86.788   169.499
+ 
+                        ==== Principal Axis System:
+
+                              -0.787     0.610    -0.094
+                              -0.605    -0.793    -0.073
+                              -0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(7)
+ 
+ Atom input number in the ADF calculation: H(12)
+ Internal NMR numbering of atoms: H(7)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              -6.994    -6.867    -5.499
+           0.000     0.000     0.000              -6.867   -28.251   -18.655
+           0.000     0.000     0.000              -5.499   -18.655     6.567
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.559
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           3.233     2.878     4.680               3.748    -0.394     0.186
+           2.878    12.138    15.876              -0.394     2.527     0.629
+           4.680    15.876    -7.955               0.186     0.629     1.126
+    -----------------------------------     -----------------------------------
+              isotropic =      2.472                  isotropic =      2.467
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              -0.013    -4.383    -0.634
+                              -4.383   -13.587    -2.150
+                              -0.634    -2.150    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.620
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.215     0.074     1.280
+ 
+                        ==== Principal Axis System:
+
+                              -0.280    -0.042     0.959
+                              -0.949    -0.142    -0.283
+                              -0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              27.435     4.229     0.657
+           0.000     0.000     0.000               4.229    40.532     2.230
+           0.000     0.000     0.000               0.657     2.230    25.204
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              27.435     4.229     0.657
+                               4.229    40.532     2.230
+                               0.657     2.230    25.204
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.188    42.099
+ 
+                        ==== Principal Axis System:
+
+                              -0.038     0.959    -0.280
+                              -0.131    -0.283    -0.950
+                               0.991    -0.001    -0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              27.423    -0.154     0.023
+                              -0.154    26.946     0.080
+                               0.023     0.080    24.942
+                        -----------------------------------
+                                  isotropic =     26.437
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.904    27.468
+ 
+                        ==== Principal Axis System:
+
+                              -0.012    -0.283     0.959
+                              -0.041    -0.958    -0.283
+                               0.999    -0.043     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(17)
+ 
+ Atom input number in the ADF calculation: C(13)
+ Internal NMR numbering of atoms: C(17)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -216.161   -23.364   -10.016
+           0.000     0.000     0.000             -23.364  -288.517   -33.970
+           0.000     0.000     0.000             -10.016   -33.970  -194.909
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.196
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          31.341    11.377     6.580              10.624    -0.904    -2.451
+          11.377    66.565    22.260              -0.904     7.826    -8.310
+           6.580    22.260   121.680              -2.451    -8.310     7.842
+    -----------------------------------     -----------------------------------
+              isotropic =     73.196                  isotropic =      8.764
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -174.196   -12.892    -5.887
+                             -12.892  -214.126   -20.020
+                              -5.887   -20.020   -65.387
+                        -----------------------------------
+                                  isotropic =   -151.236
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.730  -170.395   -62.584
+ 
+                        ==== Principal Axis System:
+
+                              -0.280     0.959    -0.038
+                              -0.951    -0.283    -0.128
+                              -0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             256.577    -2.114     1.206
+           0.000     0.000     0.000              -2.114   250.029     4.109
+           0.000     0.000     0.000               1.206     4.109   232.896
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.501
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             256.577    -2.114     1.206
+                              -2.114   250.029     4.109
+                               1.206     4.109   232.896
+                        -----------------------------------
+                                  isotropic =    246.501
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.851   250.451   257.200
+ 
+                        ==== Principal Axis System:
+
+                              -0.067    -0.275     0.959
+                              -0.227    -0.932    -0.283
+                               0.972    -0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              82.381   -15.006    -4.681
+                             -15.006    35.903   -15.911
+                              -4.681   -15.911   167.509
+                        -----------------------------------
+                                  isotropic =     95.265
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.487    86.805   169.502
+ 
+                        ==== Principal Axis System:
+
+                              -0.281     0.959    -0.034
+                              -0.952    -0.283    -0.114
+                              -0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(8)
+ 
+ Atom input number in the ADF calculation: H(14)
+ Internal NMR numbering of atoms: H(8)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             -22.183    11.799    16.043
+           0.000     0.000     0.000              11.799   -13.058   -10.997
+           0.000     0.000     0.000              16.043   -10.997     6.570
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.557
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           9.593    -4.942   -13.653               2.874     0.678    -0.541
+          -4.942     5.773     9.358               0.678     3.399     0.371
+         -13.653     9.358    -7.958              -0.541     0.371     1.125
+    -----------------------------------     -----------------------------------
+              isotropic =      2.469                  isotropic =      2.466
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              -9.715     7.535     1.849
+                               7.535    -3.887    -1.267
+                               1.849    -1.267    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.621
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.216     0.074     1.278
+ 
+                        ==== Principal Axis System:
+
+                               0.816     0.122     0.565
+                              -0.559    -0.084     0.825
+                              -0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              36.796    -7.270    -1.918
+           0.000     0.000     0.000              -7.270    31.172     1.314
+           0.000     0.000     0.000              -1.918     1.314    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              36.796    -7.270    -1.918
+                              -7.270    31.172     1.314
+                              -1.918     1.314    25.203
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.883    26.189    42.099
+ 
+                        ==== Principal Axis System:
+
+                               0.113     0.565     0.817
+                              -0.077     0.825    -0.560
+                               0.991     0.000    -0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              27.081     0.265    -0.069
+                               0.265    27.286     0.047
+                              -0.069     0.047    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.903    27.467
+ 
+                        ==== Principal Axis System:
+
+                               0.035     0.824     0.565
+                              -0.024    -0.565     0.825
+                               0.999    -0.043     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(18)
+ 
+ Atom input number in the ADF calculation: C(15)
+ Internal NMR numbering of atoms: C(18)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -267.889    40.156    29.219
+           0.000     0.000     0.000              40.156  -236.822   -20.029
+           0.000     0.000     0.000              29.219   -20.029  -194.906
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.206
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          56.498   -19.550   -19.140               8.624     1.552     7.148
+         -19.550    41.375    13.123               1.552     9.826    -4.899
+         -19.140    13.123   121.673               7.148    -4.899     7.843
+    -----------------------------------     -----------------------------------
+              isotropic =     73.182                  isotropic =      8.764
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -202.768    22.158    17.227
+                              22.158  -185.621   -11.805
+                              17.227   -11.805   -65.390
+                        -----------------------------------
+                                  isotropic =   -151.260
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.761  -170.435   -62.583
+ 
+                        ==== Principal Axis System:
+
+                               0.818     0.565     0.110
+                              -0.560     0.825    -0.075
+                              -0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             251.901     3.635    -3.535
+           0.000     0.000     0.000               3.635   254.713     2.420
+           0.000     0.000     0.000              -3.535     2.420   232.895
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.503
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             251.901     3.635    -3.535
+                               3.635   254.713     2.420
+                              -3.535     2.420   232.895
+                        -----------------------------------
+                                  isotropic =    246.503
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.850   250.455   257.204
+ 
+                        ==== Principal Axis System:
+
+                               0.196     0.801     0.565
+                              -0.134    -0.549     0.825
+                               0.972    -0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              49.133    25.793    13.693
+                              25.793    69.092    -9.386
+                              13.693    -9.386   167.505
+                        -----------------------------------
+                                  isotropic =     95.243
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.460    86.769   169.501
+ 
+                        ==== Principal Axis System:
+
+                               0.819     0.565     0.098
+                              -0.561     0.825    -0.068
+                              -0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(9)
+ 
+ Atom input number in the ADF calculation: H(16)
+ Internal NMR numbering of atoms: H(9)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             -20.865   -12.229    15.414
+           0.000     0.000     0.000             -12.229   -14.382    11.857
+           0.000     0.000     0.000              15.414    11.857     6.573
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.558
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           9.042     5.122   -13.118               2.950    -0.703    -0.520
+           5.122     6.328   -10.091              -0.703     3.323    -0.400
+         -13.118   -10.091    -7.960              -0.520    -0.400     1.125
+    -----------------------------------     -----------------------------------
+              isotropic =      2.470                  isotropic =      2.466
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              -8.873    -7.809     1.776
+                              -7.809    -4.730     1.366
+                               1.776     1.366    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.622
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.216     0.074     1.278
+ 
+                        ==== Principal Axis System:
+
+                              -0.784     0.117     0.610
+                              -0.603     0.090    -0.793
+                               0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              35.983     7.535    -1.842
+           0.000     0.000     0.000               7.535    31.986    -1.417
+           0.000     0.000     0.000              -1.842    -1.417    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.058
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              35.983     7.535    -1.842
+                               7.535    31.986    -1.417
+                              -1.842    -1.417    25.203
+                        -----------------------------------
+                                  isotropic =     31.058
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.189    42.100
+ 
+                        ==== Principal Axis System:
+
+                               0.108     0.610    -0.785
+                               0.083    -0.793    -0.604
+                               0.991     0.000     0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              27.111    -0.274    -0.067
+                              -0.274    27.256    -0.051
+                              -0.067    -0.051    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.903    27.467
+ 
+                        ==== Principal Axis System:
+
+                               0.034    -0.792     0.610
+                               0.026    -0.610    -0.792
+                               0.999     0.043     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(19)
+ 
+ Atom input number in the ADF calculation: C(17)
+ Internal NMR numbering of atoms: C(19)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -263.405   -41.615    28.072
+           0.000     0.000     0.000             -41.615  -241.333    21.592
+           0.000     0.000     0.000              28.072    21.592  -194.899
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.212
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          54.305    20.263   -18.390               8.798    -1.609     6.869
+          20.263    43.563   -14.157              -1.609     9.650     5.282
+         -18.390   -14.157   121.675               6.869     5.282     7.843
+    -----------------------------------     -----------------------------------
+              isotropic =     73.181                  isotropic =      8.764
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -200.301   -22.962    16.551
+                             -22.962  -188.120    12.717
+                              16.551    12.717   -65.382
+                        -----------------------------------
+                                  isotropic =   -151.268
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.770  -170.455   -62.579
+ 
+                        ==== Principal Axis System:
+
+                              -0.786     0.610     0.106
+                              -0.604    -0.793     0.081
+                               0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             252.309    -3.767    -3.396
+           0.000     0.000     0.000              -3.767   254.308    -2.608
+           0.000     0.000     0.000              -3.396    -2.608   232.893
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.504
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             252.309    -3.767    -3.396
+                              -3.767   254.308    -2.608
+                              -3.396    -2.608   232.893
+                        -----------------------------------
+                                  isotropic =    246.504
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.849   250.456   257.206
+ 
+                        ==== Principal Axis System:
+
+                               0.188    -0.770     0.610
+                               0.144    -0.592    -0.793
+                               0.972     0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              52.008   -26.728    13.155
+                             -26.728    66.188    10.109
+                              13.155    10.109   167.511
+                        -----------------------------------
+                                  isotropic =     95.236
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.451    86.751   169.505
+ 
+                        ==== Principal Axis System:
+
+                              -0.787     0.610     0.095
+                              -0.605    -0.793     0.073
+                               0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(10)
+ 
+ Atom input number in the ADF calculation: H(18)
+ Internal NMR numbering of atoms: H(10)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              -7.813     7.990    -6.513
+           0.000     0.000     0.000               7.990   -27.440    18.321
+           0.000     0.000     0.000              -6.513    18.321     6.571
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.561
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           3.577    -3.348     5.543               3.702     0.459     0.220
+          -3.348    11.799   -15.593               0.459     2.573    -0.618
+           5.543   -15.593    -7.959               0.220    -0.618     1.126
+    -----------------------------------     -----------------------------------
+              isotropic =      2.473                  isotropic =      2.467
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              -0.534     5.100    -0.750
+                               5.100   -13.067     2.110
+                              -0.750     2.110    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.621
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.216     0.073     1.279
+ 
+                        ==== Principal Axis System:
+
+                               0.331    -0.050     0.942
+                              -0.932     0.140     0.335
+                               0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              27.938    -4.921     0.777
+           0.000     0.000     0.000              -4.921    40.030    -2.188
+           0.000     0.000     0.000               0.777    -2.188    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              27.938    -4.921     0.777
+                              -4.921    40.030    -2.188
+                               0.777    -2.188    25.203
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.189    42.099
+ 
+                        ==== Principal Axis System:
+
+                              -0.045     0.942     0.332
+                               0.128     0.335    -0.933
+                               0.991    -0.001     0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              27.404     0.180     0.027
+                               0.180    26.963    -0.079
+                               0.027    -0.079    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.903    27.468
+ 
+                        ==== Principal Axis System:
+
+                              -0.014     0.335     0.942
+                               0.040    -0.941     0.335
+                               0.999     0.042     0.000
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(20)
+ 
+ Atom input number in the ADF calculation: C(19)
+ Internal NMR numbering of atoms: C(20)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -218.961    27.183   -11.857
+           0.000     0.000     0.000              27.183  -285.763    33.360
+           0.000     0.000     0.000             -11.857    33.360  -194.902
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.208
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          32.689   -13.238     7.783              10.516     1.051    -2.901
+         -13.238    65.208   -21.875               1.051     7.931     8.164
+           7.783   -21.875   121.674              -2.901     8.164     7.844
+    -----------------------------------     -----------------------------------
+              isotropic =     73.190                  isotropic =      8.764
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -175.756    14.996    -6.975
+                              14.996  -212.624    19.650
+                              -6.975    19.650   -65.384
+                        -----------------------------------
+                                  isotropic =   -151.254
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.751  -170.427   -62.585
+ 
+                        ==== Principal Axis System:
+
+                               0.332     0.942    -0.044
+                              -0.934     0.335     0.125
+                               0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             256.328     2.460     1.429
+           0.000     0.000     0.000               2.460   250.284    -4.034
+           0.000     0.000     0.000               1.429    -4.034   232.894
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.502
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             256.328     2.460     1.429
+                               2.460   250.284    -4.034
+                               1.429    -4.034   232.894
+                        -----------------------------------
+                                  isotropic =    246.502
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.851   250.452   257.202
+ 
+                        ==== Principal Axis System:
+
+                              -0.079     0.326     0.942
+                               0.223    -0.915     0.335
+                               0.972     0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              80.572    17.455    -5.546
+                              17.455    37.660    15.616
+                              -5.546    15.616   167.510
+                        -----------------------------------
+                                  isotropic =     95.247
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.467    86.776   169.500
+ 
+                        ==== Principal Axis System:
+
+                               0.332     0.942    -0.040
+                              -0.936     0.335     0.112
+                               0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : C(21)
+ 
+ Atom input number in the ADF calculation: C(20)
+ Internal NMR numbering of atoms: C(21)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000            -295.352    -2.358   -35.391
+           0.000     0.000     0.000              -2.358  -209.338    -0.971
+           0.000     0.000     0.000             -35.391    -0.971  -194.907
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =   -233.199
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          69.902     1.151    23.212               7.560    -0.090    -8.661
+           1.151    28.024     0.630              -0.090    10.889    -0.237
+          23.212     0.630   121.678              -8.661    -0.237     7.844
+    -----------------------------------     -----------------------------------
+              isotropic =     73.201                  isotropic =      8.764
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                            -217.890    -1.297   -20.840
+                              -1.297  -170.425    -0.578
+                             -20.840    -0.578   -65.385
+                        -----------------------------------
+                                  isotropic =   -151.233
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                            -220.724  -170.390   -62.587
+ 
+                        ==== Principal Axis System:
+
+                              -0.991     0.027    -0.133
+                              -0.027    -1.000    -0.004
+                              -0.133     0.000     0.991
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             249.411    -0.215     4.279
+           0.000     0.000     0.000              -0.215   257.193     0.118
+           0.000     0.000     0.000               4.279     0.118   232.895
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =    246.500
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                             249.411    -0.215     4.279
+                              -0.215   257.193     0.118
+                               4.279     0.118   232.895
+                        -----------------------------------
+                                  isotropic =    246.500
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             231.851   250.449   257.199
+ 
+                        ==== Principal Axis System:
+
+                              -0.237    -0.971     0.028
+                              -0.007    -0.027    -1.000
+                               0.972    -0.237     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              31.521    -1.512   -16.561
+                              -1.512    86.767    -0.460
+                             -16.561    -0.460   167.510
+                        -----------------------------------
+                                  isotropic =     95.266
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              29.491    86.809   169.499
+ 
+                        ==== Principal Axis System:
+
+                              -0.993     0.027    -0.119
+                              -0.027    -1.000    -0.003
+                              -0.119     0.000     0.993
+                        -----------------------------------
+################################################################################
+********************************************************************************
+****  N U C L E U S : H(11)
+ 
+ Atom input number in the ADF calculation: H(21)
+ Internal NMR numbering of atoms: H(11)
+ 
+ NBO: we are working with a Cartesian (6d/10f) basis
+ 
+================================================================================
+ 
+ 
+===  PARAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000             -30.264    -0.693   -19.438
+           0.000     0.000     0.000              -0.693    -4.988    -0.534
+           0.000     0.000     0.000             -19.438    -0.534     6.567
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -9.561
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          12.984     0.290    16.543               2.412    -0.040     0.656
+           0.290     2.392     0.454              -0.040     3.864     0.018
+          16.543     0.454    -7.955               0.656     0.018     1.126
+    -----------------------------------     -----------------------------------
+              isotropic =      2.474                  isotropic =      2.467
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                             -14.867    -0.443    -2.239
+                              -0.443     1.268    -0.061
+                              -2.239    -0.061    -0.262
+                        -----------------------------------
+                                  isotropic =     -4.620
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                             -15.215     0.073     1.280
+ 
+                        ==== Principal Axis System:
+
+                              -0.989    -0.148     0.027
+                              -0.027    -0.004    -1.000
+                              -0.148     0.989     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  DIAMAGNETIC NMR SHIELDING TENSORS (ppm)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              41.767     0.427     2.322
+           0.000     0.000     0.000               0.427    26.200     0.064
+           0.000     0.000     0.000               2.322     0.064    25.203
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     31.057
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              41.767     0.427     2.322
+                               0.427    26.200     0.064
+                               2.322     0.064    25.203
+                        -----------------------------------
+                                  isotropic =     31.057
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.884    26.188    42.098
+ 
+                        ==== Principal Axis System:
+
+                              -0.136     0.027    -0.990
+                              -0.004    -1.000    -0.027
+                               0.991     0.000    -0.136
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL NMR SHIELDING TENSOR (ppm)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total shielding tensor
+                        -----------------------------------
+                              26.900    -0.015     0.083
+                              -0.015    27.468     0.002
+                               0.083     0.002    24.941
+                        -----------------------------------
+                                  isotropic =     26.436
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              24.938    26.903    27.468
+ 
+                        ==== Principal Axis System:
+
+                              -0.042    -0.999     0.027
+                              -0.001    -0.027    -1.000
+                               0.999    -0.042     0.000
+                        -----------------------------------
+ *******************************************************************************
+
+                             N M R   E X I T
+ NORMAL TERMINATION
+
+
+
+ =================
+ Timing Statistics
+ =================
+  
+ Total Used :                     CPU=     6234.03      System=       46.38     Elapsed=     6288.34
+
+ Calls  Section                     ( Mean, Percentage )
+ ---------------------------------------------------------------------------------------------------
+     3  ><      ................      0.00    0.00             0.00    0.00             0.00    0.00
+     1  INPUTT  ................      0.02    0.00             0.00    0.00             0.02    0.00
+     1  INIT    ................      0.26    0.00             0.07    0.16             0.34    0.01
+     1  ZAOF1K  ................   1576.25   25.28             4.72   10.17          1582.41   25.16
+     1  ZU1K    ................    522.60    8.38            10.06   21.70           537.80    8.55
+    21  ZAODKK  ................    196.86   66.32             1.50   67.78           198.43   66.26
+     1  ZSG     ................      0.73    0.01             0.02    0.05             0.75    0.01
+     1  EXIT PROCEDURE .........      0.01    0.00             0.07    0.14             0.08    0.00
+
+
+ Currently Open Files (EXIT00)
+ ====================
+
+ Unit    Access Format  Status   Type       Ident (file)
+ -------------------------------------------------------
+   3      SEQ    FORM   TRANSP  NORMAL      LOGFILE
+                                          ( logfile )
+
+
+ Buffered I/O statistics
+ =======================
+ Memory available:                     67108864
+ Number of records fitting in memory:     16131
+ Input :   9.2% of                      1672012  *4k bytes
+ Output:   7.2% of                       210687  *4k bytes
+ Records from serial files evicted:           0
+                    others evicted:       41789
+ Hash table lookups:    5412081 with    1034967 conflicts ( 19.12%)
+
+ ***************************************************************************************************
+ (LOGFILE)
+ <Dec21-2012> <10:03:37>  NMR 2012.01  RunTime: Dec21-2012 10:03:37  Nodes: 1  Procs: 8
+ <Dec21-2012> <10:03:39>  FITFIT
+ <Dec21-2012> <10:03:39>  AOAOFIT
+ <Dec21-2012> <10:03:39>         atom:     1
+ <Dec21-2012> <10:05:34>         atom:     2
+ <Dec21-2012> <10:05:39>         atom:     3
+ <Dec21-2012> <10:05:44>         atom:     4
+ <Dec21-2012> <10:05:49>         atom:     5
+ <Dec21-2012> <10:05:54>         atom:     6
+ <Dec21-2012> <10:05:59>         atom:     7
+ <Dec21-2012> <10:06:04>         atom:     8
+ <Dec21-2012> <10:06:09>         atom:     9
+ <Dec21-2012> <10:06:14>         atom:    10
+ <Dec21-2012> <10:06:19>         atom:    11
+ <Dec21-2012> <10:06:24>         atom:    12
+ <Dec21-2012> <10:06:39>         atom:    13
+ <Dec21-2012> <10:06:54>         atom:    14
+ <Dec21-2012> <10:07:09>         atom:    15
+ <Dec21-2012> <10:07:24>         atom:    16
+ <Dec21-2012> <10:07:40>         atom:    17
+ <Dec21-2012> <10:07:55>         atom:    18
+ <Dec21-2012> <10:08:10>         atom:    19
+ <Dec21-2012> <10:08:25>         atom:    20
+ <Dec21-2012> <10:08:41>         atom:    21
+ <Dec21-2012> <10:08:56>  GIAOFITFIT
+ <Dec21-2012> <10:08:56>  GIAOAOAOFIT
+ <Dec21-2012> <10:08:56>         atom:     1
+ <Dec21-2012> <10:14:53>         atom:     2
+ <Dec21-2012> <10:15:11>         atom:     3
+ <Dec21-2012> <10:15:29>         atom:     4
+ <Dec21-2012> <10:15:47>         atom:     5
+ <Dec21-2012> <10:16:05>         atom:     6
+ <Dec21-2012> <10:16:23>         atom:     7
+ <Dec21-2012> <10:16:41>         atom:     8
+ <Dec21-2012> <10:17:00>         atom:     9
+ <Dec21-2012> <10:17:19>         atom:    10
+ <Dec21-2012> <10:17:37>         atom:    11
+ <Dec21-2012> <10:17:56>         atom:    12
+ <Dec21-2012> <10:18:50>         atom:    13
+ <Dec21-2012> <10:19:45>         atom:    14
+ <Dec21-2012> <10:20:40>         atom:    15
+ <Dec21-2012> <10:21:36>         atom:    16
+ <Dec21-2012> <10:22:33>         atom:    17
+ <Dec21-2012> <10:23:35>         atom:    18
+ <Dec21-2012> <10:24:34>         atom:    19
+ <Dec21-2012> <10:25:31>         atom:    20
+ <Dec21-2012> <10:26:26>         atom:    21
+ <Dec21-2012> <10:27:23>  >>>> ZSG
+ <Dec21-2012> <10:27:35>  Executing NEW zu1k
+ <Dec21-2012> <10:27:35>  >>>> ZU1K
+ <Dec21-2012> <11:16:21>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:17:52>  NMR Shielding  Ni(1):       -5763.78 ppm
+ <Dec21-2012> <11:17:52>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:19:24>  NMR Shielding   H(2):          26.44 ppm
+ <Dec21-2012> <11:19:24>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:20:56>  NMR Shielding   C(12):         95.24 ppm
+ <Dec21-2012> <11:20:56>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:22:27>  NMR Shielding   H(3):          26.44 ppm
+ <Dec21-2012> <11:22:27>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:23:59>  NMR Shielding   C(13):         95.25 ppm
+ <Dec21-2012> <11:23:59>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:25:31>  NMR Shielding   H(4):          26.44 ppm
+ <Dec21-2012> <11:25:31>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:27:02>  NMR Shielding   C(14):         95.26 ppm
+ <Dec21-2012> <11:27:02>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:28:34>  NMR Shielding   H(5):          26.44 ppm
+ <Dec21-2012> <11:28:34>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:30:05>  NMR Shielding   C(15):         95.26 ppm
+ <Dec21-2012> <11:30:05>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:31:37>  NMR Shielding   H(6):          26.44 ppm
+ <Dec21-2012> <11:31:37>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:33:09>  NMR Shielding   C(16):         95.26 ppm
+ <Dec21-2012> <11:33:09>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:34:40>  NMR Shielding   H(7):          26.44 ppm
+ <Dec21-2012> <11:34:40>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:36:12>  NMR Shielding   C(17):         95.26 ppm
+ <Dec21-2012> <11:36:12>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:37:43>  NMR Shielding   H(8):          26.44 ppm
+ <Dec21-2012> <11:37:43>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:39:15>  NMR Shielding   C(18):         95.24 ppm
+ <Dec21-2012> <11:39:15>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:40:47>  NMR Shielding   H(9):          26.44 ppm
+ <Dec21-2012> <11:40:47>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:42:18>  NMR Shielding   C(19):         95.24 ppm
+ <Dec21-2012> <11:42:18>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:43:50>  NMR Shielding   H(10):         26.44 ppm
+ <Dec21-2012> <11:43:50>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:45:22>  NMR Shielding   C(20):         95.25 ppm
+ <Dec21-2012> <11:45:22>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:46:54>  NMR Shielding   C(21):         95.27 ppm
+ <Dec21-2012> <11:46:54>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:48:26>  NMR Shielding   H(11):         26.44 ppm
+ <Dec21-2012> <11:48:26>  NORMAL TERMINATION
+ <Dec21-2012> <11:48:26>  END
+NORMAL TERMINATION
+                   NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION

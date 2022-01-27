@@ -1,0 +1,728 @@
+Job 978351.d12n16.ccr.buffalo.edu has requested 8 cores/processors per node.
+ADFHOME is /ifs/projects/jochena/software/adf/adffix2012
+running in directory /scratch/978351.d12n16.ccr.buffalo.edu
+Platform-MPI licensed for SCM.
+
+
+ Parallel Execution: Process Information
+ ==============================================================================
+ Rank   Node Name                              NodeID   MyNodeRank  NodeMaster
+    0   d11n04                                    0          0          0
+    1   d11n04                                    0          1         -1
+    2   d11n04                                    0          2         -1
+    3   d11n04                                    0          3         -1
+    4   d11n04                                    0          4         -1
+    5   d11n04                                    0          5         -1
+    6   d11n04                                    0          6         -1
+    7   d11n04                                    0          7         -1
+ ==============================================================================
+
+
+(INPUT FILE)
+allinone
+nmr
+ gfactors
+ u1k best
+ calc all
+ out iso tens
+end
+end input
+
+ *******************************************************************************
+ *                                                                             *
+ *  -------------------------------------                                      *
+ *   Amsterdam Density Functional  (ADF)         2012.01   January 26, 2012    *
+ *  -------------------------------------                                      *
+ *                                               Build 201205311514            *
+ *                                                                             *
+ *                                                                             *
+ *                              =================                              *
+ *                              |               |                              *
+ *                              |     N M R     |                              *
+ *                              |               |                              *
+ *                              =================                              *
+ *                                                                             *
+ *                                                                             *
+ *   Online information and documentation:  http://www.scm.com                 *
+ *   E-mail:  support@scm.com   info@scm.com                                   *
+ *                                                                             *
+ *   Scientific publications using ADF results must be properly referenced     *
+ *   See the User Manuals (or the web site) for recommended citations          *
+ *   The terms and conditions of the End User License Agreement apply to       *
+ *   the use of ADF, http://www.scm.com/Sales/LicAgreement.html                *
+ *                                                                             *
+ **********************  pentium64_linux / platform_mpi  ***********************
+ 
+ NMR 2012.01  RunTime: Dec21-2012 10:01:36  Nodes: 1  Procs: 8
+
+ Temporary files are created in /scratch/kid_0.hOvH4r
+
+ found GFACT. setting gfactors and allin1
+                    
+                      **********************************    
+                      ||******************************||    
+                      ||                              ||    
+                      ||  ##   ##  ###  ###  ######   ||    
+                      ||  ###  ##  ########  ##   ##  ||    
+                      ||  #### ##  ## ## ##  ######   ||    
+                      ||  ## ####  ##    ##  ## ##    ||    
+                      ||  ##  ###  ##    ##  ##  ##   ||    
+                      ||  ##   ##  ##    ##  ##   ##  ||    
+                      ||                              ||    
+                      | ****************************** |    
+                      **********************************    
+                    
+                            Written for ADF by              
+                    
+                    Stephen K. Wolff & Georg Schreckenbach  
+                    
+                      The research group of Tom Ziegler     
+                            University of Calgary           
+                               Alberta, Canada              
+                    
+                      Speedups, NBO analysis, g-tensors, by 
+                         Jochen Autschbach, SUNY Buffalo
+                    
+                    --------------------------------------- 
+                    
+                    
+                                 References:                
+                                 ===========                
+                    
+                    1. G. Schreckenbach and T. Ziegler,     
+                       J. Phys. Chem. 99 (1995) 606         
+                    
+                    2. G. Schreckenbach and T. Ziegler      
+                       Int. J. Quantum CHem. 61 (1997) 899  
+                    
+                    3. S. K. Wolff and T. Ziegler           
+                       J. Chem. Phys. 109 (1998) 895        
+                    
+                    --------------------------------------- 
+                    
+ 
+################################################################################
+ 
+ 
+################################################################################
+ 
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 GENERAL ADF INFORMATION:
+                 ------------------------
+ 
+                 TITLE:    *** (NO TITLE) ***                           
+                 JOB ID:   ADF 2012.01  RunTime: Dec21-2012 09:35:25  No
+                 NONLXC:                                                
+                 SYMMETRY: NOSYM                                        
+                  
+                 IOPREL:   3
+                 ------>  Scalar ZORA + core pot. (Re MOs)
+                 ------>  Core pot used in K, Full pot used in V
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              ==================================================
+ 
+                 NUCLEAR COORDINATES (ANGSTROMS):
+                 --------------------------------
+ 
+                 Ni (  1):       0.0000     -0.0001      0.0000
+                 H  (  2):      -0.7705      2.1667      1.8276
+                 H  (  3):      -2.2989     -0.0632      1.8275
+                 H  (  4):      -0.6505     -2.2059      1.8274
+                 H  (  5):       1.8968     -1.3003      1.8274
+                 H  (  6):       1.8226      1.4022      1.8275
+                 H  (  7):      -0.6503     -2.2057     -1.8275
+                 H  (  8):       1.8970     -1.3001     -1.8278
+                 H  (  9):       1.8228      1.4024     -1.8277
+                 H  ( 10):      -0.7703      2.1670     -1.8273
+                 H  ( 11):      -2.2988     -0.0629     -1.8272
+                 C  ( 12):      -0.4070      1.1445      1.8308
+                 C  ( 13):      -1.2144     -0.0334      1.8308
+                 C  ( 14):      -0.3436     -1.1653      1.8307
+                 C  ( 15):       1.0019     -0.6869      1.8307
+                 C  ( 16):       0.9627      0.7406      1.8307
+                 C  ( 17):      -0.3435     -1.1651     -1.8307
+                 C  ( 18):       1.0021     -0.6867     -1.8309
+                 C  ( 19):       0.9629      0.7408     -1.8308
+                 C  ( 20):      -0.4068      1.1447     -1.8306
+                 C  ( 21):      -1.2142     -0.0332     -1.8305
+ 
+              ==================================================
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 NUMBERS:
+                 --------
+ 
+                 number of electrons:     98.00
+ 
+                 ---   AOs   ---           ---  MOs alfa / beta ---
+                 ncor =      0            nocc =     50     48
+                 nval =    598            nvir =    484    486
+                 nbas =    598            nmo  =    534    534
+                 naos =   598             nsot =   534
+              ==================================================
+                  
+                 --------------------------
+                     ATOM TYPE: Ni                       
+                 --------------------------
+                 === BASIS
+                   1S  380.00     VALENCE
+                   1S   99.00     VALENCE
+                   1S   35.55     VALENCE
+                   1S   26.40     VALENCE
+                   2S   23.65     VALENCE
+                   2S   12.20     VALENCE
+                   2S    9.60     VALENCE
+                   3S    7.65     VALENCE
+                   3S    5.10     VALENCE
+                   3S    3.65     VALENCE
+                   4S    2.70     VALENCE
+                   4S    1.80     VALENCE
+                   4S    1.20     VALENCE
+                   4S    0.85     VALENCE
+                   2P   24.60     VALENCE
+                   2P   13.60     VALENCE
+                   2P    9.60     VALENCE
+                   3P    6.80     VALENCE
+                   3P    4.50     VALENCE
+                   3P    3.05     VALENCE
+                   4P    2.00     VALENCE
+                   4P    1.00     VALENCE
+                   3D   10.80     VALENCE
+                   3D    6.00     VALENCE
+                   3D    3.25     VALENCE
+                   3D    1.70     VALENCE
+                   3D    0.93     VALENCE
+                   4F    4.00     VALENCE
+                   4F    2.00     VALENCE
+                   4F    1.00     VALENCE
+                  
+                 --------------------------
+                     ATOM TYPE: H                        
+                 --------------------------
+                 === BASIS
+                   1S  100.00     VALENCE
+                   1S    4.00     VALENCE
+                   1S    3.00     VALENCE
+                   1S    2.00     VALENCE
+                   1S    0.69     VALENCE
+                   1S    0.92     VALENCE
+                   1S    1.58     VALENCE
+                   2P    1.25     VALENCE
+                   3D    2.50     VALENCE
+                  
+                 --------------------------
+                     ATOM TYPE: C                        
+                 --------------------------
+                 === BASIS
+                   1S  600.00     VALENCE
+                   1S   24.00     VALENCE
+                   1S   18.00     VALENCE
+                   1S   12.00     VALENCE
+                   1S    7.68     VALENCE
+                   1S    5.00     VALENCE
+                   2S    1.28     VALENCE
+                   2S    2.10     VALENCE
+                   2S    4.60     VALENCE
+                   2P    0.82     VALENCE
+                   2P    1.48     VALENCE
+                   2P    2.94     VALENCE
+                   3D    2.20     VALENCE
+                   4F    3.30     VALENCE
+                  
+              ==================================================
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 TENSOR INFORMATION:
+                 -------------------
+ 
+                 Calculating scalar ZORA EPR g-matrix with spin-orbit
+                 terms included at the second-order pertubation theory level.
+ 
+                 This implementation uses the 'All-in-One-Step' AO based code and therefore
+                 the output format is somewhat different from the regular NMR output.
+
+                              CALC                   U1K
+ 
+                 paramagnetic  = T     ZORA SO       = F
+                 diamagnetic   = T     ZORA SO FULL  = F
+                 ZORA SO       = F     Zeeman        = F
+                 ZORA SCALE    = T     E IN U1 SCL   = F
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 OUTPUT SWITCHES:
+                 ----------------
+ 
+                           ISO = T                F1 = F
+                          TENS = T                S1 = F
+                           EIG = F                U1 = F
+                           AOP = F                B1 = F
+                           AOD = F                F  = F
+                           AOF = F                 S = F
+                          INFO = F              REFS = F
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              --------------------------------------------------
+ 
+                 CALCULATE THE POTENTIAL? F
+                  
+                 ---> Potential is already on TAPE10.
+                      It will not be re-calculated.
+ 
+              --------------------------------------------------
+
+
+
+ ===========================
+ L I N E A R   S C A L I N G
+ ===========================
+  
+
+ Overlap cut-off criterion AO matrix elements:     0.1000000000E-08
+
+
+ Test of Precision of the Numerical Integration Grid
+ ===================================================
+
+ Integral of the Total Core Density:                   0.00000000000000
+ ****************************************
+ *  ...INFO: DEPENDENCY is turned on... *
+ ****************************************
+ *********************************************************
+ *  ..And orbitals have been removed... Before removal:  *
+ *********************************************************
+ * nbasdpt =           20          20 gNmr%nmot =          534         534
+ * gNmr%nvirt =          484         486  gNmr%nmo =          534
+ * gNmr%nocc =           50  gNmr%nocct =           50          48
+ *********************************************************
+ Neglecting orbital/spin          515 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          516 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          517 /           1  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          518 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          519 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          520 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          521 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          522 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          523 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          524 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          525 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          526 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          527 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          528 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          529 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          530 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          531 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          532 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          533 /           1  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          534 /           1  with energy 
+   100000000.000000     
+ Highest non-neglected orbital/spin:          514 /           1  energy = 
+   164584.563504262     
+ Neglecting orbital/spin          515 /           2  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          516 /           2  with energy 
+   99999999.9999999     
+ Neglecting orbital/spin          517 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          518 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          519 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          520 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          521 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          522 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          523 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          524 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          525 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          526 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          527 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          528 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          529 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          530 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          531 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          532 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          533 /           2  with energy 
+   100000000.000000     
+ Neglecting orbital/spin          534 /           2  with energy 
+   100000000.000000     
+ Highest non-neglected orbital/spin:          514 /           2  energy = 
+   164584.709868434     
+ *********************************************************
+ *  After removal of dependency orbitals *
+ *********************************************************
+ * nbasdpt =           20          20 gNmr%nmot =          514         514
+ * gNmr%nvirt =          464         466  gNmr%nmo =          534
+ * gNmr%nocc =           50  gNmr%nocct =           50          48
+ *********************************************************
+ ========================
+ STARTING A NEW SCF. Step            1
+ CRIT   1.00000000000000     
+ CRIT   1.00000000000000     
+ CRIT   1.00000000000000     
+ ========================
+ STARTING A NEW SCF. Step            2
+ CRIT  8.415843718647001E-002
+ CRIT  8.416513429169500E-002
+ CRIT  1.583645256870944E-002
+ ========================
+ STARTING A NEW SCF. Step            3
+ CRIT  7.777306873964130E-003
+ CRIT  7.778244195630425E-003
+ CRIT  9.672718367372018E-004
+ ========================
+ STARTING A NEW SCF. Step            4
+ CRIT  2.613853213737689E-003
+ CRIT  2.613979100560676E-003
+ CRIT  9.993817064432378E-005
+ ========================
+ STARTING A NEW SCF. Step            5
+ CRIT  3.157228878715112E-004
+ CRIT  3.160593896390616E-004
+ CRIT  5.837927948341825E-006
+ ========================
+ STARTING A NEW SCF. Step            6
+ CRIT  8.227869596269595E-005
+ CRIT  8.232803833471022E-005
+ CRIT  1.320624682936669E-006
+ ========================
+ STARTING A NEW SCF. Step            7
+ CRIT  3.554776701950789E-005
+ CRIT  3.559810455595833E-005
+ CRIT  2.566465615810809E-007
+ ========================
+ STARTING A NEW SCF. Step            8
+ CRIT  5.168698898162824E-006
+ CRIT  5.170916681503128E-006
+ ========================
+ STARTING A NEW SCF. Step            9
+ CRIT  1.398761216331286E-006
+ CRIT  1.400177252218771E-006
+ ========================
+ STARTING A NEW SCF. Step           10
+ CRIT  1.423517022713380E-007
+ CRIT  1.435668503050192E-007
+ ========================
+ STARTING A NEW SCF. Step            1
+ CRIT   1.00000000000000     
+ CRIT   1.00000000000000     
+ CRIT   1.00000000000000     
+ ========================
+ STARTING A NEW SCF. Step            2
+ CRIT  0.370271731857137     
+ CRIT  0.370350223001759     
+ CRIT  2.292765142744122E-002
+ ========================
+ STARTING A NEW SCF. Step            3
+ CRIT  8.662399043443063E-002
+ CRIT  8.663561530336786E-002
+ CRIT  5.534442753750906E-003
+ ========================
+ STARTING A NEW SCF. Step            4
+ CRIT  5.116588071365905E-002
+ CRIT  5.116843800304489E-002
+ CRIT  7.390875743919764E-004
+ ========================
+ STARTING A NEW SCF. Step            5
+ CRIT  1.691872007800002E-002
+ CRIT  1.692472601877436E-002
+ CRIT  9.496702545959941E-005
+ ========================
+ STARTING A NEW SCF. Step            6
+ CRIT  8.100778821959502E-003
+ CRIT  8.103372527071783E-003
+ CRIT  8.716779502894859E-006
+ ========================
+ STARTING A NEW SCF. Step            7
+ CRIT  2.507280720488008E-003
+ CRIT  2.510174871937492E-003
+ CRIT  3.829797243859737E-006
+ ========================
+ STARTING A NEW SCF. Step            8
+ CRIT  1.907691841702156E-004
+ CRIT  1.924387049621426E-004
+ CRIT  2.443775427485183E-006
+ ========================
+ STARTING A NEW SCF. Step            9
+ CRIT  3.524839168311057E-005
+ CRIT  3.713668721554549E-005
+ CRIT  1.803238121212803E-006
+ ========================
+ STARTING A NEW SCF. Step           10
+ CRIT  2.042752215142807E-005
+ CRIT  2.131514408308121E-005
+ CRIT  4.719391848003608E-007
+ ========================
+ STARTING A NEW SCF. Step           11
+ CRIT  2.171798279024704E-006
+ CRIT  1.946782124090849E-006
+ ========================
+ STARTING A NEW SCF. Step           12
+ CRIT  3.370927865031375E-007
+ CRIT  5.480610082326106E-007
+ NBO: we are working with a Cartesian (6d/10f) basis
+
+ <Sz> value used in the calculation:   1.0000
+ 
+================================================================================
+ 
+ 
+===  Paramagnetic EPR Delta g-matrix (ppt)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              98.095    -0.002     0.007
+           0.000     0.000     0.000              -0.002    98.095     0.006
+           0.000     0.000     0.000               0.007     0.006     2.538
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     66.243
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+          -8.754     0.000     0.000              -0.030     0.000     0.000
+           0.000    -8.754     0.000               0.000    -0.030     0.000
+           0.000     0.000    -1.699               0.000     0.000     0.002
+    -----------------------------------     -----------------------------------
+              isotropic =     -6.402                  isotropic =     -0.019
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                              89.311    -0.002     0.007
+                              -0.002    89.311     0.005
+                               0.007     0.005     0.841
+                        -----------------------------------
+                                  isotropic =     59.821
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                               0.841    89.310    89.313
+ 
+                        ==== Principal Axis System:
+
+                               0.000    -0.657     0.754
+                               0.000    -0.754    -0.657
+                               1.000     0.000     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  Diamagnetic EPR Delta g-matrix (ppt)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              -0.089     0.000     0.000
+           0.000     0.000     0.000               0.000    -0.089     0.000
+           0.000     0.000     0.000               0.000     0.000    -0.231
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -0.136
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              -0.089     0.000     0.000
+                               0.000    -0.089     0.000
+                               0.000     0.000    -0.231
+                        -----------------------------------
+                                  isotropic =     -0.136
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              -0.231    -0.089    -0.089
+ 
+                        ==== Principal Axis System:
+
+                               0.000     0.397    -0.918
+                               0.000    -0.918    -0.397
+                               1.000     0.000     0.000
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL EPR Delta g-matrix (ppt)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total Delta g-matrix
+                        -----------------------------------
+                              89.223    -0.002     0.007
+                              -0.002    89.222     0.005
+                               0.007     0.005     0.610
+                        -----------------------------------
+                                  isotropic =     59.685
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                               0.610    89.221    89.224
+ 
+                        ==== Principal Axis System:
+
+                               0.000    -0.657     0.754
+                               0.000    -0.754    -0.657
+                               1.000     0.000     0.000
+                        -----------------------------------
+ *******************************************************************************
+
+                             N M R   E X I T
+ NORMAL TERMINATION
+
+
+
+ =================
+ Timing Statistics
+ =================
+  
+ Total Used :                     CPU=     4438.90      System=       45.71     Elapsed=     4495.01
+
+ Calls  Section                     ( Mean, Percentage )
+ ---------------------------------------------------------------------------------------------------
+     3  ><      ................      0.00    0.00             0.00    0.00             0.00    0.00
+     1  INPUTT  ................      0.00    0.00             0.00    0.00             0.01    0.00
+     1  INIT    ................      0.26    0.01             0.07    0.16             0.37    0.01
+     1  ZAOF1K  ................   1540.61   34.71             4.64   10.16          1547.33   34.42
+     1  ZU1K    ................    521.69   11.75             9.68   21.17           536.22   11.93
+     1  ZSG     ................   2376.32   53.53            31.24   68.35          2410.99   53.64
+     1  EXIT PROCEDURE .........      0.01    0.00             0.07    0.16             0.08    0.00
+
+
+ Currently Open Files (EXIT00)
+ ====================
+
+ Unit    Access Format  Status   Type       Ident (file)
+ -------------------------------------------------------
+   3      SEQ    FORM   TRANSP  NORMAL      LOGFILE
+                                          ( logfile )
+
+
+ Buffered I/O statistics
+ =======================
+ Memory available:                     67108864
+ Number of records fitting in memory:     16131
+ Input :   8.3% of                      1647466  *4k bytes
+ Output:   7.2% of                       210687  *4k bytes
+ Records from serial files evicted:           0
+                    others evicted:       41789
+ Hash table lookups:    5338443 with    1034967 conflicts ( 19.39%)
+
+ ***************************************************************************************************
+ (LOGFILE)
+ <Dec21-2012> <10:01:36>  NMR 2012.01  RunTime: Dec21-2012 10:01:36  Nodes: 1  Procs: 8
+ <Dec21-2012> <10:01:38>  FITFIT
+ <Dec21-2012> <10:01:38>  AOAOFIT
+ <Dec21-2012> <10:01:38>         atom:     1
+ <Dec21-2012> <10:03:32>         atom:     2
+ <Dec21-2012> <10:03:37>         atom:     3
+ <Dec21-2012> <10:03:42>         atom:     4
+ <Dec21-2012> <10:03:47>         atom:     5
+ <Dec21-2012> <10:03:52>         atom:     6
+ <Dec21-2012> <10:03:57>         atom:     7
+ <Dec21-2012> <10:04:02>         atom:     8
+ <Dec21-2012> <10:04:06>         atom:     9
+ <Dec21-2012> <10:04:12>         atom:    10
+ <Dec21-2012> <10:04:16>         atom:    11
+ <Dec21-2012> <10:04:21>         atom:    12
+ <Dec21-2012> <10:04:36>         atom:    13
+ <Dec21-2012> <10:04:51>         atom:    14
+ <Dec21-2012> <10:05:06>         atom:    15
+ <Dec21-2012> <10:05:20>         atom:    16
+ <Dec21-2012> <10:05:35>         atom:    17
+ <Dec21-2012> <10:05:50>         atom:    18
+ <Dec21-2012> <10:06:05>         atom:    19
+ <Dec21-2012> <10:06:20>         atom:    20
+ <Dec21-2012> <10:06:34>         atom:    21
+ <Dec21-2012> <10:06:49>  GIAOFITFIT
+ <Dec21-2012> <10:06:49>  GIAOAOAOFIT
+ <Dec21-2012> <10:06:49>         atom:     1
+ <Dec21-2012> <10:12:36>         atom:     2
+ <Dec21-2012> <10:12:54>         atom:     3
+ <Dec21-2012> <10:13:11>         atom:     4
+ <Dec21-2012> <10:13:29>         atom:     5
+ <Dec21-2012> <10:13:46>         atom:     6
+ <Dec21-2012> <10:14:03>         atom:     7
+ <Dec21-2012> <10:14:20>         atom:     8
+ <Dec21-2012> <10:14:36>         atom:     9
+ <Dec21-2012> <10:14:53>         atom:    10
+ <Dec21-2012> <10:15:09>         atom:    11
+ <Dec21-2012> <10:15:27>         atom:    12
+ <Dec21-2012> <10:16:20>         atom:    13
+ <Dec21-2012> <10:17:12>         atom:    14
+ <Dec21-2012> <10:18:06>         atom:    15
+ <Dec21-2012> <10:19:02>         atom:    16
+ <Dec21-2012> <10:19:58>         atom:    17
+ <Dec21-2012> <10:20:55>         atom:    18
+ <Dec21-2012> <10:21:50>         atom:    19
+ <Dec21-2012> <10:22:46>         atom:    20
+ <Dec21-2012> <10:23:42>         atom:    21
+ <Dec21-2012> <10:24:46>  >>>> ZSG
+ <Dec21-2012> <10:24:59>  Executing NEW zu1k
+ <Dec21-2012> <10:24:59>  >>>> ZU1K
+ <Dec21-2012> <11:13:46>  EXECUTING All-In-One Branch of the code
+ <Dec21-2012> <11:16:31>  Isotropic Delta-g :       59.68 ppt
+ <Dec21-2012> <11:16:31>  NORMAL TERMINATION
+ <Dec21-2012> <11:16:31>  END
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION
+NORMAL TERMINATION

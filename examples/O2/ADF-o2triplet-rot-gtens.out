@@ -1,0 +1,380 @@
+(INPUT FILE)
+allinone
+nmr
+ gfactors
+ u1k best
+ calc all
+ out iso tens
+end
+end input
+
+ *******************************************************************************
+ *                                                                             *
+ *  -------------------------------------                                      *
+ *   Amsterdam Density Functional  (ADF)         2012.01   January 26, 2012    *
+ *  -------------------------------------                                      *
+ *                                               Build 201205311514            *
+ *                                                                             *
+ *                                                                             *
+ *                              =================                              *
+ *                              |               |                              *
+ *                              |     N M R     |                              *
+ *                              |               |                              *
+ *                              =================                              *
+ *                                                                             *
+ *                                                                             *
+ *   Online information and documentation:  http://www.scm.com                 *
+ *   E-mail:  support@scm.com   info@scm.com                                   *
+ *                                                                             *
+ *   Scientific publications using ADF results must be properly referenced     *
+ *   See the User Manuals (or the web site) for recommended citations          *
+ *   The terms and conditions of the End User License Agreement apply to       *
+ *   the use of ADF, http://www.scm.com/Sales/LicAgreement.html                *
+ *                                                                             *
+ **********************  pentium64_linux / platform_mpi  ***********************
+ 
+ NMR 2012.01  RunTime: Sep11-2012 12:41:03  Nodes: 1  Procs: 1
+
+ Temporary files are created in /scratch/kid_0.skPYqs
+
+ found GFACT. setting gfactors and allin1
+                    
+                      **********************************    
+                      ||******************************||    
+                      ||                              ||    
+                      ||  ##   ##  ###  ###  ######   ||    
+                      ||  ###  ##  ########  ##   ##  ||    
+                      ||  #### ##  ## ## ##  ######   ||    
+                      ||  ## ####  ##    ##  ## ##    ||    
+                      ||  ##  ###  ##    ##  ##  ##   ||    
+                      ||  ##   ##  ##    ##  ##   ##  ||    
+                      ||                              ||    
+                      | ****************************** |    
+                      **********************************    
+                    
+                            Written for ADF by              
+                    
+                    Stephen K. Wolff & Georg Schreckenbach  
+                    
+                      The research group of Tom Ziegler     
+                            University of Calgary           
+                               Alberta, Canada              
+                    
+                      Speedups, NBO analysis, g-tensors, by 
+                         Jochen Autschbach, SUNY Buffalo
+                    
+                    --------------------------------------- 
+                    
+                    
+                                 References:                
+                                 ===========                
+                    
+                    1. G. Schreckenbach and T. Ziegler,     
+                       J. Phys. Chem. 99 (1995) 606         
+                    
+                    2. G. Schreckenbach and T. Ziegler      
+                       Int. J. Quantum CHem. 61 (1997) 899  
+                    
+                    3. S. K. Wolff and T. Ziegler           
+                       J. Chem. Phys. 109 (1998) 895        
+                    
+                    --------------------------------------- 
+                    
+ 
+################################################################################
+ 
+ 
+################################################################################
+ 
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 GENERAL ADF INFORMATION:
+                 ------------------------
+ 
+                 TITLE:    *** (NO TITLE) ***                           
+                 JOB ID:   ADF 2012.01  RunTime: Sep11-2012 12:39:50  No
+                 NONLXC:   PBEc PBEx                                    
+                 SYMMETRY: NOSYM                                        
+                  
+                 IOPREL:   3
+                 ------>  Scalar ZORA + core pot. (Re MOs)
+                 ------>  Core pot used in K, Full pot used in V
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              ==================================================
+ 
+                 NUCLEAR COORDINATES (ANGSTROMS):
+                 --------------------------------
+ 
+                 O  (  1):      10.1534      1.5038      5.5459
+                 O  (  2):       9.1661      1.3640      6.2269
+ 
+              ==================================================
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 NUMBERS:
+                 --------
+ 
+                 number of electrons:     16.00
+ 
+                 ---   AOs   ---           ---  MOs alfa / beta ---
+                 ncor =      0            nocc =      9      7
+                 nval =     68            nvir =     51     53
+                 nbas =     68            nmo  =     60     60
+                 naos =    68             nsot =    60
+              ==================================================
+                  
+                 --------------------------
+                     ATOM TYPE: O                        
+                 --------------------------
+                 === BASIS
+                   1S  800.00     VALENCE
+                   1S   32.00     VALENCE
+                   1S   24.00     VALENCE
+                   1S   16.00     VALENCE
+                   1S    9.80     VALENCE
+                   1S    6.80     VALENCE
+                   2S    7.58     VALENCE
+                   2S    2.88     VALENCE
+                   2S    1.72     VALENCE
+                   2P    4.08     VALENCE
+                   2P    2.08     VALENCE
+                   2P    1.12     VALENCE
+                   3D    2.00     VALENCE
+                   4F    3.00     VALENCE
+                  
+              ==================================================
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 TENSOR INFORMATION:
+                 -------------------
+ 
+                 Calculating scalar ZORA EPR g-matrix with spin-orbit
+                 terms included at the second-order pertubation theory level.
+ 
+                 This implementation uses the 'All-in-One-Step' AO based code and therefore
+                 the output format is somewhat different from the regular NMR output.
+
+                              CALC                   U1K
+ 
+                 paramagnetic  = T     ZORA SO       = F
+                 diamagnetic   = T     ZORA SO FULL  = F
+                 ZORA SO       = F     Zeeman        = F
+                 ZORA SCALE    = T     E IN U1 SCL   = F
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+                 OUTPUT SWITCHES:
+                 ----------------
+ 
+                           ISO = T                F1 = F
+                          TENS = T                S1 = F
+                           EIG = F                U1 = F
+                           AOP = F                B1 = F
+                           AOD = F                F  = F
+                           AOF = F                 S = F
+                          INFO = F              REFS = F
+ 
+              <><><><><><><><><><><><><><><><><><><><><><><><><>
+ 
+              --------------------------------------------------
+ 
+                 CALCULATE THE POTENTIAL? F
+                  
+                 ---> Potential is already on TAPE10.
+                      It will not be re-calculated.
+ 
+              --------------------------------------------------
+
+
+
+ ===========================
+ L I N E A R   S C A L I N G
+ ===========================
+  
+
+ Overlap cut-off criterion AO matrix elements:     0.1000000000E-08
+
+
+ Test of Precision of the Numerical Integration Grid
+ ===================================================
+
+ Integral of the Total Core Density:                   0.00000000000000
+ NBO: we are working with a Cartesian (6d/10f) basis
+
+ <Sz> value used in the calculation:   1.0000
+ 
+================================================================================
+ 
+ 
+===  Paramagnetic EPR Delta g-matrix (ppt)
+ 
+    ===     paramagnetic b^(1) tensor       ===     paramagnetic u^(1) tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000               0.951    -0.272     1.322
+           0.000     0.000     0.000              -0.272     2.830     0.187
+           0.000     0.000     0.000               1.322     0.187     1.956
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =      1.912
+
+    ===     paramagnetic s^(1) tensor       ===     paramagnetic gauge tensor
+    -----------------------------------     -----------------------------------
+           0.115    -0.033     0.161               0.000     0.000     0.000
+          -0.033     0.343     0.023               0.000     0.000     0.000
+           0.161     0.023     0.237               0.000     0.000     0.000
+    -----------------------------------     -----------------------------------
+              isotropic =      0.232                  isotropic =      0.000
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total paramagnetic tensor
+                        -----------------------------------
+                               1.066    -0.305     1.483
+                              -0.305     3.173     0.210
+                               1.483     0.210     2.193
+                        -----------------------------------
+                                  isotropic =      2.144
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                               0.000     3.216     3.216
+ 
+                        ==== Principal Axis System:
+
+                              -0.818    -0.008     0.576
+                              -0.116    -0.977    -0.179
+                               0.564    -0.213     0.798
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  Diamagnetic EPR Delta g-matrix (ppt)
+ 
+    ===       diamagnetic core tensor       ===    diamagnetic valence tensor
+    -----------------------------------     -----------------------------------
+           0.000     0.000     0.000              -0.078     0.004    -0.022
+           0.000     0.000     0.000               0.004    -0.109    -0.003
+           0.000     0.000     0.000              -0.022    -0.003    -0.095
+    -----------------------------------     -----------------------------------
+              isotropic =      0.000                  isotropic =     -0.094
+
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total diamagnetic tensor
+                        -----------------------------------
+                              -0.078     0.004    -0.022
+                               0.004    -0.109    -0.003
+                              -0.022    -0.003    -0.095
+                        -----------------------------------
+                                  isotropic =     -0.094
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              -0.110    -0.110    -0.062
+ 
+                        ==== Principal Axis System:
+
+                               0.319     0.479    -0.818
+                              -0.907     0.405    -0.116
+                               0.276     0.778     0.564
+                        -----------------------------------
+ 
+================================================================================
+ 
+ 
+===  TOTAL EPR Delta g-matrix (ppt)
+ 
+                        ***********************************
+                        CARTESIAN AXIS REPRESENTATION
+
+                        ==== total Delta g-matrix
+                        -----------------------------------
+                               0.988    -0.300     1.461
+                              -0.300     3.064     0.207
+                               1.461     0.207     2.099
+                        -----------------------------------
+                                  isotropic =      2.050
+
+                        ***********************************
+                        -----------------------------------
+                        PRINCIPAL AXIS REPRESENTATION
+
+                        ==== Principal components:
+
+                              -0.062     3.106     3.106
+ 
+                        ==== Principal Axis System:
+
+                              -0.818    -0.008     0.576
+                              -0.116    -0.977    -0.178
+                               0.564    -0.212     0.798
+                        -----------------------------------
+ *******************************************************************************
+
+                             N M R   E X I T
+ NORMAL TERMINATION
+
+
+
+ =================
+ Timing Statistics
+ =================
+  
+ Total Used :                     CPU=        2.33      System=        0.08     Elapsed=        2.51
+
+ Calls  Section                     ( Mean, Percentage )
+ ---------------------------------------------------------------------------------------------------
+     3  ><      ................      0.00    0.30             0.00    2.44             0.01    0.80
+     1  INPUTT  ................      0.00    0.00             0.00    1.22             0.00    0.08
+     1  INIT    ................      0.01    0.56             0.03   35.36             0.07    2.66
+     1  ZAOF1K  ................      1.12   48.18             0.01    9.76             1.14   45.52
+     1  ZU1K    ................      0.00    0.09             0.00    1.22             0.04    1.63
+     1  ZSG     ................      1.18   50.79             0.04   50.00             1.23   49.17
+     1  EXIT PROCEDURE .........      0.00    0.09             0.00    0.00             0.00    0.14
+
+
+ Currently Open Files (EXIT00)
+ ====================
+
+ Unit    Access Format  Status   Type       Ident (file)
+ -------------------------------------------------------
+   3      SEQ    FORM   TRANSP  NORMAL      LOGFILE
+                                          ( logfile )
+
+
+ Buffered I/O statistics
+ =======================
+ Memory available:                     67108864
+ Number of records fitting in memory:     16131
+ Input :  56.8% of                         3376  *4k bytes
+ Output:  43.3% of                         1789  *4k bytes
+ Records from serial files evicted:           0
+                    others evicted:           0
+ Hash table lookups:      14475 with          0 conflicts (  0.00%)
+
+ ***************************************************************************************************
+ (LOGFILE)
+ <Sep11-2012> <12:41:03>  NMR 2012.01  RunTime: Sep11-2012 12:41:03  Nodes: 1  Procs: 1
+ <Sep11-2012> <12:41:03>  >>>> ZSG
+ <Sep11-2012> <12:41:03>  Executing NEW zu1k
+ <Sep11-2012> <12:41:03>  >>>> ZU1K
+ <Sep11-2012> <12:41:04>  EXECUTING All-In-One Branch of the code
+ <Sep11-2012> <12:41:06>  Isotropic Delta-g :        2.05 ppt
+ <Sep11-2012> <12:41:06>  NORMAL TERMINATION
+ <Sep11-2012> <12:41:06>  END

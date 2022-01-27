@@ -1,0 +1,507 @@
+1(INPUT FILE)
+ gga
+ hybrid
+ hyperfine-scalar
+   scf converge 1e-8 iterations 25
+   atoms 1 2
+ end
+ end input
+
+ *******************************************************************************
+ *                                                                             *
+ *  -------------------------------------                                      *
+ *   Amsterdam Density Functional  (ADF)         2012.01   January 26, 2012    *
+ *  -------------------------------------                                      *
+ *                                               Build 201205311514            *
+ *                                                                             *
+ *                                                                             *
+ *                              =================                              *
+ *                              |               |                              *
+ *                              |     C P L     |                              *
+ *                              |               |                              *
+ *                              =================                              *
+ *                                                                             *
+ *                                                                             *
+ *   Online information and documentation:  http://www.scm.com                 *
+ *   E-mail:  support@scm.com   info@scm.com                                   *
+ *                                                                             *
+ *   Scientific publications using ADF results must be properly referenced     *
+ *   See the User Manuals (or the web site) for recommended citations          *
+ *   The terms and conditions of the End User License Agreement apply to       *
+ *   the use of ADF, http://www.scm.com/Sales/LicAgreement.html                *
+ *                                                                             *
+ **********************  pentium64_linux / platform_mpi  ***********************
+ 
+ CPL 2012.01  RunTime: Sep11-2012 12:40:24  Nodes: 1  Procs: 1
+
+ Temporary files are created in /scratch/kid_0.ebLh1M
+
+ hello from rdinp, dbg=            0
+   
+   
+  ****************************************  
+     *************************************  
+     **                                 **  
+     **     ######  ######   ##         **  
+     **    #######  ##   ##  ##         **  
+     **   ##        ######   ##         **  
+     **   ##        ##       ##         **  
+     **    #######  ##       #######    **  
+     **     ######  ##       #######    **  
+     **                                 **  
+     *************************************  
+  ****************************************  
+   
+  CPL was written by                  
+   
+  Jochen Autschbach               
+  SUNY Buffalo                  
+   
+  Original development of CPL took     
+  place in the research group of       
+  Tom Ziegler                 
+  University of Calgary          
+  Alberta, Canada              
+   
+  Further developments done by 
+  JA's research group at SUNY Buffalo 
+   
+  Please cite this work using       
+  some or all of Refs. [1-4]        
+   
+  Refs. [1,2]: original implementation    
+  Ref. [3]: NBO analysis, 
+  Ref. [4]: hybrid functionals and rewrite
+  Recommended references: [2,4]       
+   
+  Nonrelativistic code for the       
+  DSO term and a few other things     
+  based on the Dickson & Ziegler      
+  program, Refs. [5,6]            
+   
+  References: 
+  =========== 
+   
+  [1] J. Autschbach and T. Ziegler,      
+      J. Chem. Phys. 113 (2000), 936     
+   
+  [2] J. Autschbach and T. Ziegler,      
+      J. Chem. Phys. 113 (2000), 9410    
+   
+  [3] J. Autschbach,                     
+      J. Chem. Phys. 128 (2008), 164112  
+   
+  [4] J. Autschbach,                     
+      J. Chem. Phys. 129 (2008), 094105  
+   
+  [5] R. M. Dickson and T. Ziegler,      
+      J. Phys. Chem. 100 (1996), 5286    
+   
+  [6] J. Khandogin and T. Ziegler,       
+      Spectrochim. Acta A55 (1999), 607  
+   
+  ****************************************  
+   
+
+
+
+                 ***********************************
+                 *   J O B  I N F O R M A T I O N  *
+                 ***********************************
+  
+
+
+
+ ===============================
+ General information from TAPE21
+ ===============================
+  
+  TITLE:      *** (NO TITLE) ***                                
+  JOB ID:     ADF 2012.01  RunTime: Sep11-2012 12:39:50  Nodes: 
+  NONLXC:     PBEc PBEx                                         
+  SYMMETRY:   NOSYM                                             
+   
+  IOPREL:       3
+  ------>     Scalar ZORA + frozen core pot. (Re MOs)
+
+
+
+ ==========================================
+ Nuclear Coordinates and internal numbering
+ ==========================================
+  
+  O  (  1):      10.1534      1.5038      5.5459
+  O  (  2):       9.1661      1.3640      6.2269
+
+
+
+ =======
+ Numbers
+ =======
+  
+  number of valence electrons:     16.00
+ 
+  ---   AOs   ---           ---  MOs alfa / beta ---
+  ncor =      0            nocc =      9      7
+  nval =     68            nvir =     51     53
+  nbas =     68            nmo  =     60     60
+  naos =     68            nsot =     60
+
+
+
+ ===================
+ Fragments and Basis
+ ===================
+  
+   
+  --------------------------
+  ATOM TYPE:  O                                                 
+  --------------------------
+  === BASIS
+    1S  800.00     VALENCE
+    1S   32.00     VALENCE
+    1S   24.00     VALENCE
+    1S   16.00     VALENCE
+    1S    9.80     VALENCE
+    1S    6.80     VALENCE
+    2S    7.58     VALENCE
+    2S    2.88     VALENCE
+    2S    1.72     VALENCE
+    2P    4.08     VALENCE
+    2P    2.08     VALENCE
+    2P    1.12     VALENCE
+    3D    2.00     VALENCE
+    4F    3.00     VALENCE
+
+
+
+ =================================
+ TAPE10 info, TAPE21 compatibility
+ =================================
+  
+  ---> TAPE10 will be created by CPL
+ 
+  ---> ADF 2000 TAPE21 detected. 
+ 
+  ---> Potential is already on TAPE10.
+       It will not be re-calculated.
+
+
+
+ ================================================
+ Settings for the Hyperfine couplings computation
+ ================================================
+  
+  Compute...
+  FC  Term    YES             (*     default *)
+  SD  Term    YES             (*     default *)
+  PSO Term    YES             (*     default *)
+ 
+  Max. no. of SCF iterations:                25
+  Convergence criterion for SCF cycle:       0.000000010
+
+  Nuclei numbering in the output refers to the
+  INTERNAL atom ordering of ADF.
+  This ordering is usually different from the order
+  that has been specified in the ADF input that pro-
+  duced the TAPE21 being used here.
+
+
+
+ ===========================
+ L I N E A R   S C A L I N G
+ ===========================
+  
+
+ Overlap cut-off criterion AO matrix elements:     0.1000000000E-08
+
+
+
+
+ Test of Precision of the Numerical Integration Grid
+ ===================================================
+
+ Integral of the Total Core Density:                   0.00000000000000
+
+
+
+                 **********************************
+                 *  Hyperfine tensor calculation  *
+                 **********************************
+  
+ Nucelar Data for requested nuclei
+
+ Nucleus  Element   g-value   Spin   Isotope       X/A        Y/A        Z/A
+ ---------------------------------------------------------------------------
+      1     O       -0.7575    2.5    17.00     10.153      1.504      5.546
+      2     O       -0.7575    2.5    17.00      9.166      1.364      6.227
+ 
+ *** calculating FC / SD contributions
+ *** running PSOSO linear response calculation
+
+ *** entering CPKS routine for hyperfine coupling *** Version 09/10 (scalar) ***
+
+     computing
+     ... pso matrix elements for nucleus   1
+     ... pso matrix elements for nucleus   2
+     ... matrix elements for spin-orbit operator 
+     ... PSOSO terms of coupling constant(s) 
+ 
+ *** using new CPKS routine ***
+ *** NOTE: running UNrestricted calculation ***
+    running CPKS for SINGLET Operator
+    response potential will skip pure DFT part due to antisymmetric operator
+ 
+ *** skipping SCF cycle
+ DEBUG: this tensor element from pmat1: -5.096997980047329E-003
+ DEBUG: this tensor element from pmat1: -1.193269442310817E-003
+ DEBUG: this tensor element from pmat1:  5.810745451011503E-003
+ DEBUG: this tensor element from pmat1: -5.096997953636544E-003
+ DEBUG: this tensor element from pmat1: -1.193269440595126E-003
+ DEBUG: this tensor element from pmat1:  5.810745442643284E-003
+ *** using new CPKS routine ***
+ *** NOTE: running UNrestricted calculation ***
+    running CPKS for SINGLET Operator
+    response potential will skip pure DFT part due to antisymmetric operator
+ 
+ *** skipping SCF cycle
+ DEBUG: this tensor element from pmat1: -1.193269442268611E-003
+ DEBUG: this tensor element from pmat1:  3.158430761428819E-003
+ DEBUG: this tensor element from pmat1:  8.230551336691983E-004
+ DEBUG: this tensor element from pmat1: -1.193269440632390E-003
+ DEBUG: this tensor element from pmat1:  3.158430775910732E-003
+ DEBUG: this tensor element from pmat1:  8.230551324454495E-004
+ *** using new CPKS routine ***
+ *** NOTE: running UNrestricted calculation ***
+    running CPKS for SINGLET Operator
+    response potential will skip pure DFT part due to antisymmetric operator
+ 
+ *** skipping SCF cycle
+ DEBUG: this tensor element from pmat1:  5.810745450937795E-003
+ DEBUG: this tensor element from pmat1:  8.230551336881605E-004
+ DEBUG: this tensor element from pmat1: -6.804998872898957E-004
+ DEBUG: this tensor element from pmat1:  5.810745442727788E-003
+ DEBUG: this tensor element from pmat1:  8.230551324313892E-004
+ DEBUG: this tensor element from pmat1: -6.804998672027112E-004
+
+ <Sz> value used in the calculation:   1.0000
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 1(O)  XYZ=      10.153      1.504      5.546
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  17O  
+  nuclear spin I      =  2.5
+  magnetic moment mu  = -1.8937900
+          g_n = mu/I  = -0.7575160
+  quadrupole moment Q = -0.02558 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.240                           A(MHz)     -17.396
+      -0.374      -0.174       0.846             27.089      12.567     -61.196
+      -0.174       0.827       0.120             12.567     -59.853      -8.668
+       0.846       0.120       0.268            -61.196      -8.668     -19.423
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)       0.063
+      -0.005      -0.001       0.006              0.369       0.086      -0.420
+      -0.001       0.003       0.001              0.086      -0.229      -0.060
+       0.006       0.001      -0.001             -0.420      -0.060       0.049
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.240                           A(MHz)     -17.332
+      -0.379      -0.175       0.852             27.458      12.653     -61.617
+      -0.175       0.830       0.121             12.653     -60.082      -8.728
+       0.852       0.121       0.268            -61.617      -8.728     -19.374
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.240                           A(MHz)     -17.396
+      -0.982       0.000       0.000             71.079       0.000       0.000
+       0.000       0.852       0.000              0.000     -61.633       0.000
+       0.000       0.000       0.852              0.000       0.000     -61.633
+
+        span        skew       asymm               span        skew       asymm
+       1.834      -1.000       3.000           -132.713      72.359    -217.077
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)       0.063
+      -0.009       0.000       0.000              0.671       0.000       0.000
+       0.000       0.003       0.000              0.000      -0.241       0.000
+       0.000       0.000       0.003              0.000       0.000      -0.241
+
+        span        skew       asymm               span        skew       asymm
+       0.013      -1.000       3.000             -0.912      72.359    -217.077
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.240                           A(MHz)     -17.332
+      -0.992       0.000       0.000             71.751       0.000       0.000
+       0.000       0.855       0.000              0.000     -61.874       0.000
+       0.000       0.000       0.855              0.000       0.000     -61.874
+
+        span        skew       asymm               span        skew       asymm
+       1.847      -1.000       3.000           -133.624      72.359    -217.077
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+       -0.818     0.565    -0.109
+       -0.116    -0.347    -0.931
+        0.564     0.748    -0.349
+
+
+
+ =========================================================================
+ Hyperfine tensor for nucleus 2(O)  XYZ=       9.166      1.364      6.227
+ =========================================================================
+  
+
+
+ ------------------------------------------------
+  isotope             =  17O  
+  nuclear spin I      =  2.5
+  magnetic moment mu  = -1.8937900
+          g_n = mu/I  = -0.7575160
+  quadrupole moment Q = -0.02558 e 10-24 cm2
+ ------------------------------------------------
+  
+ ---------------------------------
+   Cartesian Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.240                           A(MHz)     -17.396
+      -0.374      -0.174       0.846             27.089      12.567     -61.196
+      -0.174       0.827       0.120             12.567     -59.853      -8.668
+       0.846       0.120       0.268            -61.196      -8.668     -19.423
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)       0.063
+      -0.005      -0.001       0.006              0.369       0.086      -0.420
+      -0.001       0.003       0.001              0.086      -0.229      -0.060
+       0.006       0.001      -0.001             -0.420      -0.060       0.049
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.240                           A(MHz)     -17.332
+      -0.379      -0.175       0.852             27.458      12.653     -61.617
+      -0.175       0.830       0.121             12.653     -60.082      -8.728
+       0.852       0.121       0.268            -61.617      -8.728     -19.374
+ 
+ ---------------------------------
+   Principal Axis Representation  
+ ---------------------------------
+
+ ----- A-tensor in atomic units ----         ------------- A (MHz) ------------
+
+ FC, SD 'first-order' terms:             
+  isotropic    A(au)       0.240                           A(MHz)     -17.396
+      -0.982       0.000       0.000             71.079       0.000       0.000
+       0.000       0.852       0.000              0.000     -61.633       0.000
+       0.000       0.000       0.852              0.000       0.000     -61.633
+
+        span        skew       asymm               span        skew       asymm
+       1.834      -1.000       3.000           -132.713      72.359    -217.077
+
+ PSO-Spin-Orbit 'second order' terms:    
+  isotropic    A(au)      -0.001                           A(MHz)       0.063
+      -0.009       0.000       0.000              0.671       0.000       0.000
+       0.000       0.003       0.000              0.000      -0.241       0.000
+       0.000       0.000       0.003              0.000       0.000      -0.241
+
+        span        skew       asymm               span        skew       asymm
+       0.013      -1.000       3.000             -0.912      72.359    -217.077
+
+ Total calculated hyperfine coupling:    
+  isotropic    A(au)       0.240                           A(MHz)     -17.332
+      -0.992       0.000       0.000             71.751       0.000       0.000
+       0.000       0.855       0.000              0.000     -61.874       0.000
+       0.000       0.000       0.855              0.000       0.000     -61.874
+
+        span        skew       asymm               span        skew       asymm
+       1.847      -1.000       3.000           -133.624      72.359    -217.077
+ 
+ Principal Axis System (u,v,w) expressed in Cartesians:
+ (taken as eigenvectors of the symmetric part of the coupling tensor,
+  sorted in ascending order of eigenvalues = principal values)
+        u         v         w
+       -0.818    -0.167     0.551
+       -0.116    -0.890    -0.441
+        0.564    -0.424     0.708
+ *******************************************************************************
+
+                             N M R   E X I T
+ NORMAL TERMINATION
+
+
+
+ =================
+ Timing Statistics
+ =================
+  
+ Total Used :                     CPU=        2.21      System=        0.09     Elapsed=        2.44
+
+ Calls  Section                     ( Mean, Percentage )
+ ---------------------------------------------------------------------------------------------------
+     3  ><      ................      0.00    0.36             0.00    2.25             0.01    0.89
+     2  FCSD    ................      0.56   50.63             0.03   74.16             0.64   52.77
+     2  CALPSO  ................      0.38   34.62             0.01   21.35             0.39   32.32
+     1  PSOSO   ................      0.31   14.25             0.00    0.00             0.33   13.34
+     1  ATENS   ................      0.00    0.14             0.00    0.00             0.01    0.45
+     1  EXIT PROCEDURE .........      0.00    0.00             0.00    2.25             0.01    0.22
+
+
+ Currently Open Files (EXIT00)
+ ====================
+
+ Unit    Access Format  Status   Type       Ident (file)
+ -------------------------------------------------------
+   3      SEQ    FORM   TRANSP  NORMAL      LOGFILE
+                                          ( logfile )
+
+
+ Buffered I/O statistics
+ =======================
+ Memory available:                     67108864
+ Number of records fitting in memory:     16131
+ Input :  53.5% of                         4362  *4k bytes
+ Output:  48.8% of                         2032  *4k bytes
+ Records from serial files evicted:           0
+                    others evicted:           0
+ Hash table lookups:      18126 with          0 conflicts (  0.00%)
+
+ ***************************************************************************************************
+ (LOGFILE)
+ <Sep11-2012> <12:40:24>  CPL 2012.01  RunTime: Sep11-2012 12:40:24  Nodes: 1  Procs: 1
+ <Sep11-2012> <12:40:24>  >>>> ATENS
+ <Sep11-2012> <12:40:24>  >>>> FCSD
+ <Sep11-2012> <12:40:25>  >>>> FCSD
+ <Sep11-2012> <12:40:25>  >>>> PSOSO
+ <Sep11-2012> <12:40:26>   skipping SCF cycle
+ <Sep11-2012> <12:40:26>   skipping SCF cycle
+ <Sep11-2012> <12:40:26>   skipping SCF cycle
+ <Sep11-2012> <12:40:26>  Hyperfine tensor for nucleus 1(O)  XYZ=      10.153      1.504      5.546
+ <Sep11-2012> <12:40:26>    O(1):                A(au)=       0.240 , A(MHz)     -17.332
+ <Sep11-2012> <12:40:26>  Hyperfine tensor for nucleus 2(O)  XYZ=       9.166      1.364      6.227
+ <Sep11-2012> <12:40:26>    O(2):                A(au)=       0.240 , A(MHz)     -17.332
+ <Sep11-2012> <12:40:26>  NORMAL TERMINATION
+ <Sep11-2012> <12:40:26>  END

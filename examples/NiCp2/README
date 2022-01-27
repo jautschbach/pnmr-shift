@@ -1,0 +1,53 @@
+To run the run_PNMRShift script, you may need to change
+the PNMRSHIFT variable in that script (it is the location of the PNMRShift
+binary)
+
+-----------------------
+SCRIPTS/EXECUTABLES
+-----------------------
+run_PNMRShift            - runs PNMRShift with/without ZFS corrections
+
+
+
+-----------------------
+INPUTS
+-----------------------
+pnmrshift.inp            - Includes ZFS
+pnmrshift.nod.inp        - Without ZFS
+
+
+-----------------------
+OUTPUTS
+-----------------------
+pnmr.nod.out             - Output from run_PNMRShift without ZFS
+pnmr.out                 - Output from run_PNMRShift including ZFS
+pnmr_25K.out             - Output from run_PNMRShift including ZFS at 25K
+
+pnmr.nod.out.ref         - Reference output for the code - without ZFS
+pnmr.out.ref             - Reference output for the code - with ZFS
+pnmr_25K.out.ref         - Reference output for the code - with ZFS at 25K
+
+-----------------------
+ADF
+-----------------------
+geo.xyz                  - Geometry
+ADF*.pbs                 - ADF job scripts
+ADF*.out                 - ADF outputs 
+
+-----------------------
+CHEMICAL SHIFTS
+-----------------------
+TMS Proton Shielding	 - 31.45 ppm
+TMS Carbon 13 Shielding	 - 187.95 ppm
+
+To convert the results from PNMRShift to chemical shifts, subtract the "Total"
+  shielding value in the "Final results" table from the reference values given
+  above. For more information, see the following references.
+
+[1] Autschbach, J.; Patchkovskii, S.; Pritchard, B.,
+   J. Chem. Theory Comput. 2011, 7, 2175 - 2188.
+   DOI:10.1021/ct2000143w
+
+[2] Martin, B.; Autschbach, J.,
+   J. Chem. Phys. 2015, 142, 054108.
+   DOI: 10.1063/1.4906318

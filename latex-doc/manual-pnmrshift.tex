@@ -1,0 +1,683 @@
+\documentclass[11pt]{report}
+
+\usepackage{stix}                                                                
+%                                                                                
+% fontenc, mtpro/mathtime are for commercial Math fonts. Can be commented out    
+%\usepackage[LY1]{fontenc} %% needed for YandY TeX but works with MiKTeX also    
+%\usepackage[subscriptcorrection,slantedGreek,nofontinfo,lucidacal,mtpbbi]{mtpro2}
+                                                                                 
+% proper URL formatting and hyperlink embedding:                                 
+%\usepackage[implicit=false,hidelinks]{hyperref}                                  
+                                                                                 
+%%% AMS Math                                                                     
+\usepackage{amsmath}                                                             
+                                                                                 
+%%% Bold math definitions                                                        
+\usepackage{bm}                                                                  
+%\usepackage{relsize}                                                            
+%%% graphics import support                                                      
+\usepackage{graphicx}                                                            
+\graphicspath{ {./figures/} }                                                    
+%%% Misc. Packages                                                               
+                                                                                 
+\usepackage{overcite}                                                            
+\usepackage{setspace}                                                            
+\usepackage{color}                                                               
+\usepackage{rotating}                                                            
+\usepackage[version=3]{mhchem}                                                              
+
+% These should be loaded before the font in this case
+%\RequirePackage{amssymb}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Font
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\RequirePackage{kpfonts}  % Will load amsmath
+%\RequirePackage[T1]{fontenc}
+%\RequirePackage{microtype}
+\linespread{1.05}
+%\setlength{\jot}{3.0ex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\RequirePackage[sfdefault=iwona]{isomath}
+\renewcommand\bmmax{2}
+\renewcommand\hmmax{0}
+\RequirePackage{bm}
+
+
+\usepackage{import}
+
+
+\usepackage{xspace}
+
+\RequirePackage{geometry}
+\geometry{lmargin=1.25in,rmargin=1.25in,vmargin=1.00in}
+
+\usepackage{listings}
+\lstset{language={}}
+\lstset{frame=single,basicstyle=\ttfamily\small,columns=fixed,showspaces=false}
+\renewcommand\lstlistlistingname{List of Listings}
+
+
+%\RequirePackage[super,sort&compress,comma]{natbib}
+%\RequirePackage{natmove}
+
+%\renewcommand\bibname{References}
+
+
+% Macros, etc
+\newcommand\PNMRShift{\textsf{PNMRShift}\xspace}
+
+\newcommand{\code}[1]{\lstinline!#1!}
+\newcommand{\etal}{\mbox{\emph{et al}}\xspace}
+\newcommand{\matdim}[2]{\ensuremath{#1 \times #2}}
+\renewcommand{\vec}{\bm}
+\newcommand{\mat}{\bm}    % Matrices are bold
+%\newcommand{\ten}{\mathsf}
+\newcommand{\ten}{\bm}
+
+\newcommand{\sci}[2]{\ensuremath{#1\times10^{#2}}}
+\newcommand{\Order}{\ensuremath{\mathscr{O}}}  % Order symbol
+
+\newcommand{\vecop}[1]{\op{\vec{#1}}}
+\newcommand{\matop}[1]{\op{\mat{#1}}}
+\newcommand{\tenop}[1]{\op{\ten{#1}}}
+\newcommand{\scop}[1]{\ensuremath{\hat{#1}}} %% scalar operators
+%\newcommand{\scop}[1]{\op{#1}}
+
+\newcommand{\transpose}{\mathsf{T}}
+\newcommand{\conj}{*}
+
+\renewcommand{\Re}{\operatorname{Re}}
+
+
+\newcommand\nr{\mathrm{nr}}
+\newcommand\so{\mathrm{so}}
+
+\newcommand\nrfc{\mathrm{nrfc}}
+\newcommand\nrsd{\mathrm{nrsd}}
+
+\newcommand\sofc{\mathrm{sofc}}
+\newcommand\sosd{\mathrm{sosd}}
+\newcommand\soas{\mathrm{as}}
+
+\newcommand\fc{\mathrm{fc}}
+\newcommand\pc{\mathrm{pc}}
+\newcommand\sd{\mathrm{sd}}
+
+\newcommand\iso{\mathrm{iso}}
+\newcommand\dia{\mathrm{dia}}
+\newcommand\para{\mathrm{para}}
+\newcommand\orb{\mathrm{orb}}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+{\Large \textbf{PNMRShift Program}}
+
+
+\vspace*{1cm}
+
+{\large
+Benjamin Pritchard, Bob Martin, and Jochen Autschbach\\[2ex]
+Department of Chemistry\\
+University at Buffalo, State University of New York\\
+Buffalo, NY 14260-3000, USA\\[2ex]
+email: jochena@buffalo.edu\\[3ex]
+last compiled: \today     
+}
+\end{center}  
+\end{titlepage}
+
+%\listoftodos
+\tableofcontents
+%\listoffigures
+%\listoftables
+%\listofschemes
+%\listofexamples
+%\lstlistoflistings
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%\subimport{chap-intro/}{chap-intro}
+%\subimport{chap-usage/}{chap-usage}
+%\subimport{chap-examples/}{chap-examples}
+
+
+\chapter{Introduction}
+\label{chap:intro}
+
+The \PNMRShift program calculates the NMR shielding for a nucleus in a
+paramagnetic molecule using EPR spin Hamiltonian parameters for the
+shielding components specific to the electron paramagnetism. The
+default route of the code is based on an equation derived by Moon \&
+Patchkovskii (Reference~\citen{Patchkovskii:2003a}):
+%
+\begin{equation}
+    \ten{\sigma} = \ten{\sigma}^{\mathrm{orb}} - \frac{\beta_e}{g_N \beta_N}\frac{S(S+1)}{3k_{B}T} \ten{g} \cdot \ten{A}
+\label{eqn:pnmrtotal}
+\end{equation}
+%
+with $\ten{A}$ in energy units.
+In SI units, $\ten{A}(\mathrm{J}) = \sci{h}{6} \times \ten{A}(\mathrm{MHz})$.
+The result of this equation is unitless, but usually
+multiplied by $10^{6}$ to convert it to the usual ppm units. The dot
+indicates here a matrix product. $S$ is the effective spin, and other
+physical constants have usual notations. The spin Hamiltonian is assumed to
+have the following contributions: $\beta_e \vec{B}\, \ten{g} \,
+\vec{S}$ for the Zeeman interaction, and $\vec{S}\, \ten{A}\, \vec{I}$
+for the hyperfine interaction. If the hyperfine interaction is based
+on the operator $\vec{I}\, \ten{A}\, \vec{S}$, for instance, then a
+matrix transpose for $\ten{A}$ should be used in Equation
+\ref{eqn:pnmrtotal}. 
+
+In the simplest case, \PNMRShift reads from an input file calculated
+tensors $\ten{g}$, $\ten{A}$ and $\ten{\sigma}^{\mathrm{orb}}$ (the
+latter is usually the corresponding shielding tensor of a closely
+related diamagnetic analog, or calculated for the paramagnetic system
+but excluding any contributions related to the electron
+paramagnetism), from the command line or a batch script used to call
+the program the values for $S$ and $T$, a molecular structure from an
+xyz file, and assembles the shielding tensor as in Equation
+\ref{eqn:pnmrtotal}, or more sophisticated versions as explained
+below. For worked-out examples that we have used for an undergraduate
+computational chemistry laboratory course please see a related article in
+\textit{J.\ Chem.\ Educ.} \cite{Autschbach:2013h}. 
+
+Equation~\ref{eqn:pnmrtotal} can be split up into several components
+in order to facilitate analysis. The $g$-tensor is divided into three
+parts -- the first is the nonrelativistic isotropic part due to $g_e$,
+and the remaining (relativistic) part,
+$\ten{\Delta g} = \ten{g} - g_e\mat{1}$, is further subdivided into
+its own isotropic part $\Delta g_\iso \mat{1}$, and its anisotropic
+part $\Delta \tilde{g}$.
+%
+\begin{align}
+       \ten{g} &= g_e\mat{1} + \ten{\Delta g} \\
+\ten{\Delta g} &= \ten{g} - g_e\mat{1} = \Delta g_\iso\mat{1} + \ten{\Delta \tilde{g}}
+\end{align}
+%
+Likewise, the hyperfine tensor is decomposed into five separate components -
+a nonrelativistic Fermi-Contact term $\ten{A}_\nrfc$, nonrelativistic spin-dipole term $\ten{A}_\nrsd$,
+relativistic corrections to the nonrelavistic terms ($\ten{A}_\sofc$ and $\ten{A}_\sosd$),
+and a relativstic asymmetric part $\ten{A}_\soas$. The Fermi-Contact terms are often taken to be
+diagonal, isotropic tensors.
+
+Therefore, $\ten{g} \cdot \ten{A}$ in Eq.~\ref{eqn:pnmrtotal} is
+a 15-term sum of these combinations.\cite{Pennanen:2008a,Liimatainen:2009a} 
+The 15 terms, along with the notation used in the output of \PNMRShift,
+are shown in Table~\ref{table:totalcontrib}.
+
+\begin{table}
+\centering
+\caption{All contributions to $\ten{g} \cdot \ten{A}$ Eq.~\ref{eqn:pnmrtotal}}
+\label{table:totalcontrib}
+%\scalebox{1.15}{
+\begin{tabular}{ccc}
+\hline
+Term & Label & Order \\ 
+\hline
+\multicolumn{3}{c}{Fermi-Contact Shift} \\
+$g_e \ten{A}_\nrfc$ & \code{GE.ANRFC} & \Order($\alpha^2$) \\
+$g_e \ten{A}_\sofc$ & \code{GE.ASOFC} & \Order($\alpha^4$) \\
+$\Delta g_\iso \ten{A}_\nrfc$ & \code{dGiso.ANRFC} & \Order($\alpha^4$) \\
+$\Delta g_\iso \ten{A}_\sofc$ & \code{dGiso.ASOFC} & \Order($\alpha^6$) \\
+$\ten{\Delta \tilde{g}} \ten{A}_\nrfc$ & \code{dGtilde.ANRFC} & \Order($\alpha^4$) \\
+$\ten{\Delta \tilde{g}} \ten{A}_\nrsd$ & \code{dGtilde.ANRSD} & \Order($\alpha^4$) \\[1.5ex]
+\multicolumn{3}{c}{Pseudocontact Shift} \\
+$g_e \ten{A}_\nrsd$ & \code{GE.ANRSD} & \Order($\alpha^2$) \\
+$g_e \ten{A}_\sosd$ & \code{GE.ASOSD} & \Order($\alpha^4$) \\
+$g_e \ten{A}_\soas$ & \code{GE.AS} & \Order($\alpha^4$) \\[1.5ex]
+$\Delta g_\iso \ten{A}_\nrsd$ & \code{dGiso.ANRSD} & \Order($\alpha^4$) \\
+$\Delta g_\iso \ten{A}_\sosd$ & \code{dGiso.ASOSD} & \Order($\alpha^6$) \\
+$\Delta g_\iso \ten{A}_\soas$ & \code{dGiso.AS} & \Order($\alpha^6$) \\[1.5ex]
+$\ten{\Delta \tilde{g}} \ten{A}_\sofc$ & \code{dGtilde.ASOFC} & \Order($\alpha^6$) \\
+$\ten{\Delta \tilde{g}} \ten{A}_\sosd$ & \code{dGtilde.ASOSD} & \Order($\alpha^6$) \\
+$\ten{\Delta \tilde{g}} \ten{A}_\soas$ & \code{dGtilde.AS} & \Order($\alpha^6$) \\[1.5ex]
+\hline
+\end{tabular}
+%}
+\end{table}
+
+Equation~\ref{eqn:pnmrtotal} is also split up into terms associated with
+the Fermi-Contact portions and the spin-dipole terms of the hyperfine tensor.
+These are commonly called the contact or Fermi-Contact (FC) shift and the
+pseudocontact (PC) shift, respectively.
+%
+\begin{gather}
+\ten{\sigma} = \ten{\sigma}^{\mathrm{orb}}
+               - \underbrace{K \ten{g} \cdot \ten{A}^\fc}_\mathrm{FC} 
+               - \underbrace{K \ten{g} \cdot \ten{A}^\sd}_\mathrm{PC}\\
+               K = \frac{\beta_e}{g_N \beta_N}\frac{S(S+1)}{3k_{B}T}
+\end{gather}
+%
+Which of the 15 terms in the expansion belong to which contribution
+is also shown in Table~\ref{table:totalcontrib}.
+Under certain assumptions,
+these equations are equivalent to those given by McConnell \& Robertson\cite{McConnell:1958b},
+Kurland \& McGarvey\cite{Kurland:1970a}, and Bertini et al.\cite{Bertini:2002a}
+
+\section{Including Zero-Field Splitting (ZFS)}
+\label{sec:zfs}
+\subsection{Method of Soncini and Van den Heuvel}
+
+For molecules with spin $S> 1/2$ and calculations where the $g$- and
+hyperfine tensors are determined without spin-orbit interactions
+included in the ground state wavefunction or density matrix,
+zero-field splitting should be included in the PNMR shielding
+equation. The equation analogous to Eq.~\ref{eqn:pnmrtotal}
+is\cite{Soncini:2013a,Autschbach:2014p}
+%
+\begin{align}
+\label{eqn:pnmrzfstotal}
+\ten{\sigma} = \ten{\sigma}^{\mathrm{orb}} - \frac{\beta_e}{g_N \beta_N k_{B} T}
+\ten{g} \cdot   \ten{Z} \cdot \ten{A}
+\end{align}
+%
+The elements of the matrix $\ten{Z}$ are given by
+%
+\begin{align}
+\label{eqn:sonc-sso}
+Z_{kl}=\frac{1}{Q}
+\sum_{\lambda} & e^{-                             
+\frac{E_\lambda}{k_B T}} \left[\sum_{a,a'}\langle S\lambda a\vert \scop{S}_{k}\vert
+S\lambda a'\rangle \langle S                                                     
+\lambda a'\vert \scop{S}_{l}\vert S\lambda a\rangle \right. \nonumber \\               
+&\left. +2 k_B T \; \Re \sum_{\lambda'\neq\lambda}                                         
+\sum_{a,a'}\frac{\langle S\lambda a\vert \scop{S}_{k}\vert S\lambda'a'\rangle \langle  
+S\lambda'a'\vert \scop{S}_{l}\vert S\lambda a\rangle}{E_{\lambda'}-E_{\lambda}} \right]
+\end{align}
+%
+The energies $E_{\lambda}$ are obtained from diagonalizing the
+$\vec{S}\mat{D}\vec{S}$ part of the EPR Hamiltonian where $\mat{D}$ is
+the ZFS tensor.  The labels $\lambda$ and $a$ refer to the $2S+1$ ZFS
+eigenfunctions, the eigenvectors of the $\vec{S}\mat{D}\vec{S}$ term,
+which are not necessarily degenerate as they are for a pure spin
+multiplet without ZFS. $Q$ is the partition function for the split
+multiplet.  For more information, see
+References~\citen{Soncini:2013a}, ~\citen{Autschbach:2014p}, and
+~\citen{Soncini:2012a}.
+%
+\subsection{Method of Pennanen and Vaara}
+Previous versions of \PNMRShift accounted for ZFS by calculating the PNMR
+shielding using the method of Vaara et al.\ 
+\cite{Pennanen:2008a,Liimatainen:2009a}, who used
+%
+\begin{align}
+\label{eqn:vaara-sso}
+Z_{kl}=\frac{1}{Q}
+\sum_{\lambda} & e^{-                             
+\frac{E_\lambda}{k_B T}} \left[\sum_{a}\langle S\lambda a\vert
+                 \scop{S}_{k}\, \scop{S}_{l}\vert S\lambda a\rangle
+                 \right ]
+\end{align}
+%
+after diagonalizing the ZFS Hamiltonian in the basis of pseudo-spin-$S$
+eigenfunctions. This method is deprecated as it was shown by Soncini
+and Van den Heuvel to be incorrect. 
+
+
+\section{Spin-orbit correction for the Hyperfine Tensor}
+\label{sec:hypcorrect}
+
+If the hyperfine tensor is calculated without considering spin-orbit
+effects, there are certain approximations to the PNMR shift equations
+that are not entirely compatible with each other, as discussed in
+Reference \citen{Autschbach:2011c}. This is due to the use of $g_e$
+versus the full $g$-tensor in the equations. For organic radicals and
+perhaps first-row transition metals (generally, when the spin-orbit
+splitting is small compared to the gap between ground state and
+excited electronic states), these considerations should not matter
+much. For cases with stronger spin-orbit coupling, we proposed a
+correction to the hyperfine tensor that uses the calculated $g$-tensor
+elements \cite{Autschbach:2011c}. The correction should be used with
+caution, however, as the full implications of applying it are not yet
+fully understood. 
+
+
+% \section{Dipolar Hyperfine Tensor}
+% \label{sec:diphyp}
+% The spin-dipole part of the hyperfine tensor ($\ten{A}^\sd$) can be
+% estimated using just the geometry. This assumes that the magnetization
+% can be approximated by a point magnetic dipole.  In general, this
+% equation is given as
+% %
+% \begin{gather}
+% \ten{A}^\sd = \frac{\mu_0}{4\pi r^5} g_e \beta_e g_N \beta_N 
+%                           \left [ 3\vec{r}\otimes\vec{r} - r^2\mat{1} \right ]
+%                           \label{eqn:simpledipatens}
+% \end{gather}
+% %
+% where the vector $\vec{r}$ is a vector from the paramagnetic center to the nucleus for which the tensor
+% is being calculated. The paramagnetic center is often placed at the origin of the coordinate system,
+% in which case $\vec{r}$ is conveniently the cartesian coordinate of the nucleus. This tensor
+% is traceless, and therefore can only contribute to the pseudocontact shift.
+% Eq.~\ref{eqn:simpledipatens} is often rewritten, giving element $ab$ of the hyperfine tensor
+% %
+% \begin{equation}
+%   \ten{A}_{ab}^\sd = \frac{\mu_0}{4\pi} g_e\beta_e g_N \beta_N 
+%                                  \left\langle \frac{3ab}{r^5} - \frac{\delta_{ab}}{r^3} \right\rangle \label{eqn:simpledipatenssuccint}
+% \end{equation}
+
+
+% As seen in Section~\ref{sec:hypcorrect}, this tensor can be corrected, forming
+% %
+% \begin{gather}
+% \ten{A}^\sd = \ten{T}^\sd \cdot \ten{g} \label{eqn:simpledipatenscorrect} \\
+% \ten{T}^\sd = \frac{\mu_0}{4\pi r^5} \beta_e g_N \beta_N \left [ 3\vec{r}\otimes\vec{r} - r^2\mat{1} \right ]
+% \end{gather}
+% %
+% or, in an alternate way,
+% %
+% \begin{gather}
+% \ten{A}^\sd_{ab} = \sum_{i\in\left\{x,y,z\right\}} \ten{T}^\sd_{bi} \ten{g}_{ia}  \label{eqn:simpledipatenscorrectelement}
+% \end{gather}
+% %
+% Using just this corrected, purely-dipolar hyperfine tensor in the overall PNMR shift equation (Eq.~\ref{eqn:pnmrtotal})
+% results in an expression that is identical to the pseudocontact
+% expression given by Bertini \etal.
+
+
+\chapter{Compilation and Usage}
+\label{chap:usage}
+
+\section{Compilation}
+\subsection{Requirements}
+Compiling and using the \PNMRShift program requires a Unix like system
+(Linux et al.) with a working set of compilers:
+%
+\begin{itemize}
+\item A Fortran and C++ Compiler. Tested with:
+\subitem GCC v4.4.6
+\subitem GCC v4.7.2
+\subitem Intel v12.1
+\item Boost (no compilation needed, just the Boost::format headers)
+\item CMake 2.6 or newer 
+\end{itemize}
+%
+The code is fairly standard C++ code, therefore other compilers should
+work just as well.
+
+
+\subsection{Compiling}
+Compilation is performed on the command line using CMake 
+%
+\begin{lstlisting}[language=Bash]
+mkdir build
+cd build
+cmake ../
+make
+\end{lstlisting}
+%
+And that is it.
+After building, the PNMRShift executable may be copied to anywhere
+you find convenient and where it is accessible. The executable
+is all that is needed.
+
+\subsection{Windows executables}
+
+ See the file \texttt{README.windows} in the top
+level directory of the \PNMRShift package for instructions how to
+cross-compile a Windows executable on a Linux system. For
+convenience, a pre-compiled Windows binary is provided. It needs
+to be executed from a command line window. We recommend using batch
+files (\texttt{.bat}) to run the code, as in the provided examples. 
+
+\section{Usage}
+\subsection{Basic Usage}
+
+If the program is invoked without options, a help screen is displayed. Table
+\ref{table:cmdline} shows the options for the program.
+
+\begin{table}
+\centering
+\caption{Arguments to the \PNMRShift program}
+\label{table:cmdline}
+\begin{tabular}{lp{3in}}
+\hline
+\textbf{Required}       & \\
+\code{-t <temperature>} & Temperature in K \\
+\code{-s <spin>}        & Overall spin of the system. Doublet = 0.5, triplet = 1.0, etc. \\ 
+\code{-c <file>}        & XYZ file. This is a standard XYZ file with the first line being
+                          the number of atoms and the second line being the title (or a
+                          blank line). XYZ coordinates are in angstroms \\
+\code{-f <file>}        & Input file for the program containing the tensor information \\
+\\
+\textbf{Optional}       & \\
+\code{--geosd}          & Use a purely-dipolar hyperfine tensor that is generated solely from the geometry. \\
+\code{--keepfc}         & When combined with --geosd, keep the Fermi-Contact portions of the hyperfine tensor. Default is to erase them.\\
+\code{--correctA}       & Correct the hyperfine tensor with the $g$-tensor. See Section~\ref{sec:hypcorrect} \\
+\code{--detail}         & Print the contributions to the overall shielding tensor of all 15 terms in Table~\ref{table:totalcontrib}. (Page~\pageref{table:totalcontrib})\\ 
+\code{-a <label>:<avg>} & Averaging. See Section~\ref{sec:averaging}. Averaging can also be included in the input file.\\
+\code{--deltag}         & Input file contains delta-g (in ppt) rather than the full g-tensor.\\
+\code{--splitinp}       & Input file contains tensors split into components (g-tensor into dia- and paramagnetic, hyperfine into FCSD and PSOSO). Implies \code{--deltag}.\\
+\code{--pvzfs}          & Calculates the ZFS correction using the method of Pennanen and Vaara. Default is to use the method of Soncini and Van den Heuvel (See Section~\ref{sec:zfs})\\
+\hline
+\end{tabular}
+\end{table}
+
+
+\subsection{Selection Strings}
+\label{sec:selection}
+In some places atoms can be specified with a string of numbers that
+includes ranges. For example, for all atoms 1 through 10,
+a string of \code{1-10} can be written. The following are all
+valid selection strings:
+%
+\begin{itemize}
+\item[] \code{1,2,3,4,5}
+\item[] \code{1-5}
+\item[] \code{2,5,6-10,22}
+\item[] \code{1-3,6,10-18,21,49-65}
+\end{itemize}
+%
+We hope that their use is self explanatory. Take note that
+duplicates will be removed and the list will sorted. That is,
+\code{1-4,2,6,12} will include nuclei 1, 2, 3, 4, 6, and 12.
+
+
+\subsection{\PNMRShift Input File}
+\label{sec:pnmrinp}
+\PNMRShift
+needs an input file containing the hyperfine tensors,
+$g$-tensors, and orbital shielding tensors, optionally ZFS tensors,
+as well as information on how to average certain quantities.
+
+The file is constructed in a somewhat free form.  All keywords are
+case insensitive, and numbers on the same line are separated with any
+number of spaces or tabs.  (The geometry is read from a separate XYZ
+file.)  The tensors are listed in any order.  Each tensor is started
+with a header identifying which tensor it is, with the atom number
+corresponding to the atom ordering in the XYZ file) which is then
+followed by the tensor. The tensor itself is written in three or six
+lines containing three columns each. Six lines are used if the tensors
+are separated into contributions, which is needed for the detailed
+analysis according to Table \ref{table:totalcontrib}.
+
+A hyperfine tensor is written as a 3x3 matrix (three lines) in
+units of MHz.
+The header line
+is  \code{atensor # X} where \code{X} is the element symbol
+and \code{#} is the number of the atom in the XYZ input ordering,
+with the first element being one.
+The file can contain multiple hyperfine tensor specifications.
+%
+\begin{lstlisting}[language={}]
+atensor 2 H
+-6.565  -2.565  -1.098
+-2.565  -0.262   3.088
+-1.098   3.088  -3.199
+\end{lstlisting}
+
+A similar input is used for the orbital shielding tensor,
+except the heading is now \code{orbtensor}.
+The input of the shielding tensor is in ppm.
+%
+\begin{lstlisting}[language={}]
+orbtensor 2 C
+75.872  17.920   5.629
+17.920  31.850 -15.832
+ 5.629 -15.832 164.274
+\end{lstlisting}
+
+The $g$-tensor is input with the keyword \code{gtensor}
+with nothing else on the line.
+%
+\begin{lstlisting}[language={}]
+gtensor
+2.085     -0.000      0.000
+0.000      2.085      0.000
+0.000      0.000      2.003
+\end{lstlisting}
+
+Finally, the optional ZFS tensor is input under the heading
+\code{zfstensor}
+%
+\begin{lstlisting}[language={}]
+zfstensor
+ 0.659659     -0.186353     -0.907466
+-0.186353     -0.629593      0.128537
+-0.907466      0.128537     -0.030066
+\end{lstlisting}
+
+After construction, this file is used
+as an input to \code{-A}, \code{-O}, \code{G}, and/or
+\code{-Z} arguments to the program.
+
+
+\subsection{Averaging}
+\label{sec:averaging}
+The \PNMRShift program allows the user to average nuclei. This is particularly
+useful for symmetry-equivalent nuclei whose calculated shifts are not equal
+due to the calculation employing a broken-symmetry configuration,
+which is not uncommon with DFT calculations.
+
+To specify an average, use the \code{-a} argument, followed by a
+label and selection string (Section~\ref{sec:selection}). The label
+is an arbitrary name given (for example, "Methyl 1H"). The
+label and selection string are separated by a colon. Usually, the
+entire argument is surrounded in quotes to properly handle spaces
+in the label. For example, averaging three methyl groups, both
+carbon and proton shieldings, may look like
+%
+\begin{itemize}
+\item[] \code{-a "Methyl 1H:8-10,19-21,23-25" -a "Methyl 13C:7,18,22"}
+\end{itemize}
+%
+Averaging information can also be included in the input file, under the heading
+'averaging'. Each different average is placed on its own line. The section
+is processed until a blank line occurs.
+
+\begin{lstlisting}[language={}]
+averaging
+ethyl 1H:8-10,19-21,23-25
+ethyl 13C:11,22,26
+\end{lstlisting}
+
+In the output, the average will be printed in the main (isotropic)
+results table, as well as in separate detailed results tables.
+
+\section{Output}
+\label{sec:output}
+The output of \PNMRShift is structured as follows (in order):
+%
+\begin{enumerate}
+\item{The user input (temperature, spin, and atomic coordinates in \AA)}
+\item{The $g$-tensor components, as well as its conversion from $\Delta g$ to $g$}
+\item{Hyperfine tensors as read in from the input file}
+\item{Hyperfine tensors that are corrected or calculated using the geometry (\code{--correctA} and/or \code{--geosd})}
+\item{Orbital shieldings as read from the input file}
+\item{ZFS Tensor. If there was no ZFS tensor input, this will be a \matdim{3}{3} identity matrix}
+\item{Calculated $\ten{Z}$ matrix (see Eq.~\ref{eqn:sonc-sso}). If no ZFS tensor was input, this
+will be a \matdim{3}{3} diagonal matrix with elements of $S(S+1)/3$}
+\item{Main results table, showing the predicted isotropic values of the shielding, Fermi-Contact, and pesudocontact
+tensors)}
+\item{If requested, a detailed breakdown of contributions with full tensors}
+
+\end{enumerate}
+
+If an atom was not input in some section (for example, if the input is
+missing the hyperfine tensor for an atom), that atom will show an `xx'
+in the element column and the tensor may be zero.
+
+\chapter*{Acknowledgments}
+
+The development of the \PNMRShift program was made possible with
+financial support from the U.S.\ Department of Energy, Office of Basic
+Energy Sciences, Heavy Element Chemistry program, under grant
+DE-FG02-09ER16066. The views, opinions, and facts stated in this
+document are those of the authors, not of the DOE or anybody else. We
+thank Dr. Pennanen for providing us with a binary of his PNMR program
+and an example input for \ce{O2} which we used to verify our
+implementation of Equation \ref{eqn:vaara-sso} and the breakdown into
+the contribution listed in Table \ref{table:totalcontrib}.
+
+%\bibliographystyle{myachemso}
+% \bibliography{myjournals,autschbach,actinides,references,cyanine,dft,dft-nmr,pnmr,nmr-exp,nmr-refs,excitations,cdrefs,basis,relativity,response,solvent,zfs,misc}
+%\bibliography{thecitations}
+
+\providecommand{\refin}[1]{\\ \textbf{Referenced in:} #1}
+\begin{thebibliography}{10}
+
+\bibitem{Patchkovskii:2003a}
+Moon,~S.;\ \ Patchkovskii,~S.  First--principles calculations of paramagnetic
+  {NMR} shifts.   In  \textit{Calculation of {NMR} and {EPR} {P}arameters.
+  {T}heory and {A}pplications}; Kaupp,~M.;\ \ B{\"u}hl,~M.;\ \ Malkin,~V.~G.,\
+  \ Eds.;  Wiley-VCH: Weinheim, 2004 pages 325--338.
+
+\bibitem{Autschbach:2013h}
+Pritchard,~B.;\ \ Simpson,~S.;\ \ Zurek,~E.;\ \ Autschbach,~J. \textit{J.\
+  Chem.\ Educ.} \textbf{2014,} \textsl{91,} 1058-1063.
+
+\bibitem{Pennanen:2008a}
+Pennanen,~T.~O.;\ \ Vaara,~J. \textit{Phys. Rev. Lett.} \textbf{2008,}
+  \textsl{100,} 133002--4.
+
+\bibitem{Liimatainen:2009a}
+Liimatainen,~H.;\ \ Pennanen,~T.~O.;\ \ Vaara,~J. \textit{Can. J. Chem.}
+  \textbf{2009,} \textsl{87,} 954--964.
+
+\bibitem{McConnell:1958b}
+McConnell,~H.~M.;\ \ Robertson,~R.~E. \textit{J. Chem. Phys.} \textbf{1958,}
+  \textsl{29,} 1361--1365.
+
+\bibitem{Kurland:1970a}
+Kurland,~R.~J.;\ \ McGarvey,~B.~R. \textit{J. Magn. Reson.} \textbf{1970,}
+  \textsl{2,} 286--301.
+
+\bibitem{Bertini:2002a}
+Bertini,~I.;\ \ Luchinat,~C.;\ \ Parigi,~G. \textit{Prog. Nucl. Mag. Res. Sp.}
+  \textbf{2002,} \textsl{40,} 249--273.
+
+\bibitem{Soncini:2013a}
+Soncini,~A.;\ \ Van~den Heuvel,~W. \textit{J.\ Chem.\ Phys.} \textbf{2013,}
+  \textsl{138,} 021103.
+
+\bibitem{Autschbach:2014p}
+Martin,~B.;\ \ Autschbach,~J. \textit{J.\ Chem.\ Phys.} \textbf{2015,}
+  \textsl{142,} 054108.
+
+\bibitem{Soncini:2012a}
+Van~den Heuvel,~W.;\ \ Soncini,~A. \textit{Phys.\ Rev.\ Lett.} \textbf{2012,}
+  \textsl{109,} 073001.
+
+\bibitem{Autschbach:2011c}
+Autschbach,~J.;\ \ Patchkovskii,~S.;\ \ Pritchard,~B. \textit{J.\ Chem.\ Theory
+  Comput.} \textbf{2011,} \textsl{7,} 2175-2188.
+
+\end{thebibliography}
+
+
+
+
+\end{document}
+
+%%% Local Variables:
+%%% mode: latex
+%%% TeX-master: t
+%%% End:

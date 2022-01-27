@@ -1,0 +1,20 @@
+To cross compile (on Linux): All that should be installed (on top of cmake,
+etc) is all of the package group "mingw-w64"
+
+To make things a little easier, there is a toolchain file for
+CMake. It specifies the cross compiler, plus a few options.
+
+To build the Windows binary on Linux, do the usual CMake steps, but
+specify the toolchain file:
+
+cd pnmr-shift
+mkdir build.windows
+cd build.windows
+cmake ../ -DCMAKE_TOOLCHAIN_FILE=../i686-w64-mingw32.toolchain
+make
+
+And there should be the PNMRShift.exe in the current directory. It can then
+be copied to the '../windows' subdirectory
+
+(the instructions above are quite old (ca. 2013) but should still work OK. 
+Please let me know in case an update is required.

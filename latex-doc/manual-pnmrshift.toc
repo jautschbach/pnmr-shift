@@ -1,0 +1,16 @@
+\contentsline {chapter}{\numberline {1}Introduction}{2}
+\contentsline {section}{\numberline {1.1}Including Zero-Field Splitting (ZFS)}{3}
+\contentsline {subsection}{\numberline {1.1.1}Method of Soncini and Van den Heuvel}{3}
+\contentsline {subsection}{\numberline {1.1.2}Method of Pennanen and Vaara}{4}
+\contentsline {section}{\numberline {1.2}Spin-orbit correction for the Hyperfine Tensor}{4}
+\contentsline {chapter}{\numberline {2}Compilation and Usage}{5}
+\contentsline {section}{\numberline {2.1}Compilation}{5}
+\contentsline {subsection}{\numberline {2.1.1}Requirements}{5}
+\contentsline {subsection}{\numberline {2.1.2}Compiling}{5}
+\contentsline {subsection}{\numberline {2.1.3}Windows executables}{5}
+\contentsline {section}{\numberline {2.2}Usage}{6}
+\contentsline {subsection}{\numberline {2.2.1}Basic Usage}{6}
+\contentsline {subsection}{\numberline {2.2.2}Selection Strings}{6}
+\contentsline {subsection}{\numberline {2.2.3}\textsf {PNMRShift}\xspace Input File}{7}
+\contentsline {subsection}{\numberline {2.2.4}Averaging}{8}
+\contentsline {section}{\numberline {2.3}Output}{8}
