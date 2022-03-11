@@ -4,6 +4,8 @@
 
 Uses calculated data for a molecular open-shell system and assembled the paramagnetic contributions to a NMR chemical shift (pNMR) tensor and the corresponding isotropic chemical shift.
 
+![Plots of pNMR shielding as a function of temperature](pnmr-panel.png)
+
 ## Authors & Credits
 
 (c) 2013-2016 Benjamin Pritchard, Bob Martin and Jochen Autschbach
